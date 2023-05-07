@@ -4,7 +4,7 @@ import { Layout } from '@/components/Layout'
 
 export function Hero () {
   return (
-    <section className='h-screen'>
+    <section className='h-[85vh]'>
       <Layout className='flex justify-between items-center pb-20'>
         <div className='basis-[45%] text-white pb-16'>
           <h1 className='mb-5'>
@@ -38,14 +38,11 @@ export function Hero () {
         <div className='flex justify-between items-center basis-[45%] relative'>
           <div className='hero absolute z-0 top-0 right-0 bottom-0 left-0 opacity-30 bg-tertiary' />
           <Image
-            className='relative z-1'
+            className='relative z-1 rounded-full'
             src='/images/caribe-dev-hero.png'
             alt='Caribe Dev logo'
             width={500}
             height={500}
-            style={{
-              borderRadius: '50%'
-            }}
           />
         </div>
       </Layout>

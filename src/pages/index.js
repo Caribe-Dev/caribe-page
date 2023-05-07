@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section id='communities' className='pt-8 pb-32'>
+      <section id='communities' className='pt-20 pb-32'>
         <Layout>
           <h2 className='text-white highlight'>Comunidades</h2>
           <div className='flex justify-evenly items-center pt-6'>
