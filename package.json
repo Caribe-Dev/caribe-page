@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.3.1",
     "autoprefixer": "10.4.14",
+    "classnames": "^2.3.2",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
     "next": "13.3.1",

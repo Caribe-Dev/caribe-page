@@ -1,0 +1,56 @@
+{
+  "organizers": [
+    {
+      "name": "Jesus Hernandez",
+      "image": "/images/organizers/jesus-hernandez.jpeg",
+      "social": {
+        "twitter": "https://twitter.com/jesuhrz",
+        "github": "https://github.com/jesuhrz",
+        "website": "https://jesuhrz.com"
+      }
+    },
+    {
+      "name": "Kelly Villa",
+      "image": "/images/organizers/kelly-villa.png",
+      "social": {
+        "twitter": "https://twitter.com/jesuhrz",
+        "github": "https://github.com/jesuhrz",
+        "website": "https://jesuhrz.com"
+      }
+    },
+    {
+      "name": "Brianith Navarro",
+      "image": "/images/organizers/brianith-navarro.jpeg",
+      "social": {
+        "twitter": "https://twitter.com/briaenrose",
+        "github": "https://github.com/briaenrose"
+      }
+    },
+    {
+      "name": "Javier Daza",
+      "image": "/images/organizers/javier-daza.jpeg",
+      "social": {
+        "twitter": "https://twitter.com/pyjavo",
+        "github": "https://github.com/pyjavo",
+        "website": "https://javierdaza.co/"
+      }
+    },
+    {
+      "name": "Gabriel Coronado",
+      "image": "/images/organizers/gabriel-coronado.jpg",
+      "social": {
+        "github": "https://github.com/gabo-cs",
+        "website": "https://gabo-cs.github.io/"
+      }
+    },
+    {
+      "name": "Aldair Moreno",
+      "image": "/images/organizers/aldair-moreno.jpeg",
+      "social": {
+        "twitter": "https://twitter.com/_aldamc",
+        "github": "https://github.com/AldairMC",
+        "website": "https://aldairmc.github.io/aldair_mc/"
+      }
+    }
+  ]
+}

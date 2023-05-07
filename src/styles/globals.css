@@ -3,25 +3,142 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --primary-color: #005D68;
+  --secondary-color:  #00A1A2;
+  --tertiary-color: #FFB253;
+  --text-primary-color: #334244;
+  --highlight-text: #edf1fd66;
+  --text-secundary-color:  #F5F5F7;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--raleway-font), -apple-system, Helvetica Neue, sans-serif;
+}
+
+html, body {
+  color: var(--text-primary-color);
+  background-color: var(--primary-color);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h5, h6 {
+  font-family: var(--formaDJRMicro-font), -apple-system, Helvetica Neue, sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 54px;
+}
+
+.hero {
+  animation: blur 4s ease 0s infinite;
+}
+
+
+.highlight {
+  background-image: linear-gradient(
+    180deg,
+    transparent 50%,
+    var(--highlight-text) 0,
+    var(--highlight-text)
+  );
+  display: inline-block;
+  background-size: 95% 75%;
+  background-repeat: no-repeat;
+  overflow: visible;
+  padding-right: 12px;
+  background-position-x: 80%;
+  background-position-y: 50%;
+}
+
+.avatar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar:hover::before {
+  transform: scale(1.03);
+  animation: avatar-animation 1s ease;
+  background-size: 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  background-image:
+    linear-gradient(var(--text-secundary-color), var(--text-secundary-color)),
+    linear-gradient(var(--primary-color) 50%, var(--text-secundary-color) 50%),
+    linear-gradient(0deg, var(--text-secundary-color) 50%, var(--primary-color) 50%),
+    linear-gradient(80deg, var(--primary-color) 50%, var(--text-secundary-color) 50%),
+    linear-gradient(280deg, var(--primary-color) 50%, var(--text-secundary-color) 50%);
+}
+
+.avatar::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(var(--text-secundary-color), var(--text-secundary-color)),
+    linear-gradient(var(--primary-color) 50%, var(--primary-color) 50%),
+    linear-gradient(0deg, var(--primary-color) 50%, var(--primary-color) 50%),
+    linear-gradient(80deg, var(--primary-color) 50%, var(--primary-color) 50%),
+    linear-gradient(280deg, var(--primary-color) 50%, var(--primary-color) 50%);
+  background-position: center center, left top, right top, left bottom, right bottom;
+  background-origin: content-box, border-box, border-box, border-box, border-box;
+  background-clip: content-box, border-box, border-box, border-box, border-box;
+}
+
+
+p, span, a, input, textarea {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@keyframes blur {
+  0% {
+    -webkit-filter: blur(100px);
+    -moz-filter: blur(100px);
+    -o-filter: blur(100px);
+    -ms-filter: blur(100px);
+  }
+  50% {
+    -webkit-filter: blur(200px);
+    -moz-filter: blur(200px);
+    -o-filter: blur(200px);
+    -ms-filter: blur(200px);
+  }
+  100% {
+    -webkit-filter: blur(100px);
+    -moz-filter: blur(100px);
+    -o-filter: blur(100px);
+    -ms-filter: blur(100px);
+  }
+}
+
+@keyframes avatar-animation {
+  0% {
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  }
+  100% {
+    background-size: 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  }
 }

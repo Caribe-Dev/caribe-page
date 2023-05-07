@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/all-communities": ["./.all-communities.json"],
+      "@/all-organizers": ["./.all-organizers.json"]
     }
   }
 }

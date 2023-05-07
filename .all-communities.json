@@ -1,0 +1,29 @@
+{
+  "communities": [
+    {
+      "name": "BarranquillaJS",
+      "logo": "/images/communities/barranquillajs-logo.png",
+      "website": "https://barranquillajs.org"
+    },
+    {
+      "name": "Pioneras Baq",
+      "logo": "/images/communities/pioneras-baq-logo.png",
+      "website": "https://twitter.com/pionerasdev?lang=en"
+    },
+    {
+      "name": "Ruby Baq",
+      "logo": "/images/communities/ruby-baq-logo.png",
+      "website": "https://twitter.com/RubyBAQ"
+    },
+    {
+      "name": "Pyton Baq",
+      "logo": "/images/communities/pybaq-logo.png",
+      "website": "https://twitter.com/pybaq"
+    },
+    {
+      "name": "Wordpress Baq",
+      "logo": "/images/communities/wp-bq-logo.svg",
+      "website": "https://www.meetup.com/es/wordpress-barranquilla/"
+    }
+  ]
+}

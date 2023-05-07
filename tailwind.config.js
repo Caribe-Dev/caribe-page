@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -6,11 +8,19 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      ...colors,
+      transparent: 'transparent',
+      current: 'currentColor',
+      'primary': '#005D68',
+      'secondary': ' #00A1A2',
+      'tertiary': '#FFB253',
+      'white': '#F5F5F7',
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        raleway: ['var(--raleway-font)', '-apple-system', 'Helvetica Neue', 'sans-serif'],
+        formaDJRMicro: ['var(--formaDJRMicro-font)', '-apple-system', 'Helvetica Neue', 'sans-serif'],
       },
     },
   },
