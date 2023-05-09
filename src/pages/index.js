@@ -10,6 +10,8 @@ import allOrganizers from '@/all-organizers'
 const { communities } = allCommunities
 const { organizers } = allOrganizers
 
+const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN
+
 export default function Home() {
   return (
     <>

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-export default function Seo (props) {
+export function Seo (props) {
   const { title, description, image } = props
   const { asPath } = useRouter()
   const site = process.env.NEXT_PUBLIC_DOMAIN
