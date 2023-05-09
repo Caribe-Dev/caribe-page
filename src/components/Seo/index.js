@@ -21,7 +21,7 @@ export function Seo (props) {
       <meta name='format-detection' content='telephone=no, date=no, address=no' />
       <meta name='theme-color' content='#005D68' />
       <meta property='og:site_name' content='Caribe Dev' />
-      <meta property='og:locale' content='en-US' />
+      <meta property='og:locale' content='es' />
       <meta property='og:type' content='website' />
       <meta property='og:url' content={`${site}${asPath}`} />
       {
