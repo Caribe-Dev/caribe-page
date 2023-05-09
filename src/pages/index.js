@@ -1,4 +1,5 @@
 import { Hero } from '@/components/Hero'
+import { Seo } from '@/components/Seo'
 import { Layout } from '@/components/Layout'
 import { Community } from '@/components/Community'
 import { Avatar } from '@/components/Avatar'
@@ -12,6 +13,11 @@ const { organizers } = allOrganizers
 export default function Home() {
   return (
     <>
+      <Seo
+        title='Caribe Dev'
+        description='Caribe Dev, la comunidad para los desarrolladores del Caribe Colombiano.'
+        image={`${DOMAIN}/images/caribe-dev-hero.png`}
+      />
       <Hero />
       <section id='communities' className='pt-20 pb-32'>
         <Layout>
