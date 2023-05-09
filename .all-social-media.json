@@ -1,0 +1,28 @@
+{
+  "social": [
+    {
+      "icon": "world",
+      "url": "https://barranquillajs.org/"
+    },
+    {
+      "icon": "github",
+      "url": "https://github.com/caribe-dev"
+    },
+    {
+      "icon": "twitter",
+      "url": "https://twitter.com/caribedev"
+    },
+    {
+      "icon": "twitch",
+      "url": "https://www.twitch.tv/caribedev"
+    },
+    {
+      "icon": "instagram",
+      "url": "https://www.instagram.com/caribedev/"
+    },
+    {
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/company/caribe-dev/"
+    }
+  ]
+}

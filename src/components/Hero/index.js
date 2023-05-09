@@ -30,7 +30,11 @@ export function Hero () {
                 <span className='block font-bold'>Barranquilla - Colombia 🇨🇴</span>
               </div>
             </div>
-            <a href='123' className='flex basis-[140px] text-[18px] justify-center items-center rounded-md bg-tertiary px-6 py-1 font-bold hover:opacity-90'>
+            <a
+              href='https://docs.google.com/forms/d/e/1FAIpQLSfsFK6t_FUBsbCWExXtDIWkBiquEQTMAnB8NNdxdKB8e5VBRw/viewform'
+              className='flex basis-[140px] text-[18px] justify-center items-center rounded-md bg-tertiary px-6 py-1 font-bold hover:opacity-90'
+              target='_blank'
+            >
               Inscríbete
             </a>
           </div>

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 import { FormaDJRMicro, Raleway } from '@/utils/fonts'
 
 import '@/styles/globals.css'
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }) {
       `}</style>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </main>
   )
 }

@@ -3,7 +3,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/all-communities": ["./.all-communities.json"],
-      "@/all-organizers": ["./.all-organizers.json"]
+      "@/all-organizers": ["./.all-organizers.json"],
+      "@/all-social-media": ["./.all-social-media.json"]
     }
   }
 }

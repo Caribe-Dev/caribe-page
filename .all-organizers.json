@@ -51,6 +51,15 @@
         "github": "https://github.com/AldairMC",
         "website": "https://aldairmc.github.io/aldair_mc/"
       }
+    },
+    {
+      "name": "Jesus Bossa",
+      "image": "/images/organizers/jesus-bossa.jpeg",
+      "social": {
+        "twitter": "https://twitter.com/jesMakinox",
+        "github": "https://github.com/makinox",
+        "website": "https://jesusbossa.dev"
+      }
     }
   ]
 }

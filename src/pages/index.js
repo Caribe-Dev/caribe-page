@@ -16,7 +16,7 @@ export default function Home() {
       <section id='communities' className='pt-20 pb-32'>
         <Layout>
           <h2 className='text-white highlight'>Comunidades</h2>
-          <div className='flex justify-evenly items-center pt-6'>
+          <div className='flex justify-evenly items-center py-6'>
             {
               communities.map(({ name, logo, website }) => {
                 return (
@@ -45,6 +45,15 @@ export default function Home() {
                 )
               })
             }
+          </div>
+          <div className='pt-2 flex justify-center'>
+            <a
+              href='https://docs.google.com/forms/d/e/1FAIpQLSfsFK6t_FUBsbCWExXtDIWkBiquEQTMAnB8NNdxdKB8e5VBRw/viewform'
+              className='text-white text-[16px] justify-center items-center rounded-md bg-tertiary p-4 font-bold hover:opacity-90'
+              target='_blank'
+            >
+              ¿Quieres ser parte de nosotros?
+            </a>
           </div>
         </Layout>
       </section>
