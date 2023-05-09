@@ -18,6 +18,7 @@ export function Footer () {
         <a
           className='text-white font-bold text-[14px] underline'
           href='https://github.com/Caribe-Dev/caribe-page/blob/main/CODE_OF_CONDUCT.md'
+          target='_blank'
         >
             Code of Conduct
         </a>
