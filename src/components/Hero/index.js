@@ -28,7 +28,7 @@ export function Hero () {
 
         <a
           className='bg-secondary py-[12px] px-[45px] rounded-2xl text-[20px] text-tertiary font-bold mt-4'
-          href='asdas'
+          href='https://www.eventbrite.co/e/caribedev-encuentro-de-comunidades-tec-tickets-626659845467'
           target='_blank'
         >
           Inscribete
