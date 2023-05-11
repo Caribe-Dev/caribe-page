@@ -27,7 +27,7 @@ export function Footer () {
             social.map(({ url, icon }) => {
               const size = icon === 'github' ? 26 : 24
               return (
-                <a key={url} className='' href={url}  target='_blank'>
+                <a key={url} href={url}  target='_blank'>
                   <Icon
                     icon={icon}
                     className='fill-white'

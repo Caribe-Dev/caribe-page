@@ -7,6 +7,9 @@ import { Avatar } from '@/components/Avatar'
 import allCommunities from '@/all-communities'
 import allOrganizers from '@/all-organizers'
 
+
+import BannerImage from '../../public/images/banner.svg'
+
 const { communities } = allCommunities
 const { organizers } = allOrganizers
 
@@ -21,7 +24,15 @@ export default function Home() {
         image={`${DOMAIN}/images/caribe-dev-hero.png`}
       />
       <Hero />
-      <section id='communities' className='pt-20 pb-32'>
+      {/* <section id='communities' className='relative'>
+        <div className='absolute w-full h-full'>
+          <BannerImage className='hidden md:block' />
+        </div>
+        <Layout className='bg-red-200 relative'>
+          <h2 className='text-[22px] text-tertiary text-center'>Comunidades</h2>
+        </Layout>
+      </section> */}
+      {/* <section id='communities' className='pt-20 pb-32 hidden'>
         <Layout>
           <h2 className='text-white highlight'>Comunidades</h2>
           <div className='flex justify-evenly items-center py-6'>
@@ -64,7 +75,7 @@ export default function Home() {
             </a>
           </div>
         </Layout>
-      </section>
+      </section> */}
     </>
   )
 }

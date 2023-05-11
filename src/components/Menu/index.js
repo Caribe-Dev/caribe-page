@@ -1,20 +1,27 @@
 import Link from 'next/link'
+import classNames from 'classnames'
 
-export function Menu () {
+export function Menu ({ className, isOpen }) {
   return (
-    <nav>
-      <ul className="flex gap-5">
-        <li className='font-medium'>
-          <Link href="#communities" scroll={false}>Comunidades</Link>
+    <nav className={classNames(
+      'w-full h-full md:h-auto md:w-auto md:block',
+      { 'hidden': !isOpen }
+    )}>
+      <ul className={classNames('flex gap-5', className)}>
+        <li className='md:font-medium font-bold text-center text-tertiary'>
+          <Link href='#evento' scroll={false}>Evento</Link>
         </li>
-        <li className='font-medium'>
+        <li className='md:font-medium font-bold text-center text-tertiary'>
+          <Link href='#communities' scroll={false}>Comunidades</Link>
+        </li>
+        <li className='md:font-medium font-bold text-center text-tertiary'>
           <Link href='#organizers' scroll={false}>Organizadores</Link>
         </li>
-        <li className='font-medium'>
-          <Link href='#events' scroll={false}>Eventos</Link>
+        <li className='md:font-medium font-bold text-center text-tertiary'>
+          <Link href='#agend' scroll={false}>Agenda</Link>
         </li>
-        <li className='font-medium'>
-          <Link href='#sponsors' scroll={false}>Sponsors</Link>
+        <li className='md:font-medium font-bold text-center text-tertiary'>
+          <Link href='#nosotros' scroll={false}>Nosotros</Link>
         </li>
       </ul>
     </nav>

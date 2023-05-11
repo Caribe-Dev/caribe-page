@@ -1,54 +1,38 @@
-import Image from 'next/image'
-
+import { Icon } from '@/components/Icon'
 import { Layout } from '@/components/Layout'
+
+import MobileHeroImage from '../../../public/images/mobile-hero.svg'
 
 export function Hero () {
   return (
-    <section className='h-[85vh]'>
-      <Layout className='flex justify-between items-center pb-20'>
-        <div className='basis-[45%] text-white pb-16'>
-          <h1 className='mb-5'>
-            <span className='font-formaDJRMicro text-[52px] text-tertiary'>
-              <span className='font-formaDJRMicro text-[60px] mr-1'>{'{'}</span>
-              Caribe Dev
-              <span className='font-formaDJRMicro text-[60px] ml-1'>{'}'}</span>
-            </span>
-            , la comunidad para los desarrolladores del Caribe Colombiano.
-          </h1>
-          <div className='flex gap-4'>
-            <div className='flex border-2 rounded-md items-center border-white'>
-              <div className='flex items-center h-full border-r-2 border-white px-3'>
-                <Image
-                  src='/images/calendar-icon.svg'
-                  alt='Calendar logo'
-                  width={32}
-                  height={32}
-                />
-              </div>
-              <div className='px-4 py-1'>
-                <span className='block font-bold'>27 de Mayo, 2023 - 9AM - 12PM</span>
-                <span className='block font-bold'>Barranquilla - Colombia 🇨🇴</span>
-              </div>
-            </div>
-            <a
-              href='https://www.eventbrite.co/e/caribedev-encuentro-de-comunidades-tec-tickets-626659845467'
-              className='flex basis-[140px] text-[18px] justify-center items-center rounded-md bg-tertiary px-6 py-1 font-bold hover:opacity-90'
-              target='_blank'
-            >
-              Inscríbete
-            </a>
-          </div>
-        </div>
-        <div className='flex justify-between items-center basis-[45%] relative'>
-          <div className='hero absolute z-0 top-0 right-0 bottom-0 left-0 opacity-30 bg-tertiary' />
-          <Image
-            className='relative z-1 rounded-full'
-            src='/images/caribe-dev-hero.png'
-            alt='Caribe Dev logo'
-            width={500}
-            height={500}
+    <section className='h-screen relative'>
+      <div className='hidden absolute md:block w-full top-0 h-[50%] bg-hero-1 bg-no-repeat sm:bg-cover md:bg-bottom lg:bg-[length:100%_100%]' />
+      <div className='hidden absolute md:block w-full top-[50%] h-[50%] bg-hero-2 bg-no-repeat sm:bg-cover md:bg-center lg:bg-[length:100%_100%]' />
+
+      <MobileHeroImage className='absolute md:hidden'  />
+      <Layout className='flex items-center flex-col z-1 relative pt-[100px] md:pt-[200px]'>
+        <h2 className='flex justify-center text-xl md:text-[48px] gap-3 text-tertiary font-bold'>
+          <Icon
+            icon='calendar'
+            width={29}
+            height={29}
           />
-        </div>
+          <span>Mayo 27 | 9 AM - 12 PM</span>
+        </h2>
+        <h1 className='text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]'>
+          Esto es un evento bien bacano
+        </h1>
+
+        <p className='mt-[20px] text-[22px] text-tertiary text-center'>CaribeDev: Primer encuentro de Comunidades Tec!</p>
+        <span className='text-[18px] text-tertiary'>🇨🇴 Barranquilla, Colombia</span>
+
+        <a
+          className='bg-secondary py-[12px] px-[45px] rounded-2xl text-[20px] text-tertiary font-bold mt-4'
+          href='asdas'
+          target='_blank'
+        >
+          Inscribete
+        </a>
       </Layout>
     </section>
   )
