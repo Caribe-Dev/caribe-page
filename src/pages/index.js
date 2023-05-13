@@ -12,7 +12,7 @@ import allCommunities from '@/all-communities'
 import allOrganizers from '@/all-organizers'
 import schedule from '@/schedule'
 
-import ReflectedSunImage from '../../public/images/reflected-Sun.svg'
+import ReflectedSunImage from '../../public/images/reflected-sun.svg'
 import ReflectedClouldsImage from '../../public/images/reflected-cloulds.svg'
 import OrangeBlockImage from '../../public/images/orange-block.svg'
 import GreenBlockImage from '../../public/images/green-block.svg'
