@@ -3,6 +3,8 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { FormaDJRMicro, Raleway } from '@/utils/fonts'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
@@ -19,7 +21,7 @@ export default function App({ Component, pageProps }) {
       `}</style>
       <Header />
       <Component {...pageProps} />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   )
 }

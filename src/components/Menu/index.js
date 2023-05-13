@@ -9,9 +9,6 @@ export function Menu ({ className, isOpen }) {
     )}>
       <ul className={classNames('flex gap-5', className)}>
         <li className='md:font-medium font-bold text-center text-tertiary'>
-          <Link href='#evento' scroll={false}>Evento</Link>
-        </li>
-        <li className='md:font-medium font-bold text-center text-tertiary'>
           <Link href='#communities' scroll={false}>Comunidades</Link>
         </li>
         <li className='md:font-medium font-bold text-center text-tertiary'>
@@ -21,7 +18,7 @@ export function Menu ({ className, isOpen }) {
           <Link href='#agend' scroll={false}>Agenda</Link>
         </li>
         <li className='md:font-medium font-bold text-center text-tertiary'>
-          <Link href='#nosotros' scroll={false}>Nosotros</Link>
+          <Link href='#we' scroll={false}>Nosotros</Link>
         </li>
       </ul>
     </nav>

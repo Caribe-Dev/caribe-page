@@ -1,26 +1,29 @@
 import Image from 'next/image'
 
+import { Icon } from '@/components/Icon'
+
+const ICON_SIZE = 22
+
 export function Avatar ({ name, image, social = {} }) {
   return (
     <div className='flex flex-col justify-between items-center w-[220px] h-[220px]'>
-      <div className='relative w-[140px] h-[140px] avatar'>
+      <div className='relative w-[140px] h-[140px]  avatar'>
         <Image
-          className='object-contain my-0 mx-auto rounded-full z-0'
+          className='object-cover my-0 mx-auto rounded-full z-0'
           src={image}
           alt={`${name} image`}
           fill
         />
       </div>
-      <span className='font-bold mt-4'>{name}</span>
+      <span className='font-bold mt-4 text-tertiary'>{name}</span>
       <div className='flex gap-5 mt-1'>
         {
           social.website && (
             <a href={social.website} target='_blank'>
-              <Image
-                src='images/world-icon.svg'
-                alt='Website icon'
-                width={22}
-                height={22}
+              <Icon
+                icon='world'
+                width={ICON_SIZE}
+                height={ICON_SIZE}
               />
             </a>
           )
@@ -28,11 +31,10 @@ export function Avatar ({ name, image, social = {} }) {
         {
           social.twitter && (
             <a href={social.twitter} target='_blank'>
-              <Image
-                src='images/twitter-icon.svg'
-                alt='Twitter icon'
-                width={22}
-                height={22}
+              <Icon
+                icon='twitter'
+                width={ICON_SIZE}
+                height={ICON_SIZE}
               />
             </a>
           )
@@ -40,11 +42,10 @@ export function Avatar ({ name, image, social = {} }) {
         {
           social.github && (
             <a href={social.github} target='_blank'>
-              <Image
-                src='images/github-icon.svg'
-                alt='Github icon'
-                width={22}
-                height={22}
+              <Icon
+                icon='github'
+                width={ICON_SIZE}
+                height={ICON_SIZE}
               />
             </a>
           )

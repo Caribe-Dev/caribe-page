@@ -9,11 +9,12 @@
   --text-primary-color: #334244;
   --highlight-text: #edf1fd66;
   --text-secundary-color:  #F5F5F7;
+  --background: #2F6F70;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #4DBDBE;
+    --background: #2F6F70;
   }
 }
 
@@ -37,18 +38,12 @@ h1, h2, h3, h5, h6 {
   font-weight: 500;
 }
 
-
 h1 {
   font-size: 38px;
 }
 
 h2 {
   font-size: 36px;
-}
-
-
-.bg-x-center {
-  background-position-x: center;
 }
 
 @media (min-width: 768px) {
@@ -61,12 +56,6 @@ h2 {
     line-height: 2.5rem
   }
 }
-
-
-.hero {
-  animation: blur 4s ease 0s infinite;
-}
-
 
 .highlight {
   background-image: linear-gradient(
@@ -91,36 +80,14 @@ h2 {
   align-items: center;
 }
 
-.avatar:hover::before {
-  transform: scale(1.03);
-  animation: avatar-animation 1s ease;
-  background-size: 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
-  background-image:
-    linear-gradient(var(--text-secundary-color), var(--text-secundary-color)),
-    linear-gradient(var(--primary-color) 50%, var(--text-secundary-color) 50%),
-    linear-gradient(0deg, var(--text-secundary-color) 50%, var(--primary-color) 50%),
-    linear-gradient(80deg, var(--primary-color) 50%, var(--text-secundary-color) 50%),
-    linear-gradient(280deg, var(--primary-color) 50%, var(--text-secundary-color) 50%);
-}
-
 .avatar::before {
   content: "";
   position: absolute;
   z-index: 0;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
+  width: calc(100% + 15px);
+  height: calc(100% + 15px);
   border-radius: 50%;
-  border: 2px solid transparent;
-  background-repeat: no-repeat;
-  background-image:
-    linear-gradient(var(--text-secundary-color), var(--text-secundary-color)),
-    linear-gradient(var(--primary-color) 50%, var(--primary-color) 50%),
-    linear-gradient(0deg, var(--primary-color) 50%, var(--primary-color) 50%),
-    linear-gradient(80deg, var(--primary-color) 50%, var(--primary-color) 50%),
-    linear-gradient(280deg, var(--primary-color) 50%, var(--primary-color) 50%);
-  background-position: center center, left top, right top, left bottom, right bottom;
-  background-origin: content-box, border-box, border-box, border-box, border-box;
-  background-clip: content-box, border-box, border-box, border-box, border-box;
+  border: 3px solid #FFE8CB;
 }
 
 @keyframes blur {
@@ -143,16 +110,6 @@ h2 {
     -ms-filter: blur(100px);
   }
 }
-
-@keyframes avatar-animation {
-  0% {
-    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-  }
-  100% {
-    background-size: 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
-  }
-}
-
 
 @media (min-width: 768px) {
   h1 {

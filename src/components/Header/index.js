@@ -7,8 +7,6 @@ import { Layout } from '@/components/Layout'
 import { Menu } from '@/components/Menu'
 import { Icon } from '@/components/Icon'
 
-import MobileHeroImage from '../../../public/images/header.svg'
-
 const MAX_SCROLL = 30
 
 export function Header () {
@@ -39,22 +37,21 @@ export function Header () {
   return (
     <header
       className={classNames(
-        'fixed z-10 w-full',
-        { 'h-20': !open, 'h-screen': open, 'bg-green-300': open }
+        'fixed z-10 w-full h',
+        { 'h-16': !open, 'h-screen': open, 'bg-green-300': open }
       )}
     >
-      <div className='relative h-20'>
-        <MobileHeroImage className={
-          classNames(
-            'absolute transition-all',
-            {
-              '-top-[190px]': !scrollTop,
-              '-top-[80px]': scrollTop,
-              'md:-top-[50px]': scrollTop
-            },
-          )
-        } />
-        <Layout className='flex relative flex-wrap md:flex-nowrap md:items-center'>
+      <div
+        className={classNames(
+          'relative h-full after:content-[""] after:transition-all after:absolute after:top-0 after:w-full after:bg-green-300',
+          {
+            'after:h-[0px]': !scrollTop,
+            'after:h-full': scrollTop,
+            'after:md:h-full': scrollTop
+          },
+        )}
+      >
+        <Layout className='flex relative flex-wrap md:flex-nowrap md:items-center z-10'>
           <div className='flex basis-full justify-between h-[70px] items-center'>
             <Link href='/'>
               <Image
@@ -73,7 +70,7 @@ export function Header () {
               <span className='sr-only'>Open main menu</span>
                 <Icon
                   icon='hamburger'
-                  className='fill-tertiary'
+                  className='fill-secondary'
                   width={25}
                   height={25}
                 />

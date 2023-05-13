@@ -1,22 +1,26 @@
+import classNames from 'classnames'
 import Image from 'next/image'
 
-export function Community ({ website, name, logo }) {
+export function Community ({ website, name, logo, background, className }) {
   return (
     <a
       key={website}
-      className='flex items-center justify-around text-center flex-col w-[180px] h-[180px]'
+      style={{ 'background-color': background || '#002F34' }}
+      className={
+        classNames(
+          'relative flex items-center justify-around rounded-xl text-center flex-col w-[160px] h-[70px]',
+          className
+        )
+      }
       href={website}
       target='_blank'
     >
-      <span className='text-white font-bold text-[20px]'>{name}</span>
-      <div className='relative w-[140px] h-[140px] p-[2px]'>
-        <Image
-          className='object-contain my-0 mx-auto rounded-full'
-          src={logo}
-          alt={`${name} logo`}
-          fill
-        />
-      </div>
+      <Image
+        className='object-contain px-4'
+        src={logo}
+        alt={`${name} logo`}
+        fill
+      />
     </a>
   )
 }
