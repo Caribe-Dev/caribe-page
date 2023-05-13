@@ -1,10 +1,6 @@
 {
   "social": [
     {
-      "icon": "world",
-      "url": "https://barranquillajs.org/"
-    },
-    {
       "icon": "github",
       "url": "https://github.com/caribe-dev"
     },
