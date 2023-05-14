@@ -30,7 +30,7 @@ module.exports = {
           linear-gradient(181.57deg, rgba(46, 111, 112, 0.2) 7.06%, #2E6F70 96.92%),
           linear-gradient(0deg, rgba(77, 189, 190, 0.99) 0%, rgba(85, 205, 179, 0.9943) 20.56%, #62E89F 47.97%, #72E397 55.49%, #9BD483 70.15%, #DDBE64 90.28%, #FFB253 99.99%)
         `,
-        'block-grandient': 'linear-gradient(180deg, rgba(0,113,113,1) 50%, rgba(255,178,83,1) 50%)'
+        'block-grandient': 'linear-gradient(180deg, #2F6F70 50%, rgba(255,178,83,1) 50%)'
       }
     },
   },

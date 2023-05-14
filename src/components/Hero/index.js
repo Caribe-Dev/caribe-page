@@ -52,8 +52,10 @@ export function Hero () {
         <h1 className='text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]'>
           Esto es un evento bien bacano
         </h1>
-        <p className='mt-[20px] text-[22px] text-tertiary text-center'>CaribeDev: Primer encuentro de Comunidades Tech!</p>
-        <span className='text-[18px] text-tertiary'>🇨🇴 Barranquilla, Colombia</span>
+        <p className='mt-[20px] text-[25px] text-tertiary text-center'>
+          CaribeDev: Primer encuentro de Comunidades Tec!
+        </p>
+        <span className='text-[20px] text-tertiary'>🇨🇴 Barranquilla, Colombia</span>
         <a
           className='bg-secondary py-[12px] px-[45px] rounded-2xl text-[20px] text-tertiary font-bold mt-4'
           href='https://www.eventbrite.co/e/caribedev-encuentro-de-comunidades-tec-tickets-626659845467'
