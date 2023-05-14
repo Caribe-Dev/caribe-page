@@ -67,6 +67,23 @@
         "twitter": "https://twitter.com/fabolivar23",
         "github": "https://github.com/fabolivar23"
       }
+    },
+    {
+      "name": "Luis Porras",
+      "image": "/images/organizers/luis-porras.jpg",
+      "social": {
+        "twitter": "https://twitter.com/lporras16",
+        "github": "https://github.com/lporras",
+        "website": "https://linktr.ee/lporras16"
+      }
+    },
+    {
+      "name": "Francisco Quintero",
+      "image": "/images/organizers/francisco-quintero.jpg",
+      "social": {
+        "twitter": "https://twitter.com/cescquintero",
+        "github": "https://github.com/cesc1989"
+      }
     }
   ]
 }
