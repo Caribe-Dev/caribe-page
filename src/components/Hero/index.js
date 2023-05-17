@@ -61,7 +61,7 @@ export function Hero () {
           href='https://www.eventbrite.co/e/caribedev-encuentro-de-comunidades-tec-tickets-626659845467'
           target='_blank'
         >
-          Inscribete
+          Inscríbete
         </a>
       </Layout>
     </section>
