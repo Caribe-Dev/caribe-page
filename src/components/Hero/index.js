@@ -53,7 +53,7 @@ export function Hero () {
           Esto es un evento bien bacano
         </h1>
         <p className='mt-[20px] text-[25px] text-tertiary text-center'>
-          CaribeDev: Primer encuentro de Comunidades Tec!
+          CaribeDev: Primer encuentro de Comunidades Tech!
         </p>
         <span className='text-[20px] text-tertiary'>🇨🇴 Barranquilla, Colombia</span>
         <a
