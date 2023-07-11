@@ -1,16 +1,16 @@
-import { Icon } from '@/components/Icon'
-import { Layout } from '@/components/Layout'
+import { Icon } from "@/components/Icon";
+import { Layout } from "@/components/Layout";
 
-import CloudsImage from '../../../public/images/clouds.svg'
-import SunImage from '../../../public/images/sun.svg'
-import HighWaveImage from '../../../public/images/high-wave.svg'
-import SmallWaveImage from '../../../public/images/small-wave.svg'
-import LeftMountainImage from '../../../public/images/left-mountain.svg'
-import RightMountainImage from '../../../public/images/right-mountain.svg'
-import LeftPalmsImage from '../../../public/images/left-palms.svg'
-import RightPalmsImage from '../../../public/images/right-palms.svg'
+import CloudsImage from "../../../public/images/clouds.svg";
+import SunImage from "../../../public/images/sun.svg";
+import HighWaveImage from "../../../public/images/high-wave.svg";
+import SmallWaveImage from "../../../public/images/small-wave.svg";
+import LeftMountainImage from "../../../public/images/left-mountain.svg";
+import RightMountainImage from "../../../public/images/right-mountain.svg";
+import LeftPalmsImage from "../../../public/images/left-palms.svg";
+import RightPalmsImage from "../../../public/images/right-palms.svg";
 
-export function Hero () {
+export function Hero() {
   return (
     <section className='h-[75vh] md:h-screen bg-primary-hero relative'>
       <div className='hidden md:flex absolute justify-center top-[30%] md:top-0 left-0 right-0 w-full'>
@@ -23,7 +23,7 @@ export function Hero () {
         <HighWaveImage className='w-[100%] h-[130px] md:h-auto' />
       </div>
       <div className='absolute flex justify-center bottom-0 left-0 right-0 w-full'>
-        <SmallWaveImage className='w-[100%] h-[120px] md:h-auto'  />
+        <SmallWaveImage className='w-[100%] h-[120px] md:h-auto' />
       </div>
       <div className='absolute flex justify-center bottom-0 left-0 right-0 w-full'>
         <SunImage className='w-[80%] md:w-[50%]' />
@@ -42,28 +42,22 @@ export function Hero () {
       </div>
       <Layout className='flex items-center flex-col z-1 relative pt-[100px] md:pt-[140px]'>
         <h2 className='flex justify-center text-xl md:text-[48px] gap-3 text-tertiary font-bold'>
-          <Icon
-            icon='calendar'
-            width={29}
-            height={29}
-          />
-          <span>Mayo 27 | 9 AM - 12 PM</span>
+          <span>🇨🇴 Barranquilla, Colombia</span>
         </h2>
         <h1 className='text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]'>
-          Esto es un evento bien bacano
+          CaribeDev
         </h1>
         <p className='mt-[20px] text-[25px] text-tertiary text-center'>
-          CaribeDev: Primer encuentro de Comunidades Tec!
+          Únete a nuestra comunidad en Discord.
         </p>
-        <span className='text-[20px] text-tertiary'>🇨🇴 Barranquilla, Colombia</span>
         <a
           className='bg-secondary py-[12px] px-[45px] rounded-2xl text-[20px] text-tertiary font-bold mt-4'
-          href='https://www.eventbrite.co/e/caribedev-encuentro-de-comunidades-tec-tickets-626659845467'
+          href='https://discord.gg/9d7MqvuQZV'
           target='_blank'
         >
-          Inscríbete
+          Únete
         </a>
       </Layout>
     </section>
-  )
+  );
 }
