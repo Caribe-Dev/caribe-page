@@ -6,7 +6,6 @@ import { Layout } from "@/components/Layout";
 import { Community } from "@/components/Community";
 import { Avatar } from "@/components/Avatar";
 import { Carousel } from "@/components/Carousel";
-import { Schedule } from "@/components/Schedule";
 
 import allCommunities from "@/all-communities";
 import allOrganizers from "@/all-organizers";
@@ -14,7 +13,6 @@ import schedule from "@/schedule";
 
 import ReflectedSunImage from "../../public/images/reflected-sun.svg";
 import ReflectedClouldsImage from "../../public/images/reflected-cloulds.svg";
-import OrangeBlockImage from "../../public/images/orange-block.svg";
 import GreenBlockImage from "../../public/images/green-block.svg";
 
 const { communities } = allCommunities;
@@ -73,7 +71,7 @@ export default function Home() {
           </div>
           <div className='pt-2 flex justify-center'>
             <a
-              href='https://docs.google.com/forms/d/e/1FAIpQLSfsFK6t_FUBsbCWExXtDIWkBiquEQTMAnB8NNdxdKB8e5VBRw/viewform'
+              href='https://calendly.com/caribedev-org/volunteer-meeting-30mins?primary_color=049b9c'
               className='text-tertiary text-[20px] justify-center items-center rounded-2xl bg-secondary px-[60px] py-[25px] font-bold hover:opacity-90'
               target='_blank'
             >
