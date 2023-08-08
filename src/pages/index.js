@@ -118,6 +118,10 @@ export default function Home({ events}) {
 }
 
 export const getServerSideProps = async () => {
-  const events = await getEvents()
-  return { props: { events } }
+  try {
+    const events = await getEvents()
+    return { props: { events } }
+  } catch (error) {
+    return { props: {  } }
+  }
 }
