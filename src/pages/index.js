@@ -6,10 +6,10 @@ import { Layout } from "@/components/Layout";
 import { Community } from "@/components/Community";
 import { Avatar } from "@/components/Avatar";
 import { Carousel } from "@/components/Carousel";
+import { getEvents } from "@/controllers/getEvents";
 
 import allCommunities from "@/all-communities";
 import allOrganizers from "@/all-organizers";
-import schedule from "@/schedule";
 
 import ReflectedSunImage from "../../public/images/reflected-sun.svg";
 import ReflectedClouldsImage from "../../public/images/reflected-cloulds.svg";
@@ -17,11 +17,10 @@ import GreenBlockImage from "../../public/images/green-block.svg";
 
 const { communities } = allCommunities;
 const { organizers } = allOrganizers;
-const { talks } = schedule;
 
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
 
-export default function Home() {
+export default function Home({ events}) {
   return (
     <>
       <Seo
@@ -29,7 +28,7 @@ export default function Home() {
         description='Caribe Dev, la comunidad para los desarrolladores del Caribe Colombiano.'
         image={`${DOMAIN}/images/caribe-dev-hero.png`}
       />
-      <Hero />
+      <Hero events={events} />
       <section
         id='communities'
         className='bg-secondary-hero relative -mt-[20px] md:-mt-[34px] pb-[30px]'
@@ -116,4 +115,9 @@ export default function Home() {
       </section>
     </>
   );
+}
+
+export const getServerSideProps = async () => {
+  const events = await getEvents()
+  return { props: { events } }
 }

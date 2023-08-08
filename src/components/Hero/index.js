@@ -1,4 +1,8 @@
-import { Icon } from "@/components/Icon";
+import Link from "next/link";
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
+
+import {getLinkFromText} from "@/utils"
 import { Layout } from "@/components/Layout";
 
 import CloudsImage from "../../../public/images/clouds.svg";
@@ -10,7 +14,7 @@ import RightMountainImage from "../../../public/images/right-mountain.svg";
 import LeftPalmsImage from "../../../public/images/left-palms.svg";
 import RightPalmsImage from "../../../public/images/right-palms.svg";
 
-export function Hero() {
+export function Hero({ events }) {
   return (
     <section className='h-[75vh] md:h-screen bg-primary-hero relative'>
       <div className='hidden md:flex absolute justify-center top-[30%] md:top-0 left-0 right-0 w-full'>
@@ -57,6 +61,27 @@ export function Hero() {
         >
           Únete
         </a>
+        <div>
+          <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Proximos eventos</h3>
+          {events.map((event) => {
+            const posibleLink = getLinkFromText(event.description)
+            const date = format(new Date(event.scheduled_start_time), 'MMMM dd, yyyy - h:m aa', { locale: es });
+            return (
+              <article key={event.name} className="bg-tertiary max-w-md p-4 rounded-lg gap-2 flex flex-col items-start">
+                <h4 className="font-bold">{event.name}</h4>
+                <div className="flex items-center gap-2">
+                  <span>📍</span>
+                  <span>{event.entity_metadata.location}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>🗓️</span>
+                  <span className="capitalize">{date}</span>
+                </div>
+                {posibleLink && <Link className="bg-secondary py-[12px] px-[45px] rounded-2xl text-[20px] text-tertiary font-bold inline-flex" href={posibleLink} target="_blank" rel="noreferrer" >Ver evento</Link>}
+              </article>
+            )
+          })}
+        </div>
       </Layout>
     </section>
   );
