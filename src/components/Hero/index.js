@@ -61,7 +61,7 @@ export function Hero({ events }) {
         >
           Únete
         </a>
-        {events?.length && <div>
+        {events?.length && <div className="my-8 sm:my-0">
           <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Proximos eventos</h3>
           {events?.map((event) => {
             const posibleLink = getLinkFromText(event.description)
