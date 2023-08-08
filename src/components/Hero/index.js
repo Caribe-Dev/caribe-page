@@ -16,7 +16,7 @@ import RightPalmsImage from "../../../public/images/right-palms.svg";
 
 export function Hero({ events }) {
   return (
-    <section className='h-[75vh] md:h-screen bg-primary-hero relative'>
+    <section className='min-h-[75vh] md:min-h-screen bg-primary-hero relative'>
       <div className='hidden md:flex absolute justify-center top-[30%] md:top-0 left-0 right-0 w-full'>
         <CloudsImage className='w-[100%]' />
       </div>
