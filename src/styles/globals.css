@@ -22,6 +22,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-variant-numeric: lining-nums;
   font-family: var(--raleway-font), -apple-system, Helvetica Neue, sans-serif;
 }
 
