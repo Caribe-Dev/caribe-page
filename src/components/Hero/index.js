@@ -61,14 +61,15 @@ export function Hero({ events }) {
           <div className="my-8 z-30">
             <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Proximos eventos</h3>
             {events?.map((event) => {
-              const posibleLink = getLinkFromText(event.description);
-              const date = format(new Date(event.scheduled_start_time), 'MMMM dd, yyyy - h:mm aa', { locale: es });
+              const posibleLink = event?.link || getLinkFromText(event.description);
+              const date = event?.date || format(new Date(event.scheduled_start_time), 'MMMM dd, yyyy - h:mm aa', { locale: es });
+              
               return (
                 <article key={event.name} className="bg-tertiary max-w-md p-4 rounded-lg gap-2 flex flex-col items-start my-2">
                   <h4 className="font-bold">{event.name}</h4>
                   <div className="flex items-center gap-2">
                     <span>📍</span>
-                    <span>{event.entity_metadata.location}</span>
+                    <span>{event?.place || event.entity_metadata.location}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span>🗓️</span>

@@ -7,6 +7,7 @@ import { Community } from "@/components/Community";
 import { Avatar } from "@/components/Avatar";
 import { Carousel } from "@/components/Carousel";
 import { getEvents } from "@/controllers/getEvents";
+import { getMeetupEvents } from "@/controllers/getMeetupEvents";
 
 import allCommunities from "@/all-communities";
 import allOrganizers from "@/all-organizers";
@@ -21,6 +22,7 @@ const { organizers } = allOrganizers;
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
 
 export default function Home({ events}) {
+
   return (
     <>
       <Seo
@@ -119,8 +121,10 @@ export default function Home({ events}) {
 
 export const getServerSideProps = async () => {
   try {
+    const meetupEvents = await getMeetupEvents()
     const events = await getEvents()
-    return { props: { events } }
+    
+    return { props: { events: [...events, ...meetupEvents] } }
   } catch (error) {
     return { props: {  } }
   }
