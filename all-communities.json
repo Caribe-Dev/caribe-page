@@ -30,6 +30,12 @@
       "logo": "/images/communities/wp-bq-logo.png",
       "website": "https://www.meetup.com/es/wordpress-barranquilla/",
       "background": "#FFFFFF"
+    },
+    {
+      "name": "Google Developers Group Barranquilla",
+      "logo": "/images/communities/google-baq-logo.jpeg",
+      "website": "https://gdg.community.dev/gdg-barranquilla/",
+      "background": "#FFFFFF"
     }
   ]
 }

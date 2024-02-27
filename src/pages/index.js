@@ -57,7 +57,7 @@ export default function Home({ events}) {
             </div>
           </div>
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
-            Organizadores
+            Fundadores
           </h2>
           <div className='flex flex-wrap justify-center items-center pt-[50px]'>
             {organizers.map(({ name, image, social }) => {
