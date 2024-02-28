@@ -1,6 +1,7 @@
 import * as cheerio from 'cheerio';
 
 const documentQuery = `[id="submain"] ul li a[data-event-label][data-event-category][id]`
+const placeholderMessage = "Solo los asistentes pueden ver el enlace"
 
 export const getMeetupEvents = async () => {
   const urls = [
@@ -28,13 +29,18 @@ export const getMeetupEvents = async () => {
       const name = $(el).find('div span.ds-font-title-3').text();
       const date = $(el).find('div time').text();
       const link = $(el).attr('href');
-      const place = $(el).find('div span.text-gray6').text().split(',').slice(0, 2);
+      const place = getPlaceName($(el).find('div span.text-gray6').text().split(',').slice(0, 2))
 
       posts.push({ name, link, date, place });
     });
   }
   return posts;
 };
+
+const getPlaceName = (place) => {
+  if (place.includes(placeholderMessage)) return 'Evento en línea';
+  return place
+}
 
 const getHtmlDoc = async (url) => {
   const response = await fetch(url);
