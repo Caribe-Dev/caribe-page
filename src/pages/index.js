@@ -123,8 +123,9 @@ export const getServerSideProps = async () => {
   try {
     const meetupEvents = await getMeetupEvents()
     const events = await getEvents()
-    
-    return { props: { events: [...events, ...meetupEvents] } }
+    const discordEvents = events?.length ? events : []
+
+    return { props: { events: [...discordEvents, ...meetupEvents] } }
   } catch (error) {
     return { props: {  } }
   }

@@ -28,7 +28,7 @@ export const getMeetupEvents = async () => {
       const name = $(el).find('div span.ds-font-title-3').text();
       const date = $(el).find('div time').text();
       const link = $(el).attr('href');
-      const place = $(el).find('div span.text-gray6').text();
+      const place = $(el).find('div span.text-gray6').text().split(',').slice(0, 2);
 
       posts.push({ name, link, date, place });
     });
