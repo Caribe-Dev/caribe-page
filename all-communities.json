@@ -36,6 +36,30 @@
       "logo": "/images/communities/google-baq-logo.jpeg",
       "website": "https://gdg.community.dev/gdg-barranquilla/",
       "background": "#FFFFFF"
+    },
+    {
+      "name": "Red team Barranquilla",
+      "logo": "/images/communities/red-team-baq-logo.jpg",
+      "website": "https://www.instagram.com/redteambq",
+      "background": "#000000"
+    },
+    {
+      "name": "Linux BQ",
+      "logo": "/images/communities/linux-bq-logo.jpg",
+      "website": "https://www.instagram.com/linuxbq",
+      "background": "#000000"
+    },
+    {
+      "name": "Friends of Figma Barranquilla",
+      "logo": "/images/communities/friends-figma-baq-logo.jpg",
+      "website": "https://friends.figma.com/barranquilla/",
+      "background": "#FFFFFF"
+    },
+    {
+      "name": "Women Techmakers Barranquilla",
+      "logo": "/images/communities/women-techmakers-baq.jpg",
+      "website": "https://www.instagram.com/wtm.baq/",
+      "background": "#FFFFFF"
     }
   ]
 }
