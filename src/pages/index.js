@@ -1,29 +1,28 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Hero } from '@/components/Hero'
-import { Seo } from '@/components/Seo'
-import { Layout } from '@/components/Layout'
-import { Community } from '@/components/Community'
-import { Avatar } from '@/components/Avatar'
-import { Carousel } from '@/components/Carousel'
-import { Schedule } from '@/components/Schedule'
+import { Hero } from "@/components/Hero";
+import { Seo } from "@/components/Seo";
+import { Layout } from "@/components/Layout";
+import { Community } from "@/components/Community";
+import { Avatar } from "@/components/Avatar";
+import { Carousel } from "@/components/Carousel";
+import { getEvents } from "@/controllers/getEvents";
+import { getMeetupEvents } from "@/controllers/getMeetupEvents";
 
-import allCommunities from '@/all-communities'
-import allOrganizers from '@/all-organizers'
-import schedule from '@/schedule'
+import allCommunities from "@/all-communities";
+import allOrganizers from "@/all-organizers";
 
-import ReflectedSunImage from '../../public/images/reflected-sun.svg'
-import ReflectedClouldsImage from '../../public/images/reflected-cloulds.svg'
-import OrangeBlockImage from '../../public/images/orange-block.svg'
-import GreenBlockImage from '../../public/images/green-block.svg'
+import ReflectedSunImage from "../../public/images/reflected-sun.svg";
+import ReflectedClouldsImage from "../../public/images/reflected-cloulds.svg";
+import GreenBlockImage from "../../public/images/green-block.svg";
 
-const { communities } = allCommunities
-const { organizers } = allOrganizers
-const { talks } = schedule
+const { communities } = allCommunities;
+const { organizers } = allOrganizers;
 
-const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN
+const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
 
-export default function Home() {
+export default function Home({ events}) {
+
   return (
     <>
       <Seo
@@ -31,8 +30,11 @@ export default function Home() {
         description='Caribe Dev, la comunidad para los desarrolladores del Caribe Colombiano.'
         image={`${DOMAIN}/images/caribe-dev-hero.png`}
       />
-      <Hero />
-      <section id='communities' className='bg-secondary-hero relative -mt-[20px] md:-mt-[34px] pb-[30px]'>
+      <Hero events={events} />
+      <section
+        id='communities'
+        className='bg-secondary-hero relative -mt-[20px] md:-mt-[34px] pb-[30px]'
+      >
         <div className='absolute flex justify-center top-0 left-0 right-0 w-full'>
           <ReflectedSunImage className='w-[76%] md:w-[49%]' />
         </div>
@@ -43,36 +45,34 @@ export default function Home() {
           <div className='flex w-full justify-center'>
             <div className='w-[80%] mt-10 z-[2]'>
               <Carousel>
-                {
-                  communities.map(({ website, ...rest }) => {
-                    return (
-                      <Community
-                        className='mx-auto'
-                        key={website}
-                        website={website}
-                        { ...rest }
-                      />
-                    )
-                  })
-                }
+                {communities.map(({ website, ...rest }) => {
+                  return (
+                    <Community
+                      className='mx-auto'
+                      key={website}
+                      website={website}
+                      {...rest}
+                    />
+                  );
+                })}
               </Carousel>
             </div>
           </div>
-          <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>Organizadores</h2>
+          <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
+            Fundadores
+          </h2>
           <div className='flex flex-wrap justify-center items-center pt-[50px]'>
-            {
-              organizers.map(({ name, image, social }) => {
-                return (
-                  <div className='flex justify-center basis-[20%] mb-12' key={name}>
-                    <Avatar name={name} image={image} social={social} />
-                  </div>
-                )
-              })
-            }
+            {organizers.map(({ name, image, social }) => {
+              return (
+                <div className='flex justify-center basis-[20%] mb-12' key={name}>
+                  <Avatar name={name} image={image} social={social} />
+                </div>
+              );
+            })}
           </div>
           <div className='pt-2 flex justify-center'>
             <a
-              href='https://docs.google.com/forms/d/e/1FAIpQLSfsFK6t_FUBsbCWExXtDIWkBiquEQTMAnB8NNdxdKB8e5VBRw/viewform'
+              href='https://calendly.com/caribedev-org/volunteer-meeting-30mins?primary_color=049b9c'
               className='text-tertiary text-[20px] justify-center items-center rounded-2xl bg-secondary px-[60px] py-[25px] font-bold hover:opacity-90'
               target='_blank'
             >
@@ -81,22 +81,7 @@ export default function Home() {
           </div>
         </Layout>
       </section>
-      <section id='agend' className='relative overflow-hidden bg-block-grandient'>
-        <div className='absolute flex justify-center w-full'>
-          <OrangeBlockImage className='w-full' />
-        </div>
-        <Layout className='relative pt-20 md:pt-40 pb-[70px]'>
-          <h2 className='text-[35px] md:text-[60px] text-primary'>Agenda</h2>
-          <div className='flex flex-col max-w-[900px] w-full flex-wrap mt-10 gap-6'>
-            {
-              talks.map(({ title, ...rest }) => {
-                return <Schedule key={title} title={title} {...rest} />
-              })
-            }
-          </div>
-        </Layout>
-      </section>
-      <section id='we' className='relative bg-[#FFB253] overflow-hidden'>
+      <section id='we' className='relative overflow-hidden'>
         <div className='absolute flex justify-center w-full'>
           <GreenBlockImage className='w-full' />
         </div>
@@ -105,9 +90,10 @@ export default function Home() {
             <div className='flex flex-col basis-[100%] md:basis-[65%]'>
               <h2 className='text-[35px] md:text-[60px] text-tertiary'>Nosotros</h2>
               <p className='text-tertiary font-medium mt-[20px] text-[18px] md:text-[20px] max-w-[1000px] w-full'>
-                Somos líderes que buscamos brindar un espacio para aprender y compartir con nuestras comunidades de tecnología en la Costa Caribe,
-                donde nos conozcan y así poder ofrecerles oportunidades y experiencias únicas, que promuevan la innovación y la
-                creatividad en la ciudad!
+                Somos líderes que buscamos brindar un espacio para aprender y compartir
+                con nuestras comunidades de tecnología en la Costa Caribe, donde nos
+                conozcan y así poder ofrecerles oportunidades y experiencias únicas, que
+                promuevan la innovación y la creatividad en la ciudad!
               </p>
             </div>
             <div className='hidden basis-[30%] mt-2 md:block'>
@@ -130,5 +116,17 @@ export default function Home() {
         </Layout>
       </section>
     </>
-  )
+  );
+}
+
+export const getServerSideProps = async () => {
+  try {
+    const meetupEvents = await getMeetupEvents()
+    const events = await getEvents()
+    const discordEvents = events?.length ? events : []
+
+    return { props: { events: [...discordEvents, ...meetupEvents] } }
+  } catch (error) {
+    return { props: {  } }
+  }
 }

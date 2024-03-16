@@ -15,9 +15,6 @@ export function Menu ({ className, isOpen }) {
           <Link href='#organizers' scroll={false}>Organizadores</Link>
         </li>
         <li className='md:font-medium font-bold text-center text-tertiary'>
-          <Link href='#agend' scroll={false}>Agenda</Link>
-        </li>
-        <li className='md:font-medium font-bold text-center text-tertiary'>
           <Link href='#we' scroll={false}>Nosotros</Link>
         </li>
       </ul>

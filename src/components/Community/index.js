@@ -5,7 +5,7 @@ export function Community ({ website, name, logo, background, className }) {
   return (
     <a
       key={website}
-      style={{ 'background-color': background || '#002F34' }}
+      style={{ 'backgroundColor': background || '#002F34' }}
       className={
         classNames(
           'relative flex items-center justify-around rounded-xl text-center flex-col w-[160px] h-[70px]',
