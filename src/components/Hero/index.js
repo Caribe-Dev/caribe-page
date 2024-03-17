@@ -60,16 +60,19 @@ export function Hero({ events }) {
         {Boolean(events?.length) && (
           <div className="my-8 z-30">
             <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Proximos eventos</h3>
+            <section className='flex w-full justify-center flex-wrap gap-2'>
             {events?.map((event) => {
               const posibleLink = event?.link || getLinkFromText(event.description);
               const date = event?.date || format(new Date(event.scheduled_start_time), 'MMMM dd, yyyy - h:mm aa', { locale: es });
+              const location = event?.place || event.entity_metadata.location
+              const locationText = location.includes('http') ? 'Online' : location;
               
               return (
-                <article key={event.name} className="bg-tertiary max-w-md p-4 rounded-lg gap-2 flex flex-col items-start my-2">
+                <article key={event.name} className="bg-tertiary max-w-xs w-full p-4 rounded-lg gap-2 flex flex-col items-start my-2">
                   <h4 className="font-bold">{event.name}</h4>
                   <div className="flex items-center gap-2">
                     <span>📍</span>
-                    <span>{event?.place || event.entity_metadata.location}</span>
+                    <span>{locationText}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span>🗓️</span>
@@ -88,6 +91,7 @@ export function Hero({ events }) {
                 </article>
               );
             })}
+            </section>
           </div>
         )}
       </Layout>
