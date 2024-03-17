@@ -5,10 +5,10 @@ import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { Community } from "@/components/Community";
 import { Avatar } from "@/components/Avatar";
-import { Carousel } from "@/components/Carousel";
 import { getEvents } from "@/controllers/getEvents";
 import { getMeetupEvents } from "@/controllers/getMeetupEvents";
 
+import allSocialMedia from '@/all-social-media'
 import allCommunities from "@/all-communities";
 import allOrganizers from "@/all-organizers";
 
@@ -18,10 +18,11 @@ import GreenBlockImage from "../../public/images/green-block.svg";
 
 const { communities } = allCommunities;
 const { organizers } = allOrganizers;
+const { social } = allSocialMedia
 
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
 
-export default function Home({ events}) {
+export default function Home({ events }) {
 
   return (
     <>
@@ -42,22 +43,9 @@ export default function Home({ events}) {
           <ReflectedClouldsImage className='w-[100%] z-0' />
         </div>
         <Layout className='relative md:pt-16'>
-          <div className='flex w-full justify-center'>
-            <div className='w-[80%] mt-10 z-[2]'>
-              <Carousel>
-                {communities.map(({ website, ...rest }) => {
-                  return (
-                    <Community
-                      className='mx-auto'
-                      key={website}
-                      website={website}
-                      {...rest}
-                    />
-                  );
-                })}
-              </Carousel>
-            </div>
-          </div>
+          <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-0">
+            {communities.map((comunity) => <Community key={comunity.website} {...comunity} />)}
+          </section>
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
             Fundadores
           </h2>
@@ -72,7 +60,7 @@ export default function Home({ events}) {
           </div>
           <div className='pt-2 flex justify-center'>
             <a
-              href='https://calendly.com/caribedev-org/volunteer-meeting-30mins?primary_color=049b9c'
+              href={social[2].url}
               className='text-tertiary text-[20px] justify-center items-center rounded-2xl bg-secondary px-[60px] py-[25px] font-bold hover:opacity-90'
               target='_blank'
             >
@@ -127,6 +115,6 @@ export const getServerSideProps = async () => {
 
     return { props: { events: [...discordEvents, ...meetupEvents] } }
   } catch (error) {
-    return { props: {  } }
+    return { props: {} }
   }
 }

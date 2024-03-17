@@ -29,7 +29,7 @@ export const EventCard = ({ event }) => {
         <span className="capitalize">{date}</span>
       </div>
       {link && (
-        <Link className='flex items-center justify-start text-secondary font-bold' href={link}
+        <Link className='flex items-center justify-start text-secondary hover:text-secondary/60 transition-all font-bold' href={link}
           target="_blank"
           rel="noreferrer">
           <FiArrowUpLeft className='text-2xl' />
