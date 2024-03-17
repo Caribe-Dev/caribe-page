@@ -1,18 +1,14 @@
-import Link from 'next/link';
-import { format } from 'date-fns';
-import { es } from 'date-fns/locale';
-
-import { getLinkFromText } from '@/utils';
 import { Layout } from '@/components/Layout';
 
-import CloudsImage from '../../../public/images/clouds.svg';
+import { EventCard } from '../EventCard/EventCard';
 import SunImage from '../../../public/images/sun.svg';
+import CloudsImage from '../../../public/images/clouds.svg';
 import HighWaveImage from '../../../public/images/high-wave.svg';
 import SmallWaveImage from '../../../public/images/small-wave.svg';
-import LeftMountainImage from '../../../public/images/left-mountain.svg';
-import RightMountainImage from '../../../public/images/right-mountain.svg';
 import LeftPalmsImage from '../../../public/images/left-palms.svg';
 import RightPalmsImage from '../../../public/images/right-palms.svg';
+import LeftMountainImage from '../../../public/images/left-mountain.svg';
+import RightMountainImage from '../../../public/images/right-mountain.svg';
 
 export function Hero({ events }) {
   return (
@@ -49,48 +45,12 @@ export function Hero({ events }) {
           <span>🇨🇴 Barranquilla, Colombia</span>
         </h2>
         <h1 className="text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]">CaribeDev</h1>
-        <p className="mt-[20px] text-[25px] text-tertiary text-center">Únete a nuestra comunidad en Discord.</p>
-        <a
-          className="bg-secondary py-[12px] px-[45px] rounded-2xl text-[20px] text-tertiary font-bold mt-4"
-          href="https://discord.gg/9d7MqvuQZV"
-          target="_blank"
-        >
-          Únete
-        </a>
+        <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl">Somos una comunidad de comunidades que busca hacer crecer al caribe colombiano a través de la tecnología y el desarrollo profesional.</p>
         {Boolean(events?.length) && (
           <div className="my-8 z-30">
             <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Proximos eventos</h3>
             <section className='flex w-full justify-center flex-wrap gap-2'>
-            {events?.map((event) => {
-              const posibleLink = event?.link || getLinkFromText(event.description);
-              const date = event?.date || format(new Date(event.scheduled_start_time), 'MMMM dd, yyyy - h:mm aa', { locale: es });
-              const location = event?.place || event.entity_metadata.location
-              const locationText = location.includes('http') ? 'Online' : location;
-              
-              return (
-                <article key={event.name} className="bg-tertiary max-w-xs w-full p-4 rounded-lg gap-2 flex flex-col items-start my-2">
-                  <h4 className="font-bold">{event.name}</h4>
-                  <div className="flex items-center gap-2">
-                    <span>📍</span>
-                    <span>{locationText}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span>🗓️</span>
-                    <span className="capitalize">{date}</span>
-                  </div>
-                  {posibleLink && (
-                    <Link
-                      className="bg-secondary py-[12px] px-[45px] rounded-2xl text-[20px] text-tertiary font-bold inline-flex"
-                      href={posibleLink}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Ver evento
-                    </Link>
-                  )}
-                </article>
-              );
-            })}
+            {events?.map((event) => <EventCard key={event.name} event={event} />)}
             </section>
           </div>
         )}
