@@ -1,7 +1,8 @@
 import * as cheerio from 'cheerio';
 
+import { getPlaceName, getHtmlDoc } from '../utils';
+
 const documentQuery = `[id="submain"] ul li a[data-event-label][data-event-category][id]`
-const placeholderMessage = "Solo los asistentes pueden ver el enlace"
 
 export const getMeetupEvents = async () => {
   const urls = [
@@ -35,15 +36,4 @@ export const getMeetupEvents = async () => {
     });
   }
   return posts;
-};
-
-const getPlaceName = (place) => {
-  if (place.includes(placeholderMessage)) return 'Evento en línea';
-  return place
-}
-
-const getHtmlDoc = async (url) => {
-  const response = await fetch(url);
-  const html = await response.text();
-  return html;
 };

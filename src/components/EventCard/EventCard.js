@@ -12,22 +12,22 @@ export const EventCard = ({ event }) => {
 
   const posibleLink = event?.link || getLinkFromText(event.description);
   const date = event?.date || format(new Date(event.scheduled_start_time), 'MMMM dd, yyyy - h:mm aa', { locale: es });
-  const location = event?.place || event.entity_metadata.location;
-  const isOnline = location.includes('http')
+  const location = event?.place || event?.entity_metadata?.location;
+  const isOnline = location?.includes('http')
   const locationText = isOnline ? 'Online' : location;
   const link = isOnline ? locationText : posibleLink;
 
   return (
     <article key={event.name} className="bg-tertiary max-w-xs w-full p-4 rounded-lg gap-2 flex flex-col items-start my-2">
       <h4 className="font-bold min-h-[54px]">{event.name}</h4>
-      <div className="flex items-center gap-2">
+      {locationText ? <div className="flex items-center gap-2">
         <MdPlace className='text-secondary' />
         <span>{locationText}</span>
-      </div>
-      <div className="flex items-center gap-2">
+      </div> : <BlankSpace />}
+      {date ? <div className="flex items-center gap-2">
         <FaCalendar className='text-secondary' />
         <span className="capitalize">{date}</span>
-      </div>
+      </div> : <BlankSpace />}
       {link && (
         <Link className='flex items-center justify-start text-secondary hover:text-secondary/60 transition-all font-bold' href={link}
           target="_blank"
@@ -41,3 +41,5 @@ export const EventCard = ({ event }) => {
     </article>
   );
 }
+
+const BlankSpace = () => <div className="w-full h-7" />

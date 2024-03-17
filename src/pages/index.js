@@ -6,6 +6,7 @@ import { Layout } from "@/components/Layout";
 import { Community } from "@/components/Community";
 import { Avatar } from "@/components/Avatar";
 import { getEvents } from "@/controllers/getEvents";
+import { getGdgEvents } from "@/controllers/getGdgEvents";
 import { getMeetupEvents } from "@/controllers/getMeetupEvents";
 
 import allSocialMedia from '@/all-social-media'
@@ -109,11 +110,12 @@ export default function Home({ events }) {
 
 export const getServerSideProps = async () => {
   try {
+    const gdgEvents = await getGdgEvents()
     const meetupEvents = await getMeetupEvents()
     const events = await getEvents()
     const discordEvents = events?.length ? events : []
 
-    return { props: { events: [...discordEvents, ...meetupEvents] } }
+    return { props: { events: [...discordEvents, ...meetupEvents, ...gdgEvents] } }
   } catch (error) {
     return { props: {} }
   }
