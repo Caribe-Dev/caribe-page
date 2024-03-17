@@ -1,3 +1,6 @@
+import { es } from 'date-fns/locale';
+import { format } from 'date-fns';
+
 const placeholderMessage = "Solo los asistentes pueden ver el enlace"
 
 export const getPlaceName = (place) => {
@@ -20,3 +23,15 @@ export const getLinkFromText = (text) => {
 }
 
 export const extractGdgNumbers = (text) => text.match(/\d+/g)
+
+export const formatGdgDate = (date) => {
+  const [year, month, day] = date;
+  const numericMonth = parseInt(month) - 1;
+  const dateObject = new Date(year, numericMonth, day)
+
+  return formatDefaultDateNoHour(dateObject)
+}
+
+export const formatDefaultDate = (date) => format(date, 'MMMM dd, yyyy - h:mm aa', { locale: es });
+
+export const formatDefaultDateNoHour = (date) => format(date, 'MMMM dd, yyyy', { locale: es });

@@ -1,17 +1,15 @@
 import Link from 'next/link';
-import { format } from 'date-fns';
-import { es } from 'date-fns/locale';
 import { MdPlace } from "react-icons/md";
 import { FaCalendar } from "react-icons/fa";
 import { FiArrowUpLeft } from "react-icons/fi";
 
 
-import { getLinkFromText } from '@/utils';
+import { getLinkFromText, formatDefaultDate } from '@/utils';
 
 export const EventCard = ({ event }) => {
 
   const posibleLink = event?.link || getLinkFromText(event.description);
-  const date = event?.date || format(new Date(event.scheduled_start_time), 'MMMM dd, yyyy - h:mm aa', { locale: es });
+  const date = event?.date || formatDefaultDate(new Date(event.scheduled_start_time));
   const location = event?.place || event?.entity_metadata?.location;
   const isOnline = location?.includes('http')
   const locationText = isOnline ? 'Online' : location;
