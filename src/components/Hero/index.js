@@ -16,7 +16,7 @@ import RightMountainImage from '../../../public/images/right-mountain.svg';
 export function Hero() {
   const [events, setEvents] = useState()
 
-  useEffect(() => updateEvents, [])
+  useEffect(() => { updateEvents() }, [])
 
   const updateEvents = async () => {
     const returnedEvents = await getAllEvents()
