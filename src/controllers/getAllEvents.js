@@ -1,6 +1,8 @@
 export const getAllEvents = async () => {
-  console.log("fetch")
-  const data = await fetch("/api/events")
+  const origin = window?.location?.href ? window.location.href : "https://caribedev.org/"
+  const url = `${origin}/api/events`
+  console.log(url)
+  const data = await fetch(url)
   const response = await data.json()
   return response?.events
 }
