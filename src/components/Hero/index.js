@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+
+import { getAllEvents } from '@/controllers/getAllEvents';
 import { Layout } from '@/components/Layout';
 
 import { EventCard } from '../EventCard/EventCard';
@@ -10,7 +13,16 @@ import RightPalmsImage from '../../../public/images/right-palms.svg';
 import LeftMountainImage from '../../../public/images/left-mountain.svg';
 import RightMountainImage from '../../../public/images/right-mountain.svg';
 
-export function Hero({ events }) {
+export function Hero() {
+  const [events, setEvents] = useState()
+
+  useEffect(() => updateEvents, [])
+
+  const updateEvents = async () => {
+    const returnedEvents = await getAllEvents()
+    setEvents(returnedEvents)
+  }
+
   return (
     <section className="min-h-[75vh] md:min-h-screen bg-primary-hero relative">
       <div className="hidden md:flex absolute justify-center top-[30%] md:top-0 left-0 right-0 w-full">
@@ -50,7 +62,7 @@ export function Hero({ events }) {
           <div className="my-8 z-30">
             <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Proximos eventos</h3>
             <section className='flex w-full justify-center flex-wrap gap-2'>
-            {events?.map((event) => <EventCard key={event.name} event={event} />)}
+              {events?.map((event) => <EventCard key={event.name} event={event} />)}
             </section>
           </div>
         )}
