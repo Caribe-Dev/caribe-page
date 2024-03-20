@@ -6,12 +6,13 @@ const documentQuery = `[id="submain"] ul li a[data-event-label][data-event-categ
 
 export const getMeetupEvents = async () => {
   const urls = [
-    'https://www.meetup.com/es/quillarb/',
-    'https://www.meetup.com/es/ideaware-meetups/',
+    'https://www.meetup.com/es-ES/quillarb/',
+    'https://www.meetup.com/es-ES/ideaware-meetups/',
     'https://www.meetup.com/es-ES/hack-the-box-meetup-barranquilla-co/',
-    'https://www.meetup.com/es/wordpress-barranquilla/',
+    'https://www.meetup.com/es-ES/wordpress-barranquilla/',
     'https://www.meetup.com/es-ES/pythonbaq/',
     'https://www.meetup.com/es-ES/pionerasdev-baq/',
+    'https://www.meetup.com/es-ES/aws-barranquilla/',
   ];
   const posts = [];
 
