@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { getAllEvents } from '@/controllers/getAllEvents';
 import { Layout } from '@/components/Layout';
@@ -14,14 +14,33 @@ import LeftMountainImage from '../../../public/images/left-mountain.svg';
 import RightMountainImage from '../../../public/images/right-mountain.svg';
 
 export function Hero() {
-  const [events, setEvents] = useState()
+  const [events, setEvents] = useState({ data: [], loaded: false })
 
   useEffect(() => { updateEvents() }, [])
 
   const updateEvents = async () => {
     const returnedEvents = await getAllEvents()
-    setEvents(returnedEvents)
+    setEvents({ data: returnedEvents, loaded: true })
   }
+
+  const renderEvents = useMemo(() => {
+
+    if (Boolean(events.data?.length) && events.loaded) return <div className="my-8 z-30">
+      <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Proximos eventos</h3>
+      <section className='flex w-full justify-center flex-wrap gap-2'>
+        {events.data?.map((event) => <EventCard key={event.name} event={event} />)}
+      </section>
+    </div>
+
+    if (Boolean(events.data?.length) && !events.loaded) return <div className="my-8 z-30">
+      <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Sin eventos por ahora</h3>
+    </div>
+
+    return <div className="my-8 z-30">
+      <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Cargando eventos</h3>
+    </div>
+
+  }, [events.loaded])
 
   return (
     <section className="min-h-[75vh] md:min-h-screen bg-primary-hero relative">
@@ -58,14 +77,7 @@ export function Hero() {
         </h2>
         <h1 className="text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]">CaribeDev</h1>
         <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl">Somos una comunidad de comunidades que busca hacer crecer al caribe colombiano a través de la tecnología y el desarrollo profesional.</p>
-        {Boolean(events?.length) && (
-          <div className="my-8 z-30">
-            <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Proximos eventos</h3>
-            <section className='flex w-full justify-center flex-wrap gap-2'>
-              {events?.map((event) => <EventCard key={event.name} event={event} />)}
-            </section>
-          </div>
-        )}
+        {renderEvents}
       </Layout>
     </section>
   );
