@@ -15,10 +15,10 @@ export const getHtmlDoc = async (url) => {
 };
 
 export const getLinkFromText = (text) => {
-  const regexUrl = /https?:\/\/\S+/gi;
+  const regexUrl = /href="([^"]+)"/i;
   const found = text.match(regexUrl);
 
-  if (found) return found[0]
+  if (found) return found[1]
   return null
 }
 
