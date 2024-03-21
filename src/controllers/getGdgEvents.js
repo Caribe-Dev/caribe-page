@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 
-import { getHtmlDoc, extractGdgNumbers, formatGdgDate } from '@/utils';
+import { getHtmlDoc } from '@/utils';
 
 const documentQuery = `div[style*="border-style:solid;border-width:1px;border-radius:12px;"]`
 
@@ -17,7 +17,7 @@ export const getGdgEvents = async () => {
 
     $(documentQuery).each((_, el) => {
       const name = $(el).find(`div[style*="font-size:22px;"] div`).text();
-      const date = formatGdgDate(extractGdgNumbers($(el).find(`div[style*="font-size:14px;"] strong div`).text()));
+      const date = $(el).find(`div[style*="font-size:14px;"] strong div`).text();
       const link = $(el).find('a').attr('href');
       const place = $(el).find(`div[style*="font-size:16px;"]`).text().split('*')[1] || ""
 
