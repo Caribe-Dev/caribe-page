@@ -15,11 +15,10 @@ export const getHtmlDoc = async (url) => {
 };
 
 export const getLinkFromText = (text) => {
-  const regexUrl = /href="([^"]+)"/i;
+  const regexUrl = /(https?:\/\/[^\s"']+)|href="([^"]+)"/i;
   const found = text.match(regexUrl);
 
-  if (found) return found[1]
-  return null
+  return found ? found[1] || found[2] : null;
 }
 
 export const extractGdgNumbers = (text) => text.match(/\d+/g)
