@@ -17,7 +17,6 @@
       "logo": "/images/communities/ruby-baq-logo.png",
       "website": "https://www.meetup.com/es/quillarb/",
       "background": "#AB3F45"
-      
     },
     {
       "name": "Python Baq",
@@ -72,6 +71,12 @@
       "logo": "/images/communities/aws-bq-logo.png",
       "website": "https://www.instagram.com/aws_barranquilla?igsh=MW90aWo0dmZsNGFlYw==",
       "background": "#FFFFFF"
+    },
+    {
+      "name": "Meet & GameDev",
+      "logo": "/images/communities/game-logo.png",
+      "website": "https://www.meetup.com/es-ES/meet-gamedev/",
+      "background": "#172136"
     }
   ]
 }
