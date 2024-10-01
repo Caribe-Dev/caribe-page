@@ -9,23 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@googleapis/calendar": "9.7.0",
-    "autoprefixer": "10.4.14",
+    "@googleapis/calendar": "9.7.9",
+    "autoprefixer": "10.4.20",
     "cheerio": "1.0.0-rc.12",
-    "classnames": "^2.3.2",
-    "date-fns": "2.30.0",
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.3.1",
-    "next": "13.3.1",
-    "postcss": "8.4.23",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "5.0.1",
-    "react-slick": "0.29.0",
+    "classnames": "2.5.1",
+    "date-fns": "4.1.0",
+    "eslint": "9.11.1",
+    "eslint-config-next": "14.2.14",
+    "next": "14.2.14",
+    "postcss": "8.4.47",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-icons": "5.3.0",
+    "react-slick": "0.30.2",
     "slick-carousel": "1.8.1",
-    "tailwindcss": "3.3.1"
+    "tailwindcss": "3.4.13"
   },
   "devDependencies": {
-    "@svgr/webpack": "7.0.0"
+    "@svgr/webpack": "8.1.0"
   }
 }
