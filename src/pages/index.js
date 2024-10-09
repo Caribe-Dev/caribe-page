@@ -75,7 +75,7 @@ const home = ({ events }) => {
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
             Sponsors
           </h2>
-          <section className="flex flex-wrap justify-center items-center pt-[50px]">
+          <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-50">
             {sponsors.map((sponsor) => <Sponsors key={sponsor.website} {...sponsor} />)}
           </section>
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>

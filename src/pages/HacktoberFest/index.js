@@ -12,7 +12,7 @@ import { Sponsors } from "@/components/Sponsors";
 
 import allCommunities from "@/all-communities";
 import allOrganizers from "@/all-organizers";
-import allSponsors from "@/all-sponsors";
+import sponsors_hacktoberfest from "@/sponsors-hacktoberfest";
 
 /* Imports Secundarios */
 import SunImage from '../../../public/images/sun.svg';
@@ -32,7 +32,7 @@ import GreenBlockImage from "/public/images/green-block.svg";
 
 const { communities } = allCommunities;
 const { organizers } = allOrganizers;
-const { sponsors } = allSponsors;
+const { sponsors } = sponsors_hacktoberfest;
 
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
 
@@ -121,7 +121,7 @@ const HacktoberFest = ({ events = [] }) => {
         <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
             Sponsors
           </h2>
-          <section className="flex flex-wrap justify-center items-center pt-[50px]">
+          <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-50">
             {sponsors.map((sponsor) => <Sponsors key={sponsor.website} {...sponsor} />)}
           </section>
           <h2 id='organizers' className='text-[35px] md:text-[45px] mt-20 text-tertiary'>

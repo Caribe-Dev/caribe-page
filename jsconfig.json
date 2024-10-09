@@ -22,6 +22,10 @@
       "@/all-volunteers": [
         "./all-volunteers.json"
       ],
+      "@/sponsors-hacktoberfest": [
+        "./sponsors-hacktoberfest.json"
+      ],
+      
     }
   }
 }
