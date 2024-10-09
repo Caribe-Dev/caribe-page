@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import Link from 'next/link'
 
 export function Menu({ className, isOpen }) {
   return (
@@ -8,13 +9,16 @@ export function Menu({ className, isOpen }) {
     )}>
       <ul className={classNames('flex gap-5', className)}>
         <li className='md:font-medium font-bold text-center text-tertiary'>
-          <a href='#communities' scroll={false}>Comunidades</a>
+          <a href='/#communities' scroll={false}>Comunidades</a>
         </li>
         <li className='md:font-medium font-bold text-center text-tertiary'>
-          <a href='#organizers' scroll={false}>Organizadores</a>
+          <a href='/#organizers' scroll={false}>Organizadores</a>
         </li>
         <li className='md:font-medium font-bold text-center text-tertiary'>
-          <a href='#we' scroll={false}>Nosotros</a>
+          <a href='/#we' scroll={false}>Nosotros</a>
+        </li>
+        <li className='md:font-medium font-bold text-center text-tertiary'>
+          <Link href="/HacktoberFest">HacktoberFest</Link>
         </li>
       </ul>
     </nav>

@@ -53,6 +53,28 @@ export function Avatar({ name, image, social = {} }) {
             </a>
           )
         }
+        {
+          social.linkedin && (
+            <a href={social.linkedin} target='_blank'>
+              <Icon
+                icon='linkedin'
+                width={ICON_SIZE}
+                height={ICON_SIZE}
+              />
+            </a>
+          )
+        }
+        {
+          social.instagram && (
+            <a href={social.instagram} target='_blank'>
+              <Icon
+                icon='instagram'
+                width={ICON_SIZE}
+                height={ICON_SIZE}
+              />
+            </a>
+          )
+        }
       </div>
     </div>
   )

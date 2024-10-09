@@ -1,11 +1,24 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"],
-      "@/all-communities": ["./all-communities.json"],
-      "@/all-organizers": ["./all-organizers.json"],
-      "@/all-social-media": ["./all-social-media.json"],
-      "@/schedule": ["./schedule.json"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/all-communities": [
+        "./all-communities.json"
+      ],
+      "@/all-organizers": [
+        "./all-organizers.json"
+      ],
+      "@/all-social-media": [
+        "./all-social-media.json"
+      ],
+      "@/all-volunteers": [
+        "./all-volunteers.json"
+      ],
+      "@/schedule": [
+        "./schedule.json"
+      ]
     }
   }
 }

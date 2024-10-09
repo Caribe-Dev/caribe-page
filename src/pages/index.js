@@ -9,6 +9,7 @@ import { Avatar } from "@/components/Avatar";
 import allSocialMedia from '@/all-social-media'
 import allCommunities from "@/all-communities";
 import allOrganizers from "@/all-organizers";
+import allVolunteers from "@/all-volunteers";
 
 import ReflectedSunImage from "../../public/images/reflected-sun.svg";
 import ReflectedClouldsImage from "../../public/images/reflected-cloulds.svg";
@@ -18,7 +19,8 @@ import { getEventsFromCalendar } from '@/utils/google-calendar'
 
 const { communities } = allCommunities;
 const { organizers } = allOrganizers;
-const { social } = allSocialMedia
+const { social } = allSocialMedia;
+const { volunteers } = allVolunteers;
 
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
 
@@ -58,14 +60,31 @@ const home = ({ events }) => {
           <ReflectedClouldsImage className='w-[100%] z-0' />
         </div>
         <Layout className='relative md:pt-16'>
-          <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-0">
-            {communities.map((comunity) => <Community key={comunity.website} {...comunity} />)}
-          </section>
+          <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
+            Comunidades
+          </h2>
+          <div className='flex flex-wrap justify-center items-center pt-[50px]'>
+            <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-0">
+              {communities.map((comunity) => <Community key={comunity.website} {...comunity} />)}
+            </section>
+          </div>
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
             Fundadores
           </h2>
           <div className='flex flex-wrap justify-center items-center pt-[50px]'>
             {organizers.map(({ name, image, social }) => {
+              return (
+                <div className='flex justify-center basis-[20%] mb-12' key={name}>
+                  <Avatar name={name} image={image} social={social} />
+                </div>
+              );
+            })}
+          </div>
+          <h2 id='volunteers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
+            Voluntarios
+          </h2>
+          <div className='flex flex-wrap justify-center items-center pt-[50px]'>
+            {volunteers.map(({ name, image, social }) => {
               return (
                 <div className='flex justify-center basis-[20%] mb-12' key={name}>
                   <Avatar name={name} image={image} social={social} />
