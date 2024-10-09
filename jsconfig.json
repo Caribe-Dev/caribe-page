@@ -15,7 +15,13 @@
       ],
       "@/schedule": [
         "./schedule.json"
-      ]
+      ],
+      "@/all-sponsors": [
+        "./all-sponsors.json"
+      ],
+      "@/all-volunteers": [
+        "./all-volunteers.json"
+      ],
     }
   }
 }
