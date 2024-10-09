@@ -73,7 +73,7 @@ const HacktoberFest = ({ events = [] }) => {
 
           <h1 className="text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]">HacktoberFest®</h1>
           <h2 className="text-[#FFC175] text-center text-[40px] md:text-[20px] max-w-[800px] mt-5 md:mt-1 leading-[95%]">
-            Presentado por <a className="text-[#FFC175] text-center text-[40px] md:text-[20px] max-w-[800px] mt-5 md:mt-1 leading-[95%]" href="https://www.avvy.co/" target="_blank">Avvy</a>, <a className="text-[#FFC175] text-center text-[40px] md:text-[20px] max-w-[800px] mt-5 md:mt-1 leading-[95%]" href="https://www.feanware.com" target="_blank">Feanware</a> y <a className="text-[#FFC175] text-center text-[40px] md:text-[20px] max-w-[800px] mt-5 md:mt-1 leading-[95%]" href="https://fundacioncodigoabierto.com/" target="_blank">Código Abierto</a>
+            Presentado por <a className="text-[#FFC175] text-center text-[40px] md:text-[20px] max-w-[800px] mt-5 md:mt-1 leading-[95%]" href="https://www.avvy.co/" target="_blank">Avvy</a>, <a className="text-[#FFC175] text-center text-[40px] md:text-[20px] max-w-[800px] mt-5 md:mt-1 leading-[95%]" href="https://www.feanware.com" target="_blank">Feanware</a>, <a className="text-[#FFC175] text-center text-[40px] md:text-[20px] max-w-[800px] mt-5 md:mt-1 leading-[95%]" href="https://fundacioncodigoabierto.com/" target="_blank">Código Abierto</a> <a className="text-[#FFC175] text-center text-[40px] md:text-[20px] max-w-[800px] mt-5 md:mt-1 leading-[95%]" href="https://instagram.com/caribedev" target="_blank">y Caribe Dev.</a>
           </h2>
           <p className="mt-[25px] text-[25px] text-tertiary text-center max-w-xl">¡Únete a este evento global y contribuye a proyectos de <u>Código Abierto</u> internacionales y locales!</p>
           <br></br>
@@ -129,6 +129,7 @@ const HacktoberFest = ({ events = [] }) => {
           <h2 id='organizers' className='text-[35px] md:text-[45px] mt-20 text-tertiary'>
             Repositorios HacktoberFest®
           </h2>
+          {/* Div o Sección al momento de tener repositorios participantes activos */}
           <div className='flex flex-wrap justify-center items-center pt-[50px]'>
             <div className="my-8 z-30">
               <h3 className="text-[#f98a65] font-extrabold text-2xl mt-1 mb-1 text-center italic">Sin repositorios por el momento.</h3>
