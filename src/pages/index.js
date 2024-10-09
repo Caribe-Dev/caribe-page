@@ -5,10 +5,12 @@ import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { Community } from "@/components/Community";
 import { Avatar } from "@/components/Avatar";
+import { Sponsors } from "@/components/Sponsors";
 
 import allSocialMedia from '@/all-social-media'
 import allCommunities from "@/all-communities";
 import allOrganizers from "@/all-organizers";
+import allSponsors from "@/all-sponsors";
 import allVolunteers from "@/all-volunteers";
 
 import ReflectedSunImage from "../../public/images/reflected-sun.svg";
@@ -17,10 +19,12 @@ import GreenBlockImage from "../../public/images/green-block.svg";
 
 import { getEventsFromCalendar } from '@/utils/google-calendar'
 
+
 const { communities } = allCommunities;
 const { organizers } = allOrganizers;
 const { social } = allSocialMedia;
 const { volunteers } = allVolunteers;
+const { sponsors } = allSponsors;
 
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
 
@@ -68,6 +72,12 @@ const home = ({ events }) => {
               {communities.map((comunity) => <Community key={comunity.website} {...comunity} />)}
             </section>
           </div>
+          <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
+            Sponsors
+          </h2>
+          <section className="flex flex-wrap justify-center items-center pt-[50px]">
+            {sponsors.map((sponsor) => <Sponsors key={sponsor.website} {...sponsor} />)}
+          </section>
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
             Fundadores
           </h2>

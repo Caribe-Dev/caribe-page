@@ -11,7 +11,7 @@ export function Sponsors({ website, name, logo, background, className }) {
         style={{ 'backgroundColor': background || '#002F34' }}
         className={
           classNames(
-            'relative flex items-center justify-around rounded-xl text-center flex-col w-[160px] h-[160px]',
+            'relative flex items-center justify-around rounded-xl text-center flex-col w-[160px] h-[70px]',
             className
           )
         }
