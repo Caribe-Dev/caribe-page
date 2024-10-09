@@ -1,0 +1,20 @@
+{
+    "sponsors": [
+      {
+        "name": "Avvy.co",
+        "logo": "/images/sponsors/avvy-logo.png",
+        "website": "https://www.avvy.co/?utm_source=webcaribedev&utm_medium=cpc&utm_campaign=hacktoberfest",
+        "background": "#080B36"
+      },{
+        "name": "Feanware",
+        "logo": "/images/sponsors/feanware-logo.png",
+        "website": "https://www.feanware.com",
+        "background": "#000000"
+      },{
+        "name": "Fundacion Codigo abierto",
+        "logo": "/images/sponsors/fca-logo.png",
+        "website": "https://fundacioncodigoabierto.com/",
+        "background": "#FFFFFF"
+      }
+    ]
+  }
