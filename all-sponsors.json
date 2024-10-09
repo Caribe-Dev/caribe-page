@@ -1,0 +1,10 @@
+{
+  "sponsors": [
+    {
+      "name": "Avvy.co",
+      "logo": "/images/sponsors/avvy-logo.png",
+      "website": "https://www.avvy.co/?utm_source=webcaribedev&utm_medium=cpc&utm_campaign=hacktoberfest",
+      "background": "#080B36"
+    }
+  ]
+}

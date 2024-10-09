@@ -13,9 +13,6 @@
       "@/all-social-media": [
         "./all-social-media.json"
       ],
-      "@/all-volunteers": [
-        "./all-volunteers.json"
-      ],
       "@/schedule": [
         "./schedule.json"
       ]
