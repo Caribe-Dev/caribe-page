@@ -9,7 +9,7 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
-      <GoogleAnalytics gaId="G-GRF4SF41QP" />
+      <GoogleAnalytics gaId="G-6L5B79TZMT" />
     </Html>
   )
 }
