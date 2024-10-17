@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }) {
     <main className='min-h-screen'>
       <Head>
         <title>Caribe Dev</title>
+        
       </Head>
      <style jsx global>{`
         :root {
