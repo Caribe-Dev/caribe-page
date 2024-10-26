@@ -13,12 +13,12 @@
       "@/all-social-media": [
         "./all-social-media.json"
       ],
+      "@/schedule": [
+        "./schedule.json"
+      ],
       "@/all-sponsors": [
         "./all-sponsors.json"
       ],
-      "@/schedule": [
-        "./schedule.json"
-      ]
     }
   }
 }
