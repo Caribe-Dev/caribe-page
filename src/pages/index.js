@@ -90,18 +90,6 @@ const home = ({ events }) => {
               );
             })}
           </div>
-          <h2 id='volunteers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
-            Voluntarios
-          </h2>
-          <div className='flex flex-wrap justify-center items-center pt-[50px]'>
-            {volunteers.map(({ name, image, social }) => {
-              return (
-                <div className='flex justify-center basis-[20%] mb-12' key={name}>
-                  <Avatar name={name} image={image} social={social} />
-                </div>
-              );
-            })}
-          </div>
           <div className='pt-2 flex justify-center'>
             <a
               href={social[2].url}
