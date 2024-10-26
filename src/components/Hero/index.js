@@ -21,19 +21,19 @@ export function Hero({ events = [] }) {
       <div className="absolute flex justify-center top-[30%] md:top-10% left-0 right-0 w-full">
         <CloudsImage className="w-[100%]" />
       </div>
-      <div className="absolute flex justify-center bottom-0 left-0 right-0 w-full">
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center w-full">
         <HighWaveImage className="w-[100%] h-[130px] md:h-auto" />
       </div>
-      <div className="absolute flex justify-center bottom-0 left-0 right-0 w-full">
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center w-full">
         <SmallWaveImage className="w-[100%] h-[120px] md:h-auto" />
       </div>
-      <div className="absolute flex justify-center bottom-0 left-0 right-0 w-full">
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center w-full">
         <SunImage className="w-[80%] md:w-[50%]" />
       </div>
-      <div className="absolute flex bottom-0 left-0 right-0 w-full">
+      <div className="absolute bottom-0 left-0 right-0 flex w-full">
         <LeftMountainImage className="w-[50%] md:w-[40%]" />
       </div>
-      <div className="absolute flex justify-end bottom-0 left-0 right-0 w-full">
+      <div className="absolute bottom-0 left-0 right-0 flex justify-end w-full">
         <RightMountainImage className="w-[50%] md:w-[52%]" />
       </div>
       <div className="absolute flex justify-start -bottom-[20%] left-0 right-0 w-full">
@@ -50,15 +50,15 @@ export function Hero({ events = [] }) {
         <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl">Somos una comunidad de comunidades que busca hacer crecer al caribe colombiano a través de la tecnología y el desarrollo profesional.</p>
         {
           hasEvents ? (
-            <div className="my-8 z-30 w-11/12 max-w-7xl m-auto md:w-full">
-              <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Proximos eventos</h3>
-              <section className='flex w-full justify-center flex-wrap gap-2'>
+            <div className="z-30 w-11/12 m-auto my-8 max-w-7xl md:w-full">
+              <h3 className="mt-8 mb-2 text-3xl font-extrabold text-center">Próximos eventos</h3>
+              <section className='flex flex-wrap justify-center w-full gap-2'>
                 {events.map((event) => <EventCard key={event.id} event={event} />)}
               </section>
             </div>
           ) : (
-            <div className="my-8 z-30">
-              <h3 className="font-extrabold text-3xl mt-8 mb-2 text-center">Sin eventos por ahora</h3>
+            <div className="z-30 my-8">
+              <h3 className="mt-8 mb-2 text-3xl font-extrabold text-center">Sin eventos por ahora</h3>
             </div>
           )
         }
