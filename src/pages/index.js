@@ -5,6 +5,7 @@ import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { Community } from "@/components/Community";
 import { Avatar } from "@/components/Avatar";
+import { Sponsors } from "@/components/Sponsors";
 
 import allSocialMedia from '@/all-social-media'
 import allCommunities from "@/all-communities";
@@ -16,7 +17,7 @@ import ReflectedClouldsImage from "../../public/images/reflected-cloulds.svg";
 import GreenBlockImage from "../../public/images/green-block.svg";
 
 import { getEventsFromCalendar } from '@/utils/google-calendar'
-import { Sponsors } from "@/components/Sponsors";
+
 
 const { communities } = allCommunities;
 const { organizers } = allOrganizers;
@@ -61,13 +62,18 @@ const home = ({ events }) => {
           <ReflectedClouldsImage className='w-[100%] z-0' />
         </div>
         <Layout className='relative md:pt-16'>
-          <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-0">
-            {communities.map((comunity) => <Community key={comunity.website} {...comunity} />)}
-          </section>
+          <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
+            Comunidades
+          </h2>
+          <div className='flex flex-wrap justify-center items-center pt-[50px]'>
+            <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-0">
+              {communities.map((comunity) => <Community key={comunity.website} {...comunity} />)}
+            </section>
+          </div>
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
             Sponsors
           </h2>
-          <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-0">
+          <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-50">
             {sponsors.map((sponsor) => <Sponsors key={sponsor.website} {...sponsor} />)}
           </section>
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>

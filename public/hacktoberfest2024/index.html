@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <title>Hacktoberfest 2024</title>
+  <meta name="description"
+    content="Hacktoberfest: a month-long celebration of open-source projects, their maintainers, and the entire community of contributors." />
+  <link rel="icon" href="small-caribe-dev.png" type="image/svg+xml" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@hacktoberfest" />
+  <meta name="twitter:title" content="Hacktoberfest 2024" />
+  <meta name="twitter:description"
+    content="Hacktoberfest: a month-long celebration of open-source projects, their maintainers, and the entire community of contributors." />
+  <meta name="twitter:image" content="https://hacktoberfest.com/_next/static/media/opengraph.9dc60c9d.png" />
+  <meta property="og:url" content="https://hacktoberfest.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hacktoberfest 2024" />
+  <meta property="og:description"
+    content="Hacktoberfest: a month-long celebration of open-source projects, their maintainers, and the entire community of contributors." />
+  <meta property="og:image" content="https://hacktoberfest.com/_next/static/media/opengraph.9dc60c9d.png" /><noscript><!--
+        *********          ,********,
+     ***..........,*******........ ..**
+    **..**********........,*********..**.
+   ,***********************************,*
+   .***********************************.*
+    **********************************,*
+     ********************************.*
+      .****************************..*
+         *.*********************,.*.
+            **..************..**
+                  ,*******
+                      #
+                      #
+                 ./,  #
+   //             .///#/
+   .(/,            *//#////
+    ((//            ((#(((////////////////////////,
+    *((///////////////#/////////////*   //////////////
+    ((((((((((////////#////(((((((  .%%%%,((((((((((((
+   ((.    ((((((((((((#(((((((((((  .*%%%..(((((((((
+             (((((((((#((((((((((((/     ((((((((/
+               (((((((#((((((((/,,(((/
+                 (///(#((((((((.,,,,,.
+               (/(((((#(,         ////,,,,.
+              ((/(( ./#/,             ////,,.
+               (((////((((
+                 ,(((((((
+                 (
+
+   *******     *******     **
+  /**////**   **/////**   /**
+  /**    /** **     //**  /**        ******  **    **  *****
+  /**    /**/**      /**  /**       **////**/**   /** **///**
+  /**    /**/**      /**  /**      /**   /**//** /** /*******
+  /**    ** //**     **   /**      /**   /** //****  /**////
+  /*******   //*******    /********//******   //**   //******
+  ///////     ///////     ////////  //////     //     //////
+
+@nohemidesign, @eye_of_doritto, @erhilse and @MattIPv4 were here.
+We hope you enjoy the theme for Hacktoberfest this year!
+
+(Oh, btw, we're hiring: https://www.digitalocean.com/careers)
+--></noscript>
+  <meta name="next-head-count" content="17" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preload" href="_next/static/media/2d141e1a38819612.p.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous" data-next-font="" />
+  <link rel="preload" href="_next/static/css/c51158ee531f30bc.css" as="style" />
+  <link rel="stylesheet" href="_next/static/css/c51158ee531f30bc.css" data-n-g="" /><noscript data-n-css=""></noscript>
+  <script defer="" nomodule="" src="_next/static/chunks/polyfills-42372ed130431b0a.js"></script>
+  <script src="_next/static/chunks/webpack-f164db4954bac6ec.js" defer=""></script>
+  <script src="_next/static/chunks/framework-64ad27b21261a9ce.js" defer=""></script>
+  <script src="_next/static/chunks/main-f522a4bf81298b5f.js" defer=""></script>
+  <script src="_next/static/chunks/pages/_app-33ef189cd79236b9.js" defer=""></script>
+  <script src="_next/static/chunks/35-182bef9b53dc530d.js" defer=""></script>
+  <script src="_next/static/chunks/134-0dba126344c1acce.js" defer=""></script>
+  <script src="_next/static/chunks/389-0df8e5d6d81171e9.js" defer=""></script>
+  <script src="_next/static/chunks/pages/index-3d2535ecc18452d4.js" defer=""></script>
+  <script src="_next/static/12adf64b2955c628f2716238c2559b6d59490ad5/_buildManifest.js" defer=""></script>
+  <script src="_next/static/12adf64b2955c628f2716238c2559b6d59490ad5/_ssgManifest.js" defer=""></script>
+  <style data-styled="" data-styled-version="6.1.13">
+    *,
+    html,
+    body {
+      box-sizing: border-box;
+      font-family: '__Space_Grotesk_2a89ca', sans-serif, sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    /*!sc*/
+    body {
+      background: #F3F0E0;
+    }
+
+    /*!sc*/
+    ::selection {
+      background: #b4ff39;
+      color: #170f1e;
+    }
+
+    /*!sc*/
+    a {
+      color: inherit;
+      width: max-content;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    /*!sc*/
+    a:hover,
+    a:focus-visible {
+      text-decoration: none;
+    }
+
+    /*!sc*/
+    ul {
+      list-style: none outside none;
+    }
+
+    /*!sc*/
+    li {
+      margin: 0;
+    }
+
+    /*!sc*/
+    button {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      outline: none;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    /*!sc*/
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    label {
+      word-wrap: break-word;
+    }
+
+    /*!sc*/
+    h1 {
+      font-size: 144px;
+      line-height: 100%;
+    }
+
+    /*!sc*/
+    h2 {
+      font-size: 88px;
+      line-height: 96px;
+    }
+
+    /*!sc*/
+    h3 {
+      font-size: 72px;
+      line-height: 72px;
+    }
+
+    /*!sc*/
+    h4 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    /*!sc*/
+    h5 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+
+    /*!sc*/
+    h6 {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    /*!sc*/
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+    }
+
+    /*!sc*/
+    @media (max-width:600px) {
+      h1 {
+        font-size: 88px;
+        line-height: 96px;
+      }
+
+      h2 {
+        font-size: 72px;
+        line-height: 72px;
+      }
+
+      h3 {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      h4 {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+
+    /*!sc*/
+    .sr-only {
+      border: 0;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    /*!sc*/
+    data-styled.g1[id="sc-global-dpVFhv1"] {
+      content: "sc-global-dpVFhv1,"
+    }
+
+    /*!sc*/
+    .kIcTWV {
+      background-color: #183717;
+      color: #F3F0E0;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-bottom: 70px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .kIcTWV {
+        grid-template-rows: max-content max-content;
+        grid-template-columns: calc((1028 / 1440) * 100%) 1fr;
+      }
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .kIcTWV {
+        padding-bottom: 0;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g2[id="Footer-styles__StyledFooter-sc-1edf6153-0"] {
+      content: "kIcTWV,"
+    }
+
+    /*!sc*/
+    .hPoejJ {
+      padding: 43px 24px 64px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .hPoejJ {
+        grid-column: 1/-1;
+      }
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .hPoejJ {
+        padding: 50px calc((199.86 / 1440) * 100%) 76px calc((451.69 / 1440) * 100%);
+      }
+    }
+
+    /*!sc*/
+    data-styled.g3[id="Footer-styles__StyledFooterContainer-sc-1edf6153-1"] {
+      content: "hPoejJ,"
+    }
+
+    /*!sc*/
+    .kcRYus {
+      width: 100%;
+      transform: translateY(-1px);
+      position: relative;
+      width: calc((340 / 375) * 100%);
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .kcRYus {
+        width: 100%;
+      }
+    }
+
+    /*!sc*/
+    .kcRYus img {
+      height: auto;
+      width: 100%;
+    }
+
+    /*!sc*/
+    data-styled.g4[id="Footer-styles__StyledFooterLogo-sc-1edf6153-2"] {
+      content: "kcRYus,"
+    }
+
+    /*!sc*/
+    .csFTrQ {
+      padding: 0 24px;
+      order: 3;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .csFTrQ {
+        place-content: flex-end;
+        padding: 0 0 calc((90 / 412) * 100%);
+        order: unset;
+      }
+    }
+
+    /*!sc*/
+    .csFTrQ p {
+      text-transform: uppercase;
+    }
+
+    /*!sc*/
+    data-styled.g5[id="Footer-styles__StyledFooterContent-sc-1edf6153-3"] {
+      content: "csFTrQ,"
+    }
+
+    /*!sc*/
+    .vpnII {
+      display: grid;
+      gap: 64px;
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .vpnII {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    /*!sc*/
+    data-styled.g6[id="Footer-styles__StyledFooterLinks-sc-1edf6153-4"] {
+      content: "vpnII,"
+    }
+
+    /*!sc*/
+    .WXec {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /*!sc*/
+    .WXec ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /*!sc*/
+    .WXec a {
+      display: inline-block;
+      font-size: 20px;
+      position: relative;
+      font-weight: 700;
+      line-height: 1.5;
+      position: relative;
+      color: #F3F0E0;
+      text-decoration: none;
+      transition: color 300ms ease-in-out;
+    }
+
+    /*!sc*/
+    .WXec a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #F3F0E0;
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out;
+    }
+
+    /*!sc*/
+    .WXec a:hover::after {
+      transform: scaleX(1);
+    }
+
+    /*!sc*/
+    data-styled.g7[id="Footer-styles__StyledFooterLinksColumn-sc-1edf6153-5"] {
+      content: "WXec,"
+    }
+
+    /*!sc*/
+    .jVimGE {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 20px;
+      position: relative;
+      font-weight: 700;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    /*!sc*/
+    .jVimGE::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-image: linear-gradient(90deg, currentColor, currentColor 25%, transparent 25%, transparent 100%);
+      background-size: 8px 2px;
+    }
+
+    /*!sc*/
+    data-styled.g8[id="Footer-styles__StyledFooterLinksTitle-sc-1edf6153-6"] {
+      content: "jVimGE,"
+    }
+
+    /*!sc*/
+    .iWkzBN {
+      padding: 12px 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      color: #183717;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .iWkzBN {
+        padding: 40px 0;
+        position: absolute;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g9[id="Header-styles__StyledHeader-sc-6be16e28-0"] {
+      content: "iWkzBN,"
+    }
+
+    /*!sc*/
+    .hYdfLN {
+      max-width: 1328px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .hYdfLN {
+        padding: 0 24px;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g10[id="Header-styles__StyledHeaderContainer-sc-6be16e28-1"] {
+      content: "hYdfLN,"
+    }
+
+    /*!sc*/
+    .jOqOWY {
+      line-height: 0;
+      z-index: 5;
+    }
+
+    /*!sc*/
+    .jOqOWY img {
+      width: auto;
+      height: 40px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .jOqOWY img {
+        height: 80px;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g11[id="Header-styles__StyledHeaderLogo-sc-6be16e28-2"] {
+      content: "jOqOWY,"
+    }
+
+    /*!sc*/
+    .cJVNYH {
+      display: flex;
+      flex-grow: 1;
+      gap: 30px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .cJVNYH {
+        align-items: center;
+        gap: 32px;
+      }
+    }
+
+    /*!sc*/
+    @media only screen and (max-width: 1023px) {
+      .cJVNYH {
+        position: absolute;
+        inset: 0;
+        width: 100dvw;
+        height: 100dvh;
+        color: #50DA4C;
+        display: none;
+        padding: 120px 24px 64px;
+        flex-direction: column;
+        background-color: #183717;
+        overflow: scroll;
+      }
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .cJVNYH>*:first-child {
+        margin-left: auto;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g12[id="Header-styles__StyledHeaderNav-sc-6be16e28-3"] {
+      content: "cJVNYH,"
+    }
+
+    /*!sc*/
+    .kJmuOf {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 42px;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .kJmuOf {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+
+    /*!sc*/
+    .kJmuOf::before {
+      content: '>';
+      color: #FF8BFF;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .kJmuOf::before {
+        display: none;
+      }
+    }
+
+    /*!sc*/
+    .kJmuOf::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out;
+    }
+
+    /*!sc*/
+    .kJmuOf:hover::after {
+      transform: scaleX(1);
+    }
+
+    /*!sc*/
+    data-styled.g13[id="Header-styles__StyledHeaderLink-sc-6be16e28-4"] {
+      content: "kJmuOf,"
+    }
+
+    /*!sc*/
+    .eFNibY {
+      overflow: hidden;
+      text-indent: -9999px;
+      width: 32px;
+      height: 32px;
+      position: relative;
+      z-index: 5;
+      margin-left: auto;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .eFNibY {
+        display: none;
+      }
+    }
+
+    /*!sc*/
+    .eFNibY::before,
+    .eFNibY::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 75%;
+      height: 2px;
+      background-color: #183717;
+      transition: transform 500ms ease-in-out, top 500ms ease-in-out;
+    }
+
+    /*!sc*/
+    .eFNibY::before {
+      top: calc(50% - 4px);
+      transform: translate(-50%);
+    }
+
+    /*!sc*/
+    .eFNibY::after {
+      top: calc(50% + 4px);
+      transform: translate(-50%);
+    }
+
+    /*!sc*/
+    data-styled.g14[id="Header-styles__StyledHeaderToggle-sc-6be16e28-5"] {
+      content: "eFNibY,"
+    }
+
+    /*!sc*/
+    .dBoVMV {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+      line-height: 30px;
+      font-weight: 500;
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+      padding: 12px 30px;
+      width: 100%;
+      text-align: center;
+      background-color: #1C1C1C;
+      color: #F3F0E0;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .dBoVMV {
+        width: auto;
+        padding: 16px 40px;
+      }
+    }
+
+    /*!sc*/
+    .dBoVMV:hover {
+      background-color: #183717;
+    }
+
+    /*!sc*/
+    .hKXHVT {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+      line-height: 30px;
+      font-weight: 500;
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+      padding: 12px 30px;
+      width: 100%;
+      text-align: center;
+      background-color: #F3F0E0;
+      color: #1C1C1C;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .hKXHVT {
+        width: auto;
+        padding: 16px 40px;
+      }
+    }
+
+    /*!sc*/
+    .hKXHVT:hover {
+      background-color: #FEFDF8;
+    }
+
+    /*!sc*/
+    .dxlTVT {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+      line-height: 30px;
+      font-weight: 500;
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+      padding: 12px 30px;
+      width: 100%;
+      text-align: center;
+      background-color: #A600A0;
+      color: #F3F0E0;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .dxlTVT {
+        width: auto;
+        padding: 16px 40px;
+      }
+    }
+
+    /*!sc*/
+    .dxlTVT:hover {
+      background-color: #FFDBFF;
+      color: #1C1C1C;
+    }
+
+    /*!sc*/
+    .dBtBl {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+      line-height: 30px;
+      font-weight: 500;
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+      padding: 12px 30px;
+      width: 100%;
+      text-align: center;
+      background-color: #50DA4C;
+      color: #1C1C1C;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .dBtBl {
+        width: auto;
+        padding: 16px 40px;
+      }
+    }
+
+    /*!sc*/
+    .dBtBl:hover {
+      background-color: #D8FFD8;
+    }
+
+    /*!sc*/
+    data-styled.g15[id="ButtonMain-styles__StyledButtonMain-sc-87f1ccab-0"] {
+      content: "dBoVMV,hKXHVT,dxlTVT,dBtBl,"
+    }
+
+    /*!sc*/
+    .hdkpIz {
+      position: relative;
+      height: 10px;
+    }
+
+    /*!sc*/
+    .hdkpIz::before,
+    .hdkpIz::after {
+      background-image: linear-gradient(90deg, currentColor, currentColor 25%, transparent 25%, transparent 100%);
+      background-size: 12px 2px;
+      background-position: -50%;
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 2px;
+      width: 100%;
+    }
+
+    /*!sc*/
+    .hdkpIz::before {
+      top: 0;
+    }
+
+    /*!sc*/
+    .hdkpIz::after {
+      bottom: 0;
+    }
+
+    /*!sc*/
+    .dGxAZj {
+      position: relative;
+      height: 2px;
+    }
+
+    /*!sc*/
+    .dGxAZj::before {
+      background-image: linear-gradient(90deg, currentColor, currentColor 25%, transparent 25%, transparent 100%);
+      background-size: 12px 2px;
+      background-position: -50%;
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      top: 0;
+    }
+
+    /*!sc*/
+    data-styled.g17[id="Divider-styles__StyledDivider-sc-8fb3cd24-0"] {
+      content: "hdkpIz,dGxAZj,"
+    }
+
+    /*!sc*/
+    .ckILal {
+      padding: 80px 0;
+      background-color: transparent;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .ckILal {
+        padding: 140px 0;
+      }
+    }
+
+    /*!sc*/
+    :where(.ckILal) a {
+      color: #A600A0;
+    }
+
+    /*!sc*/
+    .kLhDOj {
+      padding: 80px 0;
+      background-color: #1C1C1C;
+      color: #F3F0E0;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .kLhDOj {
+        padding: 140px 0;
+      }
+    }
+
+    /*!sc*/
+    :where(.kLhDOj) a {
+      color: #A600A0;
+    }
+
+    /*!sc*/
+    .jYSAfL {
+      padding: 80px 0;
+      background-color: #50DA4C;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .jYSAfL {
+        padding: 140px 0;
+      }
+    }
+
+    /*!sc*/
+    :where(.jYSAfL) a {
+      color: #A600A0;
+    }
+
+    /*!sc*/
+    data-styled.g18[id="Section-styles__StyledSection-sc-543faaca-0"] {
+      content: "ckILal,kLhDOj,jYSAfL,"
+    }
+
+    /*!sc*/
+    .jpDCap {
+      margin: 0 auto;
+      padding: 0 24px;
+      max-width: 1328px;
+    }
+
+    /*!sc*/
+    data-styled.g25[id="Container-styles__StyledContainer-sc-c518d332-0"] {
+      content: "jpDCap,"
+    }
+
+    /*!sc*/
+    .dVbBNr {
+      background-color: #F3F0E0;
+      color: #1C1C1C;
+      display: flex;
+      line-height: 0;
+    }
+
+    /*!sc*/
+    .dVbBNr svg {
+      height: auto;
+      margin: -1px 0;
+      width: auto;
+      transform: scaleX(-1);
+    }
+
+    /*!sc*/
+    .deNzhP {
+      background-color: #50DA4C;
+      color: #F3F0E0;
+      display: flex;
+      line-height: 0;
+    }
+
+    /*!sc*/
+    .deNzhP svg {
+      height: auto;
+      margin: -1px 0;
+      width: auto;
+      margin-left: auto;
+    }
+
+    /*!sc*/
+    data-styled.g31[id="SectionDivider-styles__StyledSectionDivider-sc-81349b90-0"] {
+      content: "dVbBNr,deNzhP,"
+    }
+
+    /*!sc*/
+    .gwKEbY {
+      position: relative;
+    }
+
+    /*!sc*/
+    .gwKEbY img {
+      animation: gYifjb 5000ms infinite linear alternate-reverse;
+      animation-delay: 1000ms;
+      width: 100%;
+    }
+
+    /*!sc*/
+    @media (prefers-reduced-motion) {
+      .gwKEbY img {
+        animation-play-state: paused;
+      }
+    }
+
+    /*!sc*/
+    .gwKEbY span>* {
+      position: absolute;
+      top: 0;
+      clip: rect(0, 900px, 0, 0);
+      left: 0;
+      overflow: hidden;
+    }
+
+    /*!sc*/
+    .gwKEbY span>*:first-child {
+      left: 16px;
+      animation: gYifjb 3000ms infinite linear alternate-reverse;
+    }
+
+    /*!sc*/
+    @media (prefers-reduced-motion) {
+      .gwKEbY span>*:first-child {
+        animation-play-state: paused;
+      }
+    }
+
+    /*!sc*/
+    .gwKEbY span>*:last-child {
+      left: 8px;
+      animation: gYifjb 2000ms infinite linear alternate-reverse;
+    }
+
+    /*!sc*/
+    @media (prefers-reduced-motion) {
+      .gwKEbY span>*:last-child {
+        animation-play-state: paused;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g32[id="Glitch-styles__StyledGlitch-sc-d4f6c558-0"] {
+      content: "gwKEbY,"
+    }
+
+    /*!sc*/
+    .ellmAw {
+      position: relative;
+      display: flex;
+      gap: 24px;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    /*!sc*/
+    .ellmAw>*:last-child {
+      margin-bottom: 0;
+    }
+
+    /*!sc*/
+    .dDgqmv {
+      position: relative;
+      display: flex;
+      gap: 24px;
+      flex-direction: column;
+      text-align: right;
+    }
+
+    /*!sc*/
+    .dDgqmv>*:last-child {
+      margin-bottom: 0;
+    }
+
+    /*!sc*/
+    data-styled.g33[id="ContentMaster-styles__StyledContentMaster-sc-567e01c0-0"] {
+      content: "ellmAw,dDgqmv,"
+    }
+
+    /*!sc*/
+    .fYAeeM {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /*!sc*/
+    data-styled.g34[id="ContentMaster-styles__StyledContentMasterHeader-sc-567e01c0-1"] {
+      content: "fYAeeM,"
+    }
+
+    /*!sc*/
+    .gfxzvF {
+      font-weight: 600;
+      text-transform: lowercase;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+    }
+
+    /*!sc*/
+    data-styled.g35[id="ContentMaster-styles__StyledContentMasterEyebrow-sc-567e01c0-2"] {
+      content: "gfxzvF,"
+    }
+
+    /*!sc*/
+    .cIPmEb {
+      font-weight: 400;
+      margin: 0;
+      color: #F3F0E0;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px;
+    }
+
+    /*!sc*/
+    .cIPmEb strong {
+      color: #50DA4C;
+      font-weight: 400;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .cIPmEb {
+        font-size: 56px;
+        line-height: 60px;
+      }
+    }
+
+    /*!sc*/
+    .jrTONV {
+      font-weight: 400;
+      margin: 0;
+      color: #F3F0E0;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 44px;
+    }
+
+    /*!sc*/
+    .jrTONV strong {
+      color: #50DA4C;
+      font-weight: 400;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .jrTONV {
+        font-size: 90px;
+        line-height: 92px;
+      }
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .jrTONV {
+        line-height: 100px;
+      }
+    }
+
+    /*!sc*/
+    .gRRCVH {
+      font-weight: 400;
+      margin: 0;
+      color: inherit;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 38px;
+    }
+
+    /*!sc*/
+    .gRRCVH strong {
+      color: #50DA4C;
+      font-weight: 400;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .gRRCVH {
+        font-size: 48px;
+        line-height: 52px;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g36[id="ContentMaster-styles__StyledContentMasterTitle-sc-567e01c0-3"] {
+      content: "cIPmEb,jrTONV,gRRCVH,"
+    }
+
+    /*!sc*/
+    .gIzgip p,
+    .gIzgip li {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+
+      .gIzgip p,
+      .gIzgip li {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+
+    /*!sc*/
+    .gIzgip p {
+      margin: 0 0 24px;
+    }
+
+    /*!sc*/
+    .gIzgip p:last-child {
+      margin-bottom: 0;
+    }
+
+    /*!sc*/
+    .gIzgip ul {
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /*!sc*/
+    .gIzgip li>ul {
+      margin-top: 16px;
+    }
+
+    /*!sc*/
+    .gIzgip strong {
+      font-weight: 700;
+    }
+
+    /*!sc*/
+    .gIzgip a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /*!sc*/
+    .gIzgip a:hover {
+      text-decoration: none;
+    }
+
+    /*!sc*/
+    .EhHYx p,
+    .EhHYx li {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+
+      .EhHYx p,
+      .EhHYx li {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 34px;
+      }
+    }
+
+    /*!sc*/
+    .EhHYx p {
+      margin: 0 0 24px;
+    }
+
+    /*!sc*/
+    .EhHYx p:last-child {
+      margin-bottom: 0;
+    }
+
+    /*!sc*/
+    .EhHYx ul {
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /*!sc*/
+    .EhHYx li>ul {
+      margin-top: 16px;
+    }
+
+    /*!sc*/
+    .EhHYx strong {
+      font-weight: 700;
+    }
+
+    /*!sc*/
+    .EhHYx a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /*!sc*/
+    .EhHYx a:hover {
+      text-decoration: none;
+    }
+
+    /*!sc*/
+    data-styled.g37[id="ContentMaster-styles__StyledContentMasterBody-sc-567e01c0-4"] {
+      content: "gIzgip,EhHYx,"
+    }
+
+    /*!sc*/
+    .dkSJY {
+      margin: 0;
+      padding: 24px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /*!sc*/
+    data-styled.g38[id="ContentMaster-styles__StyledContentMasterLinks-sc-567e01c0-5"] {
+      content: "dkSJY,"
+    }
+
+    /*!sc*/
+    .fSxrzG {
+      padding: 0;
+    }
+
+    /*!sc*/
+    data-styled.g39[id="ContentMaster-styles__StyledContentMasterCta-sc-567e01c0-6"] {
+      content: "fSxrzG,"
+    }
+
+    /*!sc*/
+    .fqJfXs>span {
+      transition: opacity 200ms ease-in-out;
+    }
+
+    /*!sc*/
+    .fqJfXs>span:nth-child(2) {
+      transition-delay: 0ms;
+    }
+
+    /*!sc*/
+    .fqJfXs>span:nth-child(3) {
+      transition-delay: 200ms;
+    }
+
+    /*!sc*/
+    data-styled.g41[id="TextLink-styles__StyledTextLinkArrow-sc-15d5c584-0"] {
+      content: "fqJfXs,"
+    }
+
+    /*!sc*/
+    .jUraJ {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 16px;
+      color: inherit;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .jUraJ {
+        width: auto;
+        display: inline-flex;
+      }
+    }
+
+    /*!sc*/
+    .jUraJ:hover .TextLink-styles__StyledTextLinkArrow-sc-15d5c584-0>span:nth-child(2),
+    .jUraJ:hover .TextLink-styles__StyledTextLinkArrow-sc-15d5c584-0>span:nth-child(3) {
+      opacity: 0;
+    }
+
+    /*!sc*/
+    .jUraJ:hover .TextLink-styles__StyledTextLinkArrow-sc-15d5c584-0>span:nth-child(2) {
+      transition-delay: 200ms;
+    }
+
+    /*!sc*/
+    .jUraJ:hover .TextLink-styles__StyledTextLinkArrow-sc-15d5c584-0>span:nth-child(3) {
+      transition-delay: 0ms;
+    }
+
+    /*!sc*/
+    data-styled.g42[id="TextLink-styles__StyledTextLink-sc-15d5c584-1"] {
+      content: "jUraJ,"
+    }
+
+    /*!sc*/
+    .eZSIrn {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    /*!sc*/
+    data-styled.g43[id="type__ScreenReader-sc-64180789-0"] {
+      content: "eZSIrn,"
+    }
+
+    /*!sc*/
+    .cpwuDD {
+      color: inherit;
+      background: inherit;
+      margin-left: -1ch;
+      left: 1ch;
+      position: relative;
+    }
+
+    /*!sc*/
+    data-styled.g44[id="type__StyledCursor-sc-64180789-1"] {
+      content: "cpwuDD,"
+    }
+
+    /*!sc*/
+    .hezQrJ {
+      background-image: linear-gradient(to bottom, transparent, transparent 10%, #1C1C1C 10%, #1C1C1C 90%, transparent 90%);
+      position: relative;
+      min-width: 1ch;
+      -webkit-box-decoration-break: clone;
+      padding: 0 8px;
+      box-decoration-break: clone;
+    }
+
+    /*!sc*/
+    .hezQrJ::before {
+      content: '>';
+      color: #50DA4C;
+    }
+
+    /*!sc*/
+    data-styled.g45[id="type__StyledType-sc-64180789-2"] {
+      content: "hezQrJ,"
+    }
+
+    /*!sc*/
+    .wUvVB {
+      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .wUvVB {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 64px;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g49[id="ContentSide-styles__StyledContentSide-sc-1b1b4feb-0"] {
+      content: "wUvVB,"
+    }
+
+    /*!sc*/
+    .bnNguS {
+      display: grid;
+      gap: 64px;
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .bnNguS {
+        gap: 32px 64px;
+        grid-template-columns: 1fr max-content;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g51[id="Event-styles__StyledEvent-sc-c3cbd3c3-0"] {
+      content: "bnNguS,"
+    }
+
+    /*!sc*/
+    .bVCGlm {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 16px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .bVCGlm {
+        gap: 64px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /*!sc*/
+    data-styled.g52[id="Event-styles__StyledEventContent-sc-c3cbd3c3-1"] {
+      content: "bVCGlm,"
+    }
+
+    /*!sc*/
+    .iHrcqE {
+      display: flex;
+      flex-direction: column;
+      gap: 1lh;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .iHrcqE {
+        padding-top: 40px;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g53[id="Event-styles__StyledContent-sc-c3cbd3c3-2"] {
+      content: "iHrcqE,"
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .hWEWyz {
+        text-align: right;
+      }
+    }
+
+    /*!sc*/
+    .hWEWyz a {
+      width: auto;
+    }
+
+    /*!sc*/
+    data-styled.g54[id="Event-styles__StyledRSVP-sc-c3cbd3c3-3"] {
+      content: "hWEWyz,"
+    }
+
+    /*!sc*/
+    @keyframes gYifjb {
+      5% {
+        clip: rect(4px, 9999px, 64px, 0);
+      }
+
+      10% {
+        clip: rect(121px, 9999px, 444px, 0);
+      }
+
+      15% {
+        clip: rect(445px, 9999px, 63px, 0);
+      }
+
+      20% {
+        clip: rect(435px, 9999px, 177px, 0);
+      }
+
+      25% {
+        clip: rect(412px, 9999px, 199px, 0);
+      }
+
+      30% {
+        clip: rect(282px, 9999px, 234px, 0);
+      }
+
+      35% {
+        clip: rect(160px, 9999px, 19px, 0);
+      }
+
+      40% {
+        clip: rect(456px, 9999px, 329px, 0);
+      }
+
+      45% {
+        clip: rect(419px, 9999px, 485px, 0);
+      }
+
+      50% {
+        clip: rect(258px, 9999px, 48px, 0);
+      }
+
+      55% {
+        clip: rect(188px, 9999px, 158px, 0);
+      }
+
+      60% {
+        clip: rect(201px, 9999px, 415px, 0);
+      }
+
+      65% {
+        clip: rect(253px, 9999px, 402px, 0);
+      }
+
+      70% {
+        clip: rect(39px, 9999px, 68px, 0);
+      }
+
+      75% {
+        clip: rect(98px, 9999px, 37px, 0);
+      }
+
+      80% {
+        clip: rect(39px, 9999px, 201px, 0);
+      }
+
+      85% {
+        clip: rect(244px, 9999px, 499px, 0);
+      }
+
+      90% {
+        clip: rect(106px, 9999px, 343px, 0);
+      }
+
+      95% {
+        clip: rect(11px, 9999px, 171px, 0);
+      }
+
+      100% {
+        clip: rect(40px, 9999px, 85px, 0);
+      }
+    }
+
+    /*!sc*/
+    data-styled.g81[id="sc-keyframes-gYifjb"] {
+      content: "gYifjb,"
+    }
+
+    /*!sc*/
+    .gtDOOP {
+      text-align: center;
+      padding: 216px 0 140px;
+      background-color: #50DA4C;
+    }
+
+    /*!sc*/
+    data-styled.g83[id="Hero-styles__StyledHero-sc-6555b875-0"] {
+      content: "gtDOOP,"
+    }
+
+    /*!sc*/
+    .dEwyhL {
+      max-width: 1266px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /*!sc*/
+    data-styled.g84[id="Hero-styles__StyledHeroContainer-sc-6555b875-1"] {
+      content: "dEwyhL,"
+    }
+
+    /*!sc*/
+    .cTakFt {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+
+    /*!sc*/
+    data-styled.g85[id="Hero-styles__StyledHeroContent-sc-6555b875-2"] {
+      content: "cTakFt,"
+    }
+
+    /*!sc*/
+    .kRNHoR {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 44px;
+      color: #183717;
+      text-align: center;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .kRNHoR {
+        font-size: 90px;
+        line-height: 92px;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g86[id="Hero-styles__StyledHeroTitle-sc-6555b875-3"] {
+      content: "kRNHoR,"
+    }
+
+    /*!sc*/
+    .krLaEv {
+      line-height: 0;
+      background-color: #50DA4C;
+    }
+
+    /*!sc*/
+    .krLaEv svg {
+      transform: translateY(1px) translateX(calc((259 / 375) * -100vw));
+      width: calc((800 / 375) * 100%);
+      height: auto;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .krLaEv svg {
+        width: 100%;
+        transform: translateY(1px);
+      }
+    }
+
+    /*!sc*/
+    data-styled.g88[id="Hero-styles__StyledHeroDivider-sc-6555b875-5"] {
+      content: "krLaEv,"
+    }
+
+    /*!sc*/
+    .cKEtiX {
+      background-color: #183717;
+      color: #F3F0E0;
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
+      padding: 70px 0 0;
+      position: relative;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .cKEtiX {
+        padding: 140px 0 0;
+      }
+    }
+
+    /*!sc*/
+    .cKEtiX>img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: rotate(90deg) translateX(-100%);
+      transform-origin: 0 100%;
+      display: none;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .cKEtiX>img {
+        display: block;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g89[id="HomeIntro-styles__StyledHomeIntro-sc-a009ab0b-0"] {
+      content: "cKEtiX,"
+    }
+
+    /*!sc*/
+    .hNLHUG {
+      max-width: 1328px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 24px;
+      display: grid;
+      gap: 64px;
+      grid-template-columns: 1fr;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .hNLHUG {
+        grid-template-columns: 1fr calc((608 / 1280) * 100%);
+      }
+    }
+
+    /*!sc*/
+    data-styled.g90[id="HomeIntro-styles__StyledHomeIntroContainer-sc-a009ab0b-1"] {
+      content: "hNLHUG,"
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .geNjGQ {
+        max-width: 474px;
+        margin-left: auto;
+      }
+    }
+
+    /*!sc*/
+    .geNjGQ h2 {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .geNjGQ h2 {
+        font-size: 56px;
+        line-height: 60px;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g91[id="HomeIntro-styles__StyledHomeIntroContent-sc-a009ab0b-2"] {
+      content: "geNjGQ,"
+    }
+
+    /*!sc*/
+    .fZmngP {
+      color: #1C1C1C;
+    }
+
+    /*!sc*/
+    .fZmngP a {
+      margin-left: auto;
+    }
+
+    /*!sc*/
+    data-styled.g92[id="HomeIntro-styles__StyledHomeIntroCallout-sc-a009ab0b-3"] {
+      content: "fZmngP,"
+    }
+
+    /*!sc*/
+    .boDxxP {
+      max-width: 1146px;
+      margin-left: auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      align-items: flex-end;
+      grid-column: 1/-1;
+    }
+
+    /*!sc*/
+    .boDxxP>* {
+      grid-row: 1/-1;
+      grid-column: 1/-1;
+    }
+
+    /*!sc*/
+    .boDxxP img {
+      height: auto;
+    }
+
+    /*!sc*/
+    .boDxxP>img:nth-child(1) {
+      padding: 20px 0;
+      width: 100%;
+      display: none;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .boDxxP>img:nth-child(1) {
+        display: block;
+      }
+    }
+
+    /*!sc*/
+    .boDxxP>img:nth-child(2) {
+      width: 100%;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .boDxxP>img:nth-child(2) {
+        width: calc((520 / 1146) * 100%);
+      }
+    }
+
+    /*!sc*/
+    data-styled.g93[id="HomeIntro-styles__StyledSloth-sc-a009ab0b-4"] {
+      content: "boDxxP,"
+    }
+
+    /*!sc*/
+    .kuxvuE>ul {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    /*!sc*/
+    .kuxvuE>ul>li {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    /*!sc*/
+    data-styled.g98[id="Events-styles__StyledEvents-sc-87d0e81b-0"] {
+      content: "kuxvuE,"
+    }
+
+    /*!sc*/
+    .jZoUyS {
+      height: 21px;
+      background-color: #50DA4C;
+      position: relative;
+    }
+
+    /*!sc*/
+    .jZoUyS::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #FF8BFF;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+    }
+
+    /*!sc*/
+    data-styled.g103[id="Progress-styles__StyledProgress-sc-f21f535a-0"] {
+      content: "jZoUyS,"
+    }
+
+    /*!sc*/
+    .bAqMYJ {
+      --offset: 0;
+      --square: 28, 28, 28;
+      padding: var(--offset);
+      position: relative;
+      isolation: isolate;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .bAqMYJ {
+        --offset: 24px;
+      }
+
+      .bAqMYJ::before,
+      .bAqMYJ::after {
+        content: '';
+        position: absolute;
+        background: linear-gradient(90deg, rgba(var(--square), 1) 0%, rgba(var(--square), 1) calc(0% + var(--offset)), rgba(var(--square), 0) calc(0% + var(--offset)), rgba(var(--square), 0) calc(100% - var(--offset)), rgba(var(--square), 1) calc(100% - var(--offset)));
+        width: 100%;
+        height: var(--offset);
+        left: 0;
+      }
+
+      .bAqMYJ::before {
+        top: 0;
+      }
+
+      .bAqMYJ::after {
+        bottom: 0;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g104[id="CardCallout-styles__StyledCardCallout-sc-48231144-0"] {
+      content: "bAqMYJ,"
+    }
+
+    /*!sc*/
+    .heBLrO {
+      padding: 40px;
+      position: relative;
+    }
+
+    /*!sc*/
+    data-styled.g105[id="CardCallout-styles__StyledCardCalloutContainer-sc-48231144-1"] {
+      content: "heBLrO,"
+    }
+
+    /*!sc*/
+    .elQOGW {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    /*!sc*/
+    data-styled.g106[id="CardCallout-styles__StyledCardCalloutContent-sc-48231144-2"] {
+      content: "elQOGW,"
+    }
+
+    /*!sc*/
+    .dwhoEN {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .dwhoEN {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g107[id="CardCallout-styles__StyledCardCalloutTitle-sc-48231144-3"] {
+      content: "dwhoEN,"
+    }
+
+    /*!sc*/
+    .cEoJln {
+      inset: var(--offset);
+      background-color: #50DA4C;
+      content: '';
+      position: absolute;
+    }
+
+    /*!sc*/
+    data-styled.g108[id="CardCallout-styles__StyledCardBackground-sc-48231144-4"] {
+      content: "cEoJln,"
+    }
+
+    /*!sc*/
+    .kLFvqS {
+      overflow: hidden;
+      position: relative;
+      isolation: isolate;
+    }
+
+    /*!sc*/
+    data-styled.g109[id="pages__StyledHome-sc-87c95d8f-0"] {
+      content: "kLFvqS,"
+    }
+
+    /*!sc*/
+    .WjduV {
+      line-height: 0;
+      color: #50DA4C;
+      background-color: #1C1C1C;
+    }
+
+    /*!sc*/
+    .WjduV svg {
+      transform: translateY(1px) translateX(calc((259 / 375) * -100vw));
+      width: calc((800 / 375) * 100%);
+      height: auto;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 768px) {
+      .WjduV svg {
+        width: 100%;
+        transform: translateY(1px);
+      }
+    }
+
+    /*!sc*/
+    data-styled.g111[id="pages__StyledHomeDivider-sc-87c95d8f-2"] {
+      content: "WjduV,"
+    }
+
+    /*!sc*/
+    .bgSZkr {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    /*!sc*/
+    data-styled.g113[id="pages__StyledHomeEvents-sc-87c95d8f-4"] {
+      content: "bgSZkr,"
+    }
+
+    /*!sc*/
+    .hbGAhm {
+      order: -1;
+      width: 100%;
+    }
+
+    /*!sc*/
+    @media only screen and (min-width: 1024px) {
+      .hbGAhm {
+        order: unset;
+      }
+    }
+
+    /*!sc*/
+    data-styled.g114[id="pages__StyledSponsorImage-sc-87c95d8f-5"] {
+      content: "hbGAhm,"
+    }
+
+    /*!sc*/
+  </style>
+</head>
+
+<body>
+  <div id="__next">
+    <header class="Header-styles__StyledHeader-sc-6be16e28-0 iWkzBN">
+      <div class="Header-styles__StyledHeaderContainer-sc-6be16e28-1 hYdfLN">
+        <div class="Header-styles__StyledHeaderLogo-sc-6be16e28-2 jOqOWY"><a href="index.html"><img
+              src="small-caribe-dev.png" alt="Hacktoberfest 11" width="198" height="80" /></a></div>
+        <nav class="Header-styles__StyledHeaderNav-sc-6be16e28-3 cJVNYH"><a
+            class="Header-styles__StyledHeaderLink-sc-6be16e28-4 kJmuOf"
+            href="participation/index.html">Participación</a><a
+            class="Header-styles__StyledHeaderLink-sc-6be16e28-4 kJmuOf" href="events/index.html">Eventos</a><a
+            class="Header-styles__StyledHeaderLink-sc-6be16e28-4 kJmuOf" href="donate/index.html">Donación</a><a
+            class="Header-styles__StyledHeaderLink-sc-6be16e28-4 kJmuOf" href="about/index.html">Sobre</a><a
+            target="_blank" rel="noreferrer noopener" class="Header-styles__StyledHeaderLink-sc-6be16e28-4 kJmuOf"
+            href="https://discord.gg/hacktoberfest">Uneté a Discord</a><a target="_blank"
+            class="ButtonMain-styles__StyledButtonMain-sc-87f1ccab-0 dBoVMV"
+            href="https://www.eventbrite.co/e/hacktoberfest-2024-barranquilla-tickets-1037869705227?aff=oddtdtcreator">Comienza
+            a Hackear</a>
+        </nav><button class="Header-styles__StyledHeaderToggle-sc-6be16e28-5 eFNibY">Menu</button>
+      </div>
+    </header>
+    <div class="pages__StyledHome-sc-87c95d8f-0 kLFvqS">
+      <div class="Hero-styles__StyledHero-sc-6555b875-0 gtDOOP">
+        <div class="Hero-styles__StyledHeroContainer-sc-6555b875-1 dEwyhL">
+          <div class="Hero-styles__StyledHeroContent-sc-6555b875-2 cTakFt">
+            <h1 class="Hero-styles__StyledHeroTitle-sc-6555b875-3 kRNHoR">Un mes de <strong>celebración</strong> del
+              código abierto</h1>
+          </div>
+        </div>
+      </div>
+      <div class="Hero-styles__StyledHeroDivider-sc-6555b875-5 krLaEv"><svg xmlns="http://www.w3.org/2000/svg"
+          width="1440" height="144" viewBox="0 0 1440 144" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M214 1.87085e-05V80H285V109H419V80L627 80V19.5091L763.086 19.5091V80H889.801V55.3599L1003.94 55.3599V110.233L1073.44 110.233V29.7522L1256 29.7522V3.44969e-06L1440 1.87085e-05V144H0V0L214 1.87085e-05ZM627 144V80.2358L763 80.2358V144L627 144Z"
+            fill="#183717"></path>
+          <path d="M419 80L285 80V50L419 50V80Z" fill="#183717"></path>
+        </svg></div>
+      <div class="HomeIntro-styles__StyledHomeIntro-sc-a009ab0b-0 cKEtiX">
+        <div class="HomeIntro-styles__StyledHomeIntroContainer-sc-a009ab0b-1 hNLHUG">
+          <div class="HomeIntro-styles__StyledHomeIntroContent-sc-a009ab0b-2 geNjGQ">
+            <div class="ContentMaster-styles__StyledContentMaster-sc-567e01c0-0 ellmAw">
+              <div class="ContentMaster-styles__StyledContentMasterHeader-sc-567e01c0-1 fYAeeM">
+                <h2 class="ContentMaster-styles__StyledContentMasterTitle-sc-567e01c0-3 cIPmEb"><span
+                    class="type__StyledType-sc-64180789-2 hezQrJ">Ahora es el momento, ¡Empieza el
+                    Hacktoberfest!</span><span class="type__ScreenReader-sc-64180789-0 eZSIrn">Ahora es el momento,
+                    ¡Empieza el Hacktoberfest!</span></h2>
+              </div>
+              <div class="ContentMaster-styles__StyledContentMasterBody-sc-567e01c0-4 gIzgip">
+                <p>Regístrese y empiece a contribuir con sus cuatro pull/merge requests hoy mismo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="HomeIntro-styles__StyledHomeIntroCallout-sc-a009ab0b-3 fZmngP">
+            <div class="ContentMaster-styles__StyledContentMaster-sc-567e01c0-0 dDgqmv">
+              <div class="ContentMaster-styles__StyledContentMasterCta-sc-567e01c0-6 fSxrzG"><a target="_blank"
+                  class="ButtonMain-styles__StyledButtonMain-sc-87f1ccab-0 hKXHVT"
+                  href="https://www.eventbrite.co/e/hacktoberfest-2024-barranquilla-tickets-1037869705227?aff=oddtdtcreator">Inscribete
+                  al
+                  Hacktoberfest</a></div>
+            </div>
+          </div>
+          <div class="HomeIntro-styles__StyledSloth-sc-a009ab0b-4 boDxxP"><img
+              src="_next/static/media/top-dots.e352f2dc.svg" alt="" width="1030" height="211" /><img
+              src="_next/static/media/sloan-the-sloth.8ed4b34d.svg" alt="" width="520" height="235" /></div>
+        </div><img src="_next/static/media/dots.c465a3c7.svg" alt="" />
+      </div>
+      <div class="Progress-styles__StyledProgress-sc-f21f535a-0 jZoUyS"></div>
+      <div class="Section-styles__StyledSection-sc-543faaca-0 ckILal">
+        <div class="Container-styles__StyledContainer-sc-c518d332-0 jpDCap">
+          <div class="ContentSide-styles__StyledContentSide-sc-1b1b4feb-0 wUvVB">
+            <div class="ContentMaster-styles__StyledContentMaster-sc-567e01c0-0 ellmAw">
+              <div class="ContentMaster-styles__StyledContentMasterHeader-sc-567e01c0-1 fYAeeM">
+                <h2 class="ContentMaster-styles__StyledContentMasterTitle-sc-567e01c0-3 jrTONV"><span
+                    class="type__StyledType-sc-64180789-2 hezQrJ">¿Qué es?</span><span
+                    class="type__ScreenReader-sc-64180789-0 eZSIrn">¿Qué es?</span></h2>
+              </div>
+              <div class="ContentMaster-styles__StyledContentMasterBody-sc-567e01c0-4 EhHYx">
+                <p><strong>HacktoberFest® Barranquilla</strong> es un evento enfocado en promover el código abierto en
+                  la programación. Los participantes pueden ganar premios al realizar Pull Requests en repositorios de
+                  código abierto, obteniendo insignias digitales de HacktoberFest Global y Swag local. Además, el evento
+                  fomenta la creación de redes y el aprendizaje en programación.</p>
+              </div>
+              <div class="ContentMaster-styles__StyledContentMasterCta-sc-567e01c0-6 fSxrzG"><a target="_blank"
+                  class="ButtonMain-styles__StyledButtonMain-sc-87f1ccab-0 dxlTVT"
+                  href="https://www.eventbrite.co/e/hacktoberfest-2024-barranquilla-tickets-1037869705227?aff=oddtdtcreator">Cómo
+                  participar</a></div>
+            </div>
+            <div class="CardCallout-styles__StyledCardCallout-sc-48231144-0 bAqMYJ">
+              <div class="CardCallout-styles__StyledCardBackground-sc-48231144-4 cEoJln"></div>
+              <div class="CardCallout-styles__StyledCardCalloutContainer-sc-48231144-1 heBLrO">
+                <div class="CardCallout-styles__StyledCardCalloutContent-sc-48231144-2 elQOGW">
+                  <h2 class="CardCallout-styles__StyledCardCalloutTitle-sc-48231144-3 dwhoEN">Únete a otros miembros de
+                    la comunidad del código abierto en un animado debate en Caribe Dev</h2><a target="_blank"
+                    rel="noreferrer noopener" class="ButtonMain-styles__StyledButtonMain-sc-87f1ccab-0 dBoVMV"
+                    href="https://instagram.com/caribedev">Únete a Caribe Dev</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="SectionDivider-styles__StyledSectionDivider-sc-81349b90-0 dVbBNr"><svg
+          xmlns="http://www.w3.org/2000/svg" width="523" height="100" viewBox="0 0 523 100" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M3.67176e-06 79L112 79L112 37L241 37L241 62L339 62L339 -1.70213e-05L523 -1.0851e-07L523 100L339 100L339 100L241 100L112 100L0 100L3.67176e-06 79Z"
+            fill="currentColor"></path>
+        </svg></div>
+      <div class="Section-styles__StyledSection-sc-543faaca-0 kLhDOj">
+        <div class="Container-styles__StyledContainer-sc-c518d332-0 jpDCap">
+          <div class="ContentSide-styles__StyledContentSide-sc-1b1b4feb-0 wUvVB">
+            <div class="ContentMaster-styles__StyledContentMaster-sc-567e01c0-0 ellmAw">
+              <div class="ContentMaster-styles__StyledContentMasterHeader-sc-567e01c0-1 fYAeeM">
+                <h2 class="ContentMaster-styles__StyledContentMasterTitle-sc-567e01c0-3 jrTONV"><span
+                    class="type__StyledType-sc-64180789-2 hezQrJ">Sponsors</span><span
+                    class="type__ScreenReader-sc-64180789-0 eZSIrn">Sponsors</span></h2>
+              </div>
+              <div class="ContentMaster-styles__StyledContentMasterBody-sc-567e01c0-4 EhHYx">
+                <p>Hacktoberfest es patrocinado por <strong>Avvy</strong>, <strong>Feanware</strong>,
+                  y <strong>Fundación Código Abierto</strong>. Les agradecemos su apoyo constante. ❤️</p>
+                <p>Este año IEEE Student Branch Universidad del Norte e Innova se alían con estos grandes para así
+                  traerles HacktoberFest® Barranquilla,
+                  la idea del evento es difundir la importancia del Código Abierto en el mundo de la programación.
+                </p>
+              </div>
+              <div class="ContentMaster-styles__StyledContentMasterCta-sc-567e01c0-6 fSxrzG"><a
+                  class="ButtonMain-styles__StyledButtonMain-sc-87f1ccab-0 dBtBl" href="about/index.html">Más
+                  Información<!-- --> <span class="sr-only">Más Información</span></a></div>
+            </div>
+            <div class="Glitch-styles__StyledGlitch-sc-d4f6c558-0 gwKEbY"><img
+                src="_next/static/media/ascii-participation.dfcfa767.svg" alt="" width="608" height="608"
+                class="pages__StyledSponsorImage-sc-87c95d8f-5 hbGAhm" /><span><img
+                  src="_next/static/media/ascii-participation.dfcfa767.svg" alt="" width="608" height="608"
+                  class="pages__StyledSponsorImage-sc-87c95d8f-5 hbGAhm" /><img
+                  src="_next/static/media/ascii-participation.dfcfa767.svg" alt="" width="608" height="608"
+                  class="pages__StyledSponsorImage-sc-87c95d8f-5 hbGAhm" /></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pages__StyledHomeDivider-sc-87c95d8f-2 WjduV"><svg width="1440" height="149" viewBox="0 0 1440 149"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1440 1.52588e-05L1256.36 0V49.7521L1073.44 49.752L1003.94 49.752V50L890 50V100L691 100L691 50L555 50L555 100L2.58629e-06 100L0 149L555 149V100L691 100V149H889.357H1003.94L1073 149L1256.36 149L1440 149L1440 100.236L1440 100L1440 1.52588e-05Z"
+            fill="currentColor"></path>
+        </svg></div>
+      <div class="Section-styles__StyledSection-sc-543faaca-0 jYSAfL">
+        <div class="Container-styles__StyledContainer-sc-c518d332-0 jpDCap">
+          <div class="pages__StyledHomeEvents-sc-87c95d8f-4 bgSZkr">
+            <div class="ContentSide-styles__StyledContentSide-sc-1b1b4feb-0 wUvVB">
+              <div class="ContentMaster-styles__StyledContentMaster-sc-567e01c0-0 ellmAw">
+                <div class="ContentMaster-styles__StyledContentMasterHeader-sc-567e01c0-1 fYAeeM">
+                  <h2 class="ContentMaster-styles__StyledContentMasterTitle-sc-567e01c0-3 jrTONV"><span
+                      class="type__StyledType-sc-64180789-2 hezQrJ">Repositorio</span><span
+                      class="type__ScreenReader-sc-64180789-0 eZSIrn">Repositorio</span></h2>
+                </div>
+              </div>
+              <div class="ContentMaster-styles__StyledContentMaster-sc-567e01c0-0 ellmAw">
+                <div class="ContentMaster-styles__StyledContentMasterBody-sc-567e01c0-4 gIzgip">
+                  <p>Aquí podrás encontrar los repositorios publicos que están participando.</p>
+                </div>
+                <ul class="ContentMaster-styles__StyledContentMasterLinks-sc-567e01c0-5 dkSJY">
+                  <li><a id="explore-events" class="TextLink-styles__StyledTextLink-sc-15d5c584-1 jUraJ"><span>Explora
+                        más repositorios del evento.</span><span aria-hidden="true"
+                        class="TextLink-styles__StyledTextLinkArrow-sc-15d5c584-0 fqJfXs"><span>›</span><span>›</span><span>›</span></span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="Divider-styles__StyledDivider-sc-8fb3cd24-0 hdkpIz"></div>
+            <div class="Events-styles__StyledEvents-sc-87d0e81b-0 kuxvuE">
+              <ul>
+                <li>
+                  <div class="Event-styles__StyledEvent-sc-c3cbd3c3-0 bnNguS">
+                    <div class="Event-styles__StyledEventContent-sc-c3cbd3c3-1 bVCGlm">
+                      <div class="ContentMaster-styles__StyledContentMaster-sc-567e01c0-0 ellmAw">
+                        <div class="ContentMaster-styles__StyledContentMasterHeader-sc-567e01c0-1 fYAeeM">
+                          <p class="ContentMaster-styles__StyledContentMasterEyebrow-sc-567e01c0-2 gfxzvF"></p>
+                          <h3 class="ContentMaster-styles__StyledContentMasterTitle-sc-567e01c0-3 gRRCVH">Caribe Dev
+                          </h3>
+                        </div>
+                      </div>
+                      <div class="Event-styles__StyledContent-sc-c3cbd3c3-2 iHrcqE">
+                        <p>En nuestro Repositorio de caribe dev en el archivo CONTRIBUTING.md pueden encontrar toda la
+                          información.</p>
+                        <ul>
+                          <li>Manager: <!-- -->Caribe Dev</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <p class="Event-styles__StyledRSVP-sc-c3cbd3c3-3 hWEWyz"><a target="_blank"
+                        rel="noreferrer noopener" class="ButtonMain-styles__StyledButtonMain-sc-87f1ccab-0 dBoVMV"
+                        href="https://github.com/Caribe-Dev/caribe-page/blob/main/CONTRIBUTING.md">Ver Repositorio</a>
+                    </p>
+                  </div>
+                  <div class="Divider-styles__StyledDivider-sc-8fb3cd24-0 dGxAZj"></div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="SectionDivider-styles__StyledSectionDivider-sc-81349b90-0 deNzhP"><svg
+          xmlns="http://www.w3.org/2000/svg" width="523" height="100" viewBox="0 0 523 100" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M3.67176e-06 79L112 79L112 37L241 37L241 62L339 62L339 -1.70213e-05L523 -1.0851e-07L523 100L339 100L339 100L241 100L112 100L0 100L3.67176e-06 79Z"
+            fill="currentColor"></path>
+        </svg></div>
+      <footer class="Footer-styles__StyledFooter-sc-1edf6153-0 kIcTWV">
+        <div class=""><img src="caribe-dev-logo.svg" alt="Hacktoberfest" width="1" height="4" /></div>
+        <div class="">
+          <p></p>
+        </div>
+        <div class="Footer-styles__StyledFooterContainer-sc-1edf6153-1 hPoejJ">
+          <nav aria-label="Footer" class="Footer-styles__StyledFooterLinks-sc-1edf6153-4 vpnII">
+            <div class="Footer-styles__StyledFooterLinksColumn-sc-1edf6153-5 WXec">
+              <h3 class="Footer-styles__StyledFooterLinksTitle-sc-1edf6153-6 jVimGE">Comparte</h3>
+              <ul>
+                <li><a
+                    href="https://twitter.com/share?url=https%3A%2F%2Fhacktoberfest.com&amp;text=Spread%20the%20love%20for%20open%20source%20with%20%23Hacktoberfest%2C%20a%20month-long%20celebration%20of%20open-source%20projects%2C%20their%20maintainers%2C%20and%20the%20entire%20community%20of%20contributors."
+                    target="_blank" rel="noreferrer noopener">X (Twitter)</a></li>
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhacktoberfest.com"
+                    target="_blank" rel="noreferrer noopener">Facebook</a></li>
+                <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhacktoberfest.com"
+                    target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+                <li><a
+                    href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fhacktoberfest.com&amp;t=Hacktoberfest%202024"
+                    target="_blank" rel="noreferrer noopener">Hacker News</a></li>
+                <li><a
+                    href="https://www.reddit.com/submit?url=https%3A%2F%2Fhacktoberfest.com&amp;title=Hacktoberfest%202024"
+                    target="_blank" rel="noreferrer noopener">Reddit</a></li>
+              </ul>
+            </div>
+            <div class="Footer-styles__StyledFooterLinksColumn-sc-1edf6153-5 WXec">
+              <h3 class="Footer-styles__StyledFooterLinksTitle-sc-1edf6153-6 jVimGE">Síguenos</h3>
+              <ul>
+                <li><a href="https://discord.gg/hacktoberfest" target="_blank" rel="noreferrer noopener">Discord</a>
+                </li>
+                <li><a href="https://twitter.com/hacktoberfest" target="_blank" rel="me noreferrer noopener">X
+                    (Twitter)</a></li>
+                <li><a href="https://hachyderm.io/@hacktoberfest" target="_blank"
+                    rel="me noreferrer noopener">Mastodon</a></li>
+                <li><a href="https://bsky.app/profile/hacktoberfest.com" target="_blank"
+                    rel="me noreferrer noopener">Bluesky</a></li>
+                <li><a href="https://reddit.com/r/hacktoberfest" target="_blank" rel="noreferrer noopener">Reddit</a>
+                </li>
+                <li><a href="https://www.digitalocean.com/open-source/hacktoberfest#stay-up-to-date" target="_blank"
+                    rel="noreferrer noopener">Email</a></li>
+              </ul>
+            </div>
+            <div class="Footer-styles__StyledFooterLinksColumn-sc-1edf6153-5 WXec">
+              <h3 class="Footer-styles__StyledFooterLinksTitle-sc-1edf6153-6 jVimGE">Legal</h3>
+              <ul>
+                <li><a href="https://www.digitalocean.com/legal/terms-of-service-agreement" target="_blank"
+                    rel="noreferrer noopener">Terminos</a></li>
+                <li><a href="https://www.digitalocean.com/legal/privacy-policy" target="_blank"
+                    rel="noreferrer noopener">Privacidad</a></li>
+                <li><a href="events/index.html#brand">Brand Guidelines</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script id="__NEXT_DATA__"
+      type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"12adf64b2955c628f2716238c2559b6d59490ad5","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
+</body>
+
+</html>
