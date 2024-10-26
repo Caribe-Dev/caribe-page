@@ -19,13 +19,6 @@
       "@/all-sponsors": [
         "./all-sponsors.json"
       ],
-      "@/all-volunteers": [
-        "./all-volunteers.json"
-      ],
-      "@/sponsors-hacktoberfest": [
-        "./sponsors-hacktoberfest.json"
-      ],
-      
     }
   }
 }

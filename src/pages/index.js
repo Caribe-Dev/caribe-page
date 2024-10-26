@@ -11,7 +11,6 @@ import allSocialMedia from '@/all-social-media'
 import allCommunities from "@/all-communities";
 import allOrganizers from "@/all-organizers";
 import allSponsors from "@/all-sponsors";
-import allVolunteers from "@/all-volunteers";
 
 import ReflectedSunImage from "../../public/images/reflected-sun.svg";
 import ReflectedClouldsImage from "../../public/images/reflected-cloulds.svg";
@@ -23,7 +22,6 @@ import { getEventsFromCalendar } from '@/utils/google-calendar'
 const { communities } = allCommunities;
 const { organizers } = allOrganizers;
 const { social } = allSocialMedia;
-const { volunteers } = allVolunteers;
 const { sponsors } = allSponsors;
 
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
