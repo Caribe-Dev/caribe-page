@@ -55,10 +55,10 @@ const home = ({ events }) => {
         id='communities'
         className='bg-secondary-hero relative -mt-[20px] md:-mt-[34px] pb-[30px]'
       >
-        <div className='absolute flex justify-center top-0 left-0 right-0 w-full'>
+        <div className='absolute top-0 left-0 right-0 flex justify-center w-full'>
           <ReflectedSunImage className='w-[76%] md:w-[49%]' />
         </div>
-        <div className='md:flex absolute justify-center md:top-0 left-0 right-0 w-full'>
+        <div className='absolute left-0 right-0 justify-center w-full md:flex md:top-0'>
           <ReflectedClouldsImage className='w-[100%] z-0' />
         </div>
         <Layout className='relative md:pt-16'>
@@ -79,7 +79,7 @@ const home = ({ events }) => {
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
             Fundadores
           </h2>
-          <div className='flex flex-wrap justify-center items-center pt-[50px]'>
+          <div className='flex flex-wrap justify-around md:justify-center items-center pt-[50px]'>
             {organizers.map(({ name, image, social }) => {
               return (
                 <div className='flex justify-center basis-[20%] mb-12' key={name}>
@@ -88,7 +88,7 @@ const home = ({ events }) => {
               );
             })}
           </div>
-          <div className='pt-2 flex justify-center'>
+          <div className='flex justify-center pt-2'>
             <a
               href={social[2].url}
               className='text-tertiary text-[20px] justify-center items-center rounded-2xl bg-secondary px-[60px] py-[25px] font-bold hover:opacity-90'
