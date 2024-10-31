@@ -5,7 +5,7 @@ import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { Community } from "@/components/Community";
 import { Avatar } from "@/components/Avatar";
-import { Sponsors } from "@/components/Sponsors";
+import { Sponsor } from "@/components/Sponsor";
 
 import allSocialMedia from '@/all-social-media'
 import allCommunities from "@/all-communities";
@@ -74,12 +74,12 @@ const home = ({ events }) => {
             Sponsors
           </h2>
           <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-50">
-            {sponsors.map((sponsor) => <Sponsors key={sponsor.website} {...sponsor} />)}
+            {sponsors.map((sponsor) => <Sponsor key={sponsor.website} {...sponsor} />)}
           </section>
           <h2 id='founders' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
             Fundadores
           </h2>
-          <div className='flex flex-wrap justify-center items-center pt-[50px]'>
+          <div className='flex flex-wrap justify-around md:justify-center items-center pt-[50px]'>
             {founders.map(({ name, image, social }) => {
               return (
                 <div className='flex justify-center basis-[20%] mb-12' key={name}>

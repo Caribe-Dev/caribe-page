@@ -8,17 +8,17 @@ const ICON_SIZE = 22
 
 export function Avatar({ name, image, social = {} }) {
   return (
-    <div className='flex flex-col justify-between items-center w-[220px] h-[220px]'>
-      <div className='relative w-[140px] h-[140px]  avatar'>
+    <div className='flex flex-col justify-between items-center md:w-[220px] w-[165px]'>
+      <div className='relative w-[80%] md:w-[140px] aspect-square avatar'>
         <Image
-          className='object-cover my-0 mx-auto rounded-full z-0'
+          className='z-0 object-cover mx-auto my-0 rounded-full'
           src={image}
           alt={`${name} image`}
           fill
         />
       </div>
-      <span className='font-bold mt-4 text-tertiary'>{name}</span>
-      <div className='flex gap-5 mt-1 items-center'>
+      <span className='mt-4 font-bold text-tertiary'>{name}</span>
+      <div className='flex items-center gap-5 mt-1'>
         {
           social.website && (
             <a href={social.website} target='_blank'>
