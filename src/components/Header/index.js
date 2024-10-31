@@ -43,7 +43,7 @@ export function Header() {
           'after:md:h-full': scrollTop,
         })}
       >
-        <Layout className="flex relative flex-wrap md:flex-nowrap md:items-center z-10">
+        <Layout className="relative z-10 flex flex-wrap md:flex-nowrap md:items-center">
           <div className="flex basis-full justify-between h-[70px] items-center">
             <Link href="/">
               <Image src="/images/caribe-dev-logo.svg" alt="Caribe Dev logo" width={120} height={40} />
@@ -58,7 +58,7 @@ export function Header() {
               <Icon icon="hamburger" className="fill-secondary" width={25} height={25} />
             </a>
           </div>
-          <Menu isOpen={open} className="flex-col justify-center py-4 md:flex-row md:justify-start md:py-0" />
+          <Menu isOpen={open} setOpen={setOpen} className="flex-col justify-center py-4 md:flex-row md:justify-start md:py-0" />
         </Layout>
       </div>
     </header>
