@@ -7,8 +7,8 @@
       "@/all-communities": [
         "./all-communities.json"
       ],
-      "@/all-organizers": [
-        "./all-organizers.json"
+      "@/all-founders": [
+        "./all-founders.json"
       ],
       "@/all-social-media": [
         "./all-social-media.json"
