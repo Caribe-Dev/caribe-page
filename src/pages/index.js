@@ -79,7 +79,7 @@ const home = ({ events }) => {
           <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
             Fundadores
           </h2>
-          <div className='flex flex-wrap justify-center items-center pt-[50px]'>
+          <div className='flex flex-wrap justify-around md:justify-center items-center pt-[50px]'>
             {organizers.map(({ name, image, social }) => {
               return (
                 <div className='flex justify-center basis-[20%] mb-12' key={name}>
