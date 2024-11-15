@@ -36,10 +36,10 @@ export function Hero({ events = [] }) {
       <div className="absolute bottom-0 left-0 right-0 flex justify-end w-full">
         <RightMountainImage className="w-[50%] md:w-[52%]" />
       </div>
-      <div className="absolute flex justify-start -bottom-[20%] left-0 right-0 w-full">
+      <div className="absolute flex justify-start -bottom-[20%] left-0 right-0 w-full z-0">
         <LeftPalmsImage className="w-[30%] z-[1] md:w-[22%]" />
       </div>
-      <div className="absolute flex justify-end -bottom-[20%] left-0 right-0 w-full">
+      <div className="absolute flex justify-end -bottom-[20%] left-0 right-0 w-full z-0">
         <RightPalmsImage className="w-[25%] z-[1] md:w-[22%]" />
       </div>
       <Layout className="flex items-center flex-col z-1 relative pt-[100px] md:pt-[140px]">
