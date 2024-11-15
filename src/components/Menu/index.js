@@ -15,19 +15,22 @@ export function Menu({ className, isOpen, setOpen }) {
     )}>
       <ul className={classNames('flex gap-5', className)}>
         <li className='font-bold text-center md:font-medium text-tertiary' >
-          <a href='#communities' scroll={false} onClick={onClick}>Comunidades</a>
+          <a href='/#communities' scroll={false} onClick={onClick}>Comunidades</a>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
-          <a href='#sponsors' scroll={false}>Sponsors</a>
+          <a href='/#sponsors' scroll={false}>Sponsors</a>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
-          <a href='#founders' scroll={false}>Fundadores</a>
+          <a href='/#founders' scroll={false}>Fundadores</a>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
-          <a href='#about-us' scroll={false}>Nosotros</a>
+          <a href='/#about-us' scroll={false}>Nosotros</a>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary'>
           <Link href="/hacktoberfest2024/index.html">HacktoberFest</Link>
+        </li>
+        <li className='font-bold text-center md:font-medium text-tertiary'>
+          <Link href="/caribeconf">CaribeConf</Link>
         </li>
       </ul>
     </nav>
