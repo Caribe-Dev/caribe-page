@@ -87,9 +87,9 @@ const home = () => {
                     <div className='flex justify-center pt-5 mb-5'>
                         {error && <div style={{ color: 'red' }}>{error}</div>}
                         <form onSubmit={onSubmit}>
-                            <div className="flex items-center border-b border-teal-500 py-2">
-                                <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="Email" aria-label="email" name="email" />
-                                <button className="bg-background flex-shrink-0 text-tertiary bg-secondary text-white py-1 px-2 rounded" type="submit" disabled={isLoading}>
+                            <div className="flex bg-tertiary rounded items-center border-b border-teal-500 py-2 px-2">
+                                <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 leading-tight focus:outline-none" type="email" placeholder="Email" aria-label="email" name="email" />
+                                <button className="flex-shrink-0 text-tertiary bg-secondary text-white py-1 px-2 rounded" type="submit" disabled={isLoading}>
                                     {isLoading ? 'Enviando...' : 'Enviar'}
                                 </button>
                             </div>
