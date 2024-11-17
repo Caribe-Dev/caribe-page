@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { MdPlace } from "react-icons/md";
 import { FaCalendar } from "react-icons/fa";
 import { FiArrowUpLeft } from "react-icons/fi";
+import { sendGAEvent } from '@next/third-parties/google';
 
 import { getLinkFromText, formatDefaultDate } from '@/utils';
 
@@ -17,11 +18,11 @@ export const EventCard = ({ event }) => {
     <article className="flex flex-col items-start w-full max-w-xs gap-2 p-4 my-2 rounded-lg shadow-md bg-tertiary">
       <h4 className="font-bold">{title}</h4>
       {locationText ? (
-          <div className="flex items-center w-full gap-2">
-            <MdPlace className='text-secondary' />
-            <span className='flex-1 truncate' title={locationText}>{locationText}</span>
-          </div>
-        ) :
+        <div className="flex items-center w-full gap-2">
+          <MdPlace className='text-secondary' />
+          <span className='flex-1 truncate' title={locationText}>{locationText}</span>
+        </div>
+      ) :
         <BlankSpace />
       }
       {
@@ -31,11 +32,12 @@ export const EventCard = ({ event }) => {
             <span className="capitalize">{date}</span>
           </div>
         ) :
-        <BlankSpace />
+          <BlankSpace />
       }
       {link && (
         <Link className='flex items-center justify-start font-bold transition-all text-secondary hover:text-secondary/60' href={link}
           target="_blank"
+          onClick={() => sendGAEvent('event', 'buttonClicked', { value: link })}
           rel="noreferrer">
           <FiArrowUpLeft className='text-2xl' />
           <span>
