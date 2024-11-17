@@ -3,8 +3,6 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import { FormaDJRMicro, Raleway } from '@/utils/fonts'
-import { GoogleAnalytics } from '@next/third-parties/google'
-
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -27,7 +25,6 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
       <ScrollToTop />
       <Footer />
-      <GoogleAnalytics gaId="G-6L5B79TZMT" />
     </main>
   )
 }
