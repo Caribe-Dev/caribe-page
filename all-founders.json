@@ -11,7 +11,7 @@
     },
     {
       "name": "Kelly Villa",
-      "image": "/images/founders/kelly-villa.png",
+      "image": "/images/founders/kelly-villa-2.png",
       "social": {
         "twitter": "https://twitter.com/02kellyv",
         "github": "https://github.com/02KellyV"
@@ -58,6 +58,14 @@
       "social": {
         "twitter": "https://twitter.com/fabolivar23",
         "github": "https://github.com/fabolivar"
+      }
+    },
+    {
+      "name": "Jesus Viloria",
+      "image": "/images/founders/jesus-viloria.jpeg",
+      "social": {
+        "twitter": "https://x.com/jesuviloria_",
+        "github": "https://github.com/jesuviloria"
       }
     },
     {

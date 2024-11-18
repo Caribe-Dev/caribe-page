@@ -21,7 +21,7 @@ export function Menu({ className, isOpen, setOpen }) {
           <a href='/#sponsors' scroll={false}>Sponsors</a>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
-          <a href='/#founders' scroll={false}>Fundadores</a>
+          <a href='/#founders' scroll={false}>Organizadores</a>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
           <a href='/#about-us' scroll={false}>Nosotros</a>
