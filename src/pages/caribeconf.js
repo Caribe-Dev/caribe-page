@@ -23,7 +23,7 @@ const home = () => {
 
         try {
             const formData = new FormData(event.currentTarget);
-            await fetch('/api/newsletter-conf', {
+            await fetch('/api/newsletter', {
                 method: 'POST',
                 body: JSON.stringify({
                     email: formData.get('email'),
@@ -50,7 +50,7 @@ const home = () => {
                 description='Caribe Dev, la comunidad para los desarrolladores del Caribe Colombiano.'
                 image={`${DOMAIN}/images/caribe-dev-hero.png`}
             />
-            <section className="min-h-[75vh] md:min-h-screen bg-primary-hero relative">
+            <section className="min-h-[75vh] md:min-h-screen bg-primary-hero relative overflow-hidden">
                 <div className="hidden md:flex absolute justify-center top-[30%] md:top-0 left-0 right-0 w-full">
                     <CloudsImage className="w-[100%]" />
                 </div>
