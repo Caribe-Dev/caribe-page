@@ -27,7 +27,7 @@ export function Menu({ className, isOpen, setOpen }) {
           <a href='/#about-us' scroll={false}>Nosotros</a>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary'>
-          <Link href="/hacktoberfest2024/index.html">HacktoberFest</Link>
+          <Link href="/hacktoberfest/2024/index.html">HacktoberFest</Link>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary'>
           <Link href="/caribeconf">CaribeConf</Link>
