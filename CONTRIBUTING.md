@@ -99,7 +99,7 @@ Todos los proyectos sigue la especificación [todos-contribuyentes](https://gith
 
 <td  align="center"  valign="top"  width="14.28%"><a  href=""><img  src="https://res.cloudinary.com/dpu0uajtw/image/upload/v1731987784/valentina-de-la-hoz_yqxgyf.png"  width="100px;"  alt="Valentina de la Hoz"/><br /><sub><b>Valentina de la Hoz</b></sub></a><br /><a  href=""  title="Code">💻</a> </td>
 
-<td  align="center"  valign="top"  width="14.28%"><a  href=""><img  src="https://media.licdn.com/dms/image/v2/D4E0BAQGE2Ol4EcvYqA/company-logo_200_200/company-logo_200_200/0/1681590847604/caribe_dev_logo?e=1738195200&v=beta&t=sOxu-FgPiu9PdKa7oRu8yfdS1AUeQbbkDZktQrnbXxk"  width="100px;"  alt="Sebastian Pulido"/><br /><sub><b>Sebastian Pulido</b></sub></a><br /><a  href=""  title="Code">💻</a></td>
+<td  align="center"  valign="top"  width="14.28%"><a  href=""><img  src="https://res.cloudinary.com/dpu0uajtw/image/upload/v1732041535/sebastian-pulido_yxklby.jpg"  width="100px;"  alt="Sebastian Pulido"/><br /><sub><b>Sebastian Pulido</b></sub></a><br /><a  href=""  title="Code">💻</a></td>
 
 <td  align="center"  valign="top"  width="14.28%"><a  href=""><img  src="https://avatars.githubusercontent.com/u/89615320?v=4"  width="100px;"  alt="Josue Perez"/><br /><sub><b>Josue Perez</b></sub></a><br /><a  href=""  title="Code">💻</a> </td>
 
