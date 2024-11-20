@@ -27,8 +27,8 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
       <ScrollToTop />
       <Footer />
-      <GoogleAnalytics gaId="G-6L5B79TZMT" />
-      <GoogleTagManager gtmId="G-GRF4SF41QP" />
+      <GoogleAnalytics gaId="G-GRF4SF41QP" />
+      <GoogleTagManager gtmId="GTM-W6MQB2MH" />
     </main>
   )
 }
