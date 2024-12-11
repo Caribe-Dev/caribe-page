@@ -1,8 +1,8 @@
 {
-  "organizers": [
+  "founders": [
     {
       "name": "Jesus Hernandez",
-      "image": "/images/organizers/jesus-hernandez.jpeg",
+      "image": "/images/founders/jesus-hernandez.jpeg",
       "social": {
         "twitter": "https://twitter.com/jesuhrz",
         "github": "https://github.com/jesuhrz",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Kelly Villa",
-      "image": "/images/organizers/kelly-villa.png",
+      "image": "/images/founders/kelly-villa-2.png",
       "social": {
         "twitter": "https://twitter.com/02kellyv",
         "github": "https://github.com/02KellyV"
@@ -19,7 +19,7 @@
     },
     {
       "name": "Brianith Navarro",
-      "image": "/images/organizers/brianith-navarro.jpeg",
+      "image": "/images/founders/brianith-navarro.jpeg",
       "social": {
         "twitter": "https://twitter.com/briaenrose",
         "github": "https://github.com/briaenrose"
@@ -27,7 +27,7 @@
     },
     {
       "name": "Javier Daza",
-      "image": "/images/organizers/javier-daza.jpeg",
+      "image": "/images/founders/javier-daza.jpeg",
       "social": {
         "twitter": "https://twitter.com/pyjavo",
         "github": "https://github.com/pyjavo",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Aldair Moreno",
-      "image": "/images/organizers/aldair-moreno.jpeg",
+      "image": "/images/founders/aldair-moreno.jpeg",
       "social": {
         "twitter": "https://twitter.com/_aldamc",
         "github": "https://github.com/AldairMC",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Jesus Bossa",
-      "image": "/images/organizers/jesus-bossa.jpeg",
+      "image": "/images/founders/jesus-bossa.jpeg",
       "social": {
         "twitter": "https://twitter.com/jesMakinox",
         "github": "https://github.com/makinox",
@@ -54,15 +54,23 @@
     },
     {
       "name": "Fabian Altahona",
-      "image": "/images/organizers/fabian-altahona.png",
+      "image": "/images/founders/fabian-altahona.png",
       "social": {
         "twitter": "https://twitter.com/fabolivar23",
         "github": "https://github.com/fabolivar"
       }
     },
     {
+      "name": "Jesus Viloria",
+      "image": "/images/founders/jesus-viloria.jpeg",
+      "social": {
+        "twitter": "https://x.com/jesuviloria_",
+        "github": "https://github.com/jesuviloria"
+      }
+    },
+    {
       "name": "Luis Porras",
-      "image": "/images/organizers/luis-porras.jpg",
+      "image": "/images/founders/luis-porras.jpg",
       "social": {
         "twitter": "https://twitter.com/lporras16",
         "github": "https://github.com/lporras",
@@ -71,7 +79,7 @@
     },
     {
       "name": "Francisco Quintero",
-      "image": "/images/organizers/francisco-quintero.jpg",
+      "image": "/images/founders/francisco-quintero.jpg",
       "social": {
         "twitter": "https://twitter.com/cescquintero",
         "github": "https://github.com/cesc1989"

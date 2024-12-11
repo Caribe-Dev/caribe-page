@@ -5,11 +5,11 @@ import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { Community } from "@/components/Community";
 import { Avatar } from "@/components/Avatar";
-import { Sponsors } from "@/components/Sponsors";
+import { Sponsor } from "@/components/Sponsor";
 
 import allSocialMedia from '@/all-social-media'
 import allCommunities from "@/all-communities";
-import allOrganizers from "@/all-organizers";
+import allFounders from "@/all-founders";
 import allSponsors from "@/all-sponsors";
 
 import ReflectedSunImage from "../../public/images/reflected-sun.svg";
@@ -20,7 +20,7 @@ import { getEventsFromCalendar } from '@/utils/google-calendar'
 
 
 const { communities } = allCommunities;
-const { organizers } = allOrganizers;
+const { founders } = allFounders;
 const { social } = allSocialMedia;
 const { sponsors } = allSponsors;
 
@@ -55,14 +55,14 @@ const home = ({ events }) => {
         id='communities'
         className='bg-secondary-hero relative -mt-[20px] md:-mt-[34px] pb-[30px]'
       >
-        <div className='absolute flex justify-center top-0 left-0 right-0 w-full'>
+        <div className='absolute top-0 left-0 right-0 flex justify-center w-full'>
           <ReflectedSunImage className='w-[76%] md:w-[49%]' />
         </div>
-        <div className='md:flex absolute justify-center md:top-0 left-0 right-0 w-full'>
+        <div className='absolute left-0 right-0 justify-center w-full md:flex md:top-0'>
           <ReflectedClouldsImage className='w-[100%] z-0' />
         </div>
-        <Layout className='relative md:pt-16'>
-          <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
+        <Layout className='relative md:mt-16'>
+          <h2 id='communities' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
             Comunidades
           </h2>
           <div className='flex flex-wrap justify-center items-center pt-[50px]'>
@@ -70,17 +70,17 @@ const home = ({ events }) => {
               {communities.map((comunity) => <Community key={comunity.website} {...comunity} />)}
             </section>
           </div>
-          <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
+          <h2 id='sponsors' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
             Sponsors
           </h2>
           <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-50">
-            {sponsors.map((sponsor) => <Sponsors key={sponsor.website} {...sponsor} />)}
+            {sponsors.map((sponsor) => <Sponsor key={sponsor.website} {...sponsor} />)}
           </section>
-          <h2 id='organizers' className='text-[35px] md:text-[60px] mt-20 text-tertiary'>
-            Fundadores
+          <h2 id='founders' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
+            Organizadores
           </h2>
-          <div className='flex flex-wrap justify-center items-center pt-[50px]'>
-            {organizers.map(({ name, image, social }) => {
+          <div className='flex flex-wrap justify-around md:justify-center items-center pt-[50px]'>
+            {founders.map(({ name, image, social }) => {
               return (
                 <div className='flex justify-center basis-[20%] mb-12' key={name}>
                   <Avatar name={name} image={image} social={social} />
@@ -88,7 +88,7 @@ const home = ({ events }) => {
               );
             })}
           </div>
-          <div className='pt-2 flex justify-center'>
+          <div className='flex justify-center pt-2'>
             <a
               href={social[2].url}
               className='text-tertiary text-[20px] justify-center items-center rounded-2xl bg-secondary px-[60px] py-[25px] font-bold hover:opacity-90'
@@ -99,7 +99,7 @@ const home = ({ events }) => {
           </div>
         </Layout>
       </section>
-      <section id='we' className='relative overflow-hidden'>
+      <section id='about-us' className='relative overflow-hidden'>
         <div className='absolute flex justify-center w-full'>
           <GreenBlockImage className='w-full' />
         </div>
