@@ -70,12 +70,12 @@ const home = ({ events }) => {
               {communities.map((comunity) => <Community key={comunity.website} {...comunity} />)}
             </section>
           </div>
-          <h2 id='sponsors' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
+          {/* <h2 id='sponsors' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
             Sponsors
           </h2>
           <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-50">
             {sponsors.map((sponsor) => <Sponsor key={sponsor.website} {...sponsor} />)}
-          </section>
+          </section> */}
           <h2 id='founders' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
             Organizadores
           </h2>
@@ -107,11 +107,10 @@ const home = ({ events }) => {
           <div className='flex justify-between'>
             <div className='flex flex-col basis-[100%] md:basis-[65%]'>
               <h2 className='text-[35px] md:text-[60px] text-tertiary'>Nosotros</h2>
-              <p className='text-tertiary font-medium mt-[20px] text-[18px] md:text-[20px] max-w-[1000px] w-full'>
-                Somos líderes que buscamos brindar un espacio para aprender y compartir
-                con nuestras comunidades de tecnología en la Costa Caribe, donde nos
-                conozcan y así poder ofrecerles oportunidades y experiencias únicas, que
-                promuevan la innovación y la creatividad en la ciudad!
+              <p className='text-tertiary font-medium mt-[20px] text-[18px] md:text-[20px] max-w-[1000px] w-full'> 
+                9 líderes de comunidades tecnológicas nos reunimos para impulsar espacios gratuitos en tecnología 
+                y así: co-crear nuevos eventos, impulsar la innovación y transformar nuestro territorio.
+                Conoce más de nuestra misión conectando con nosotros en <b><a href="mailto:hello@caribedev.org">hello@caribedev.org</a></b>.
               </p>
             </div>
             <div className='hidden basis-[30%] mt-2 md:block'>

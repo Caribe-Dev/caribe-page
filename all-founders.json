@@ -18,14 +18,6 @@
       }
     },
     {
-      "name": "Brianith Navarro",
-      "image": "/images/founders/brianith-navarro.jpeg",
-      "social": {
-        "twitter": "https://twitter.com/briaenrose",
-        "github": "https://github.com/briaenrose"
-      }
-    },
-    {
       "name": "Javier Daza",
       "image": "/images/founders/javier-daza.jpeg",
       "social": {
@@ -35,12 +27,29 @@
       }
     },
     {
+      "name": "Luis Porras",
+      "image": "/images/founders/luis-porras.jpg",
+      "social": {
+        "twitter": "https://twitter.com/lporras16",
+        "github": "https://github.com/lporras",
+        "website": "https://linktr.ee/lporras16"
+      }
+    },
+    {
       "name": "Aldair Moreno",
       "image": "/images/founders/aldair-moreno.jpeg",
       "social": {
         "twitter": "https://twitter.com/_aldamc",
         "github": "https://github.com/AldairMC",
         "website": "https://aldairmc.github.io/aldair_mc/"
+      }
+    },
+    {
+      "name": "Brianith Navarro",
+      "image": "/images/founders/brianith-navarro.jpeg",
+      "social": {
+        "twitter": "https://twitter.com/briaenrose",
+        "github": "https://github.com/briaenrose"
       }
     },
     {
@@ -61,28 +70,19 @@
       }
     },
     {
-      "name": "Jesus Viloria",
-      "image": "/images/founders/jesus-viloria.jpeg",
-      "social": {
-        "twitter": "https://x.com/jesuviloria_",
-        "github": "https://github.com/jesuviloria"
-      }
-    },
-    {
-      "name": "Luis Porras",
-      "image": "/images/founders/luis-porras.jpg",
-      "social": {
-        "twitter": "https://twitter.com/lporras16",
-        "github": "https://github.com/lporras",
-        "website": "https://linktr.ee/lporras16"
-      }
-    },
-    {
       "name": "Francisco Quintero",
       "image": "/images/founders/francisco-quintero.jpg",
       "social": {
         "twitter": "https://twitter.com/cescquintero",
         "github": "https://github.com/cesc1989"
+      }
+    },
+    {
+      "name": "Jesus Viloria",
+      "image": "/images/founders/jesus-viloria.jpeg",
+      "social": {
+        "twitter": "https://x.com/jesuviloria_",
+        "github": "https://github.com/jesuviloria"
       }
     }
   ]

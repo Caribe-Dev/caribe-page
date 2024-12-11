@@ -83,24 +83,24 @@ const home = () => {
                         <span>🇨🇴 Barranquilla, Colombia</span>
                     </h2>
                     <h1 className="text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]">CaribeConf 2025</h1>
-                    <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl">Nuestra primera conferencia con speakers nacionales e internacionales. Inscríbete para ser el primero en enterarte de los avances de nuestra primera conf.</p>
+                    <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl"> Sé el primero en obtener EarlyTickets con 50% de Descuento. ¡Nos vemos en Abril!</p>
                     <div className='flex justify-center pt-5 mb-5'>
                         {error && <div style={{ color: 'red' }}>{error}</div>}
                         <form onSubmit={onSubmit}>
                             <div className="flex bg-tertiary rounded items-center border-b border-teal-500 py-2 px-2">
-                                <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 leading-tight focus:outline-none" type="email" placeholder="Email" aria-label="email" name="email" />
+                                <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 leading-tight focus:outline-none" type="email" placeholder="Correo" aria-label="email" name="email" />
                                 <button className="flex-shrink-0 text-tertiary bg-secondary text-white py-1 px-2 rounded" type="submit" disabled={isLoading}>
                                     {isLoading ? 'Enviando...' : 'Enviar'}
                                 </button>
                             </div>
                         </form>
                     </div>
-                    {!isSend || <div className="bg-secondary md:block border-t-4 border-teal-500 rounded-b text-gray px-4 py-3 shadow-md" role="alert">
+                    {!isSend || <div className="bg-secondary md:block border-t-4 border-teal-500 rounded-b text-white px-4 py-3 shadow-md" role="alert">
                         <div className="flex">
                             <div className="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" /></svg></div>
                             <div>
-                                <p className="font-bold">¡Te estaremos avisando!</p>
-                                <p className="text-sm">Cualquier novedad respecto a nuestra conf te estaremos informando por correo.</p>
+                                <p className="font-bold">¡Recibirás el primer batch de tickets!</p>
+                                <p className="text-sm"> Y otras actualizaciones vía correo</p>
                             </div>
                         </div>
                     </div>}
