@@ -47,7 +47,7 @@ export function Hero({ events = [] }) {
           <span>🇨🇴 Barranquilla, Colombia</span>
         </h2>
         <h1 className="text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]">CaribeDev</h1>
-        <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl">Somos una comunidad de comunidades que busca hacer crecer al caribe colombiano a través de la tecnología y el desarrollo profesional.</p>
+        <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl">Conectamos talentos que impulsan el futuro digital, somos una comunidad de comunidades del Caribe Colombiano para el mundo.</p>
         {
           hasEvents ? (
             <div className="my-8 z-30 w-11/12 max-w-7xl m-auto md:w-full">
