@@ -10,7 +10,7 @@ const { social } = allSocialMedia
 export function Footer () {
   const year = new Date().getFullYear()
   return (
-    <footer className='p-4 bg-green-300 rounded-t-3xl border-solid z-50 relative'>
+    <footer className='p-4 bg-green-300 rounded-t-0xl border-solid z-50 relative'>
       <Layout className='flex flex-col md:flex-row justify-between items-center flex-nowrap'>
         <div className='flex w-full md:w-auto flex-col md:flex-row justify-between items-center'>
           <Image
@@ -20,7 +20,7 @@ export function Footer () {
             height={100}
           />
           <span className='text-[#FFC175] font-bold mt-4 md:mt-0'>
-            © Copyright Caribe Dev {year}
+            © Copyright Fundación CaribeDev {year}
           </span>
         </div>
         <a

@@ -17,9 +17,8 @@ export function Menu({ className, isOpen, setOpen }) {
         <li className='font-bold text-center md:font-medium text-tertiary' >
           <a href='/#communities' scroll={false} onClick={onClick}>Comunidades</a>
         </li>
-        <li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
-          <a href='/#sponsors' scroll={false}>Sponsors</a>
-        </li>
+        {/*<li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
+        <a href='/#sponsors' scroll={false}>Sponsors</a></li>*/}
         <li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
           <a href='/#founders' scroll={false}>Organizadores</a>
         </li>
@@ -33,6 +32,6 @@ export function Menu({ className, isOpen, setOpen }) {
           <Link href="/caribeconf">CaribeConf</Link>
         </li>
       </ul>
-    </nav>
+    </nav >
   )
 }
