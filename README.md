@@ -2,8 +2,7 @@
 
 **🇨🇴 Barranquilla, Colombia**
 
-> Somos una comunidad de comunidades que busca hacer crecer al caribe colombiano a través de la tecnología y el desarrollo profesional.
-
+> Líderes de comunidades tecnológicas nos reunimos para impulsar espacios gratuitos en tecnología y así: co-crear nuevos eventos, impulsar la innovación y transformar nuestro territorio. Conoce más de nuestra misión conectando con nosotros en hello@caribedev.org.
 
 ## Tech Stack
 
