@@ -83,7 +83,7 @@ const home = () => {
                         <span>🇨🇴 Barranquilla, Colombia</span>
                     </h2>
                     <h1 className="text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]">CaribeConf 2025</h1>
-                    <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl"> Sé el primero en obtener EarlyTickets con 50% de Descuento. ¡Nos vemos en Abril!</p>
+                    <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl"> Sé el primero en obtener nuestros Early Tickets con <b> 50% de Descuento.</b> ¡Nos vemos en Abril!</p>
                     <div className='flex justify-center pt-5 mb-5'>
                         {error && <div style={{ color: 'red' }}>{error}</div>}
                         <form onSubmit={onSubmit}>
@@ -104,6 +104,11 @@ const home = () => {
                             </div>
                         </div>
                     </div>}
+                    <p className="mt-[20px] text-[20px] font-bold text-gray text-center max-w-xl"> ¿Quieres postular una charla?{" "}
+                        <a target="_blank" rel="noopener noreferrer" className="underline" href="https://papers.caribeconf.com/15abed65b8ef800faf17cc54cbbb1e9f">
+                            ¡Abrimos CFP!
+                        </a>
+                    </p>
                 </Layout>
             </section>
         </>
