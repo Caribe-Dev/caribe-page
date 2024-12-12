@@ -104,7 +104,7 @@ const home = () => {
                             </div>
                         </div>
                     </div>}
-                    <p className="mt-[20px] text-[20px] text-gray text-center max-w-xl"> ¿Quieres postular una charla? <b><u href="https://papers.caribeconf.com/15abed65b8ef800faf17cc54cbbb1e9f">¡Abrimos CFP!</u></b></p>
+                    <p className="mt-[20px] text-[20px] text-gray text-center max-w-xl text-decoration"> ¿Quieres postular una charla? <b><a href="https://papers.caribeconf.com/15abed65b8ef800faf17cc54cbbb1e9f">¡Abrimos CFP!</a></b></p>
                 </Layout>
             </section>
         </>
