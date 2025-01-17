@@ -29,7 +29,7 @@ export function Menu({ className, isOpen, setOpen }) {
           <Link href="/hacktoberfest/2024/index.html">HacktoberFest</Link>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary'>
-          <Link href="/caribeconf">CaribeConf</Link>
+          <Link href="https://www.caribeconf.com/">CaribeConf</Link>
         </li>
       </ul>
     </nav >
