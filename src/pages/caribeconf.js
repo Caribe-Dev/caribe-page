@@ -1,6 +1,7 @@
+import { useState } from "react";
+
 import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
-import { useState } from "react";
 import SunImage from '../../public/images/sun.svg';
 import CloudsImage from '../../public/images/clouds.svg';
 import HighWaveImage from '../../public/images/high-wave.svg';
@@ -12,8 +13,8 @@ import RightMountainImage from '../../public/images/right-mountain.svg';
 
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
 
-const home = () => {
-    const [isSend, SetIsSend] = useState(false);
+const Home = () => {
+    const [isSend, setIsSend] = useState(false);
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -35,9 +36,9 @@ const home = () => {
         } catch (error) {
             setError(error.message);
             console.error(error);
-            SetIsSend(false);
+            setIsSend(false);
         } finally {
-            SetIsSend(true);
+            setIsSend(true);
             setIsLoading(false);
 
         }
@@ -115,4 +116,4 @@ const home = () => {
     )
 };
 
-export default home
+export default Home
