@@ -1,29 +1,38 @@
 import classNames from 'classnames'
 import Link from 'next/link'
-import { useCallback } from 'react'
 
 export function Menu({ className, isOpen, setOpen }) {
 
-  const onClick = useCallback(() => {
-    if (isOpen) setOpen(false)
-  })
+  const onClick = (e) => {
+    const $anchor = e.target.closest('a')
+
+    if ($anchor) {
+      const dataScroll = $anchor.dataset.scroll
+
+      if (dataScroll === 'true') {
+        e.preventDefault()
+      }
+
+      setOpen(false)
+    }
+  }
 
   return (
     <nav className={classNames(
       'w-full h-full md:h-auto md:w-auto md:block',
       { 'hidden': !isOpen }
     )}>
-      <ul className={classNames('flex gap-5', className)}>
+      <ul className={classNames('flex gap-5', className)} onClick={onClick}>
         <li className='font-bold text-center md:font-medium text-tertiary' >
-          <a href='/#communities' scroll={false} onClick={onClick}>Comunidades</a>
+          <Link href='#communities' data-scroll="true">Comunidades</Link>
         </li>
         {/*<li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
         <a href='/#sponsors' scroll={false}>Sponsors</a></li>*/}
-        <li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
-          <a href='/#founders' scroll={false}>Organizadores</a>
+        <li className='font-bold text-center md:font-medium text-tertiary'>
+          <Link href='#founders' data-scroll="true">Organizadores</Link>
         </li>
-        <li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
-          <a href='/#about-us' scroll={false}>Nosotros</a>
+        <li className='font-bold text-center md:font-medium text-tertiary'>
+          <Link href='#about-us' data-scroll="true">Nosotros</Link>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary'>
           <Link href="/hacktoberfest/2024/index.html">HacktoberFest</Link>
