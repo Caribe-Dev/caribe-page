@@ -13,6 +13,15 @@ import RightMountainImage from '../../public/images/right-mountain.svg';
 
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN;
 
+export const getServerSideProps = () => {
+    return {
+            redirect: {
+            destination: 'https://www.caribeconf.com/',
+            permanent: false,
+        },
+    };
+}
+
 const Home = () => {
     const [isSend, setIsSend] = useState(false);
     const [error, setError] = useState(null);
