@@ -52,7 +52,7 @@ export function Hero({ events = [] }) {
           hasEvents ? (
             <div className="z-30 w-11/12 m-auto my-8 max-w-7xl md:w-full">
               <h3 className="mt-8 mb-2 text-3xl font-extrabold text-center">Próximos eventos</h3>
-              <section className='flex flex-wrap justify-center w-full gap-2'>
+              <section className='flex flex-wrap justify-center w-full gap-2 capitalize'>
                 {events.map((event) => <EventCard key={event.id} event={event} />)}
               </section>
             </div>
