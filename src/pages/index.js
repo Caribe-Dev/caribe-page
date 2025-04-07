@@ -70,12 +70,6 @@ const home = ({ events }) => {
               {communities.map((comunity) => <Community key={comunity.website} {...comunity} />)}
             </section>
           </div>
-          {/* <h2 id='sponsors' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
-            Sponsors
-          </h2>
-          <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-50">
-            {sponsors.map((sponsor) => <Sponsor key={sponsor.website} {...sponsor} />)}
-          </section> */}
           <h2 id='founders' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
             Organizadores
           </h2>
@@ -88,15 +82,12 @@ const home = ({ events }) => {
               );
             })}
           </div>
-          <div className='flex justify-center pt-2'>
-            <a
-              href={social[2].url}
-              className='text-tertiary text-[20px] justify-center items-center rounded-2xl bg-secondary px-[60px] py-[25px] font-bold hover:opacity-90'
-              target='_blank'
-            >
-              Haz parte del equipo
-            </a>
-          </div>
+          <h2 id='sponsors' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
+            Sponsors
+          </h2>
+          <section className="flex flex-wrap justify-center gap-4 pt-6 md:pt-50">
+            {sponsors.map((sponsor) => <Sponsor key={sponsor.website} {...sponsor} />)}
+          </section>
         </Layout>
       </section>
       <section id='about-us' className='relative overflow-hidden'>

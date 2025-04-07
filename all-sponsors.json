@@ -1,10 +1,10 @@
 {
   "sponsors": [
     {
-      "name": "Avvy.co",
-      "logo": "/images/sponsors/avvy-logo.webp",
-      "website": "https://www.avvy.co/?utm_source=webcaribedev&utm_medium=cpc&utm_campaign=hacktoberfest",
-      "background": "#080B36"
+      "name": "Alegra",
+      "logo": "/images/sponsors/logo-alegra-dark.png",
+      "website": "https://www.alegra.com/colombia/",
+      "background": "#FFFFFF"
     }
   ]
 }
