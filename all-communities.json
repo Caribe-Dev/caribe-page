@@ -80,6 +80,12 @@
     },
     {
       "name": "Notion Barranquilla",
+      "logo": "/images/communities/cracktive-logo.png",
+      "website": "https://bento.me/cracktivelab",
+      "background": "#FFFFFF"
+    },
+    {
+      "name": "Cracktive Lab",
       "logo": "/images/communities/notion-logo.png",
       "website": "https://notioncolombia.com/ciudad/barranquilla",
       "background": "#FFFFFF"
