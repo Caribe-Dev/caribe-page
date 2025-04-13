@@ -80,14 +80,20 @@
     },
     {
       "name": "Notion Barranquilla",
-      "logo": "/images/communities/cracktive-logo.png",
+      "logo": "/images/communities/notion-logo.png",
       "website": "https://notioncolombia.com/ciudad/barranquilla",
       "background": "#FFFFFF"
     },
     {
       "name": "Cracktive Lab",
-      "logo": "/images/communities/notion-logo.png",
+      "logo": "/images/communities/cracktive-logo.png",
       "website": "https://bento.me/cracktivelab",
+      "background": "#FFFFFF"
+    },
+    {
+      "name": "WIE",
+      "logo": "/images/communities/wie-logo.png",
+      "website": "https://www.instagram.com/ieee.wie.unisimon?igsh=M280aDFlbzBhZ3N4&utm_source=qr",
       "background": "#FFFFFF"
     }
   ]
