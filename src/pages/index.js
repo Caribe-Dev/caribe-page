@@ -71,7 +71,7 @@ const home = ({ events }) => {
             </section>
           </div>
           <h2 id='founders' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
-            Fundadores
+            Organizadores
           </h2>
           <div className='flex flex-wrap justify-around md:justify-center items-center pt-[50px]'>
             {founders.map(({ name, image, social }) => {
