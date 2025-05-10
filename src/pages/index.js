@@ -71,7 +71,7 @@ const home = ({ events }) => {
             </section>
           </div>
           <h2 id='founders' className='text-[35px] md:text-[60px] pt-20 text-tertiary'>
-            Organizadores
+            Fundadores
           </h2>
           <div className='flex flex-wrap justify-around md:justify-center items-center pt-[50px]'>
             {founders.map(({ name, image, social }) => {
@@ -98,8 +98,8 @@ const home = ({ events }) => {
           <div className='flex justify-between'>
             <div className='flex flex-col basis-[100%] md:basis-[65%]'>
               <h2 className='text-[35px] md:text-[60px] text-tertiary'>Nosotros</h2>
-              <p className='text-tertiary font-medium mt-[20px] text-[18px] md:text-[20px] max-w-[1000px] w-full'> 
-                9 líderes de comunidades tecnológicas nos reunimos para impulsar espacios gratuitos en tecnología 
+              <p className='text-tertiary font-medium mt-[20px] text-[18px] md:text-[20px] max-w-[1000px] w-full'>
+                líderes de comunidades tecnológicas nos reunimos para impulsar espacios gratuitos en tecnología
                 y así: co-crear nuevos eventos, impulsar la innovación y transformar nuestro territorio.
                 Conoce más de nuestra misión conectando con nosotros en <b><a href="mailto:hello@caribedev.org">hello@caribedev.org</a></b>.
               </p>
