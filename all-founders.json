@@ -18,15 +18,6 @@
       }
     },
     {
-      "name": "Javier Daza",
-      "image": "/images/founders/javier-daza.jpeg",
-      "social": {
-        "twitter": "https://twitter.com/pyjavo",
-        "github": "https://github.com/pyjavo",
-        "website": "https://javierdaza.co/"
-      }
-    },
-    {
       "name": "Luis Porras",
       "image": "/images/founders/luis-porras.jpg",
       "social": {
@@ -45,44 +36,18 @@
       }
     },
     {
-      "name": "Brianith Navarro",
-      "image": "/images/founders/brianith-navarro.jpeg",
-      "social": {
-        "twitter": "https://twitter.com/briaenrose",
-        "github": "https://github.com/briaenrose"
-      }
-    },
-    {
-      "name": "Jesus Bossa",
-      "image": "/images/founders/jesus-bossa.jpeg",
-      "social": {
-        "twitter": "https://twitter.com/jesMakinox",
-        "github": "https://github.com/makinox",
-        "website": "https://jesusbossa.dev"
-      }
-    },
-    {
-      "name": "Fabian Altahona",
-      "image": "/images/founders/fabian-altahona.png",
-      "social": {
-        "twitter": "https://twitter.com/fabolivar23",
-        "github": "https://github.com/fabolivar"
-      }
-    },
-    {
-      "name": "Francisco Quintero",
-      "image": "/images/founders/francisco-quintero.jpg",
-      "social": {
-        "twitter": "https://twitter.com/cescquintero",
-        "github": "https://github.com/cesc1989"
-      }
-    },
-    {
       "name": "Jesus Viloria",
       "image": "/images/founders/jesus-viloria.jpeg",
       "social": {
         "twitter": "https://x.com/jesuviloria_",
         "github": "https://github.com/jesuviloria"
+      }
+    },
+    {
+      "name": "Carlos Ponton",
+      "image": "/images/founders/carlos-ponton.jpeg",
+      "social": {
+        "github": "https://github.com/carlosponton"
       }
     }
   ]

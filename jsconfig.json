@@ -10,6 +10,9 @@
       "@/all-founders": [
         "./all-founders.json"
       ],
+      "@/all-lead-communities": [
+        "./all-lead-communities.json"
+      ],
       "@/all-social-media": [
         "./all-social-media.json"
       ],
