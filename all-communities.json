@@ -95,6 +95,12 @@
       "logo": "/images/communities/wie-logo.png",
       "website": "https://www.instagram.com/ieee.wie.unisimon?igsh=M280aDFlbzBhZ3N4&utm_source=qr",
       "background": "#FFFFFF"
+    },
+    {
+      "name": "BarranquiJava - JUGBAQ",
+      "logo": "/images/communities/duke-barranquilla.png",
+      "website": "https://jugbaq.org/",
+      "background": "#FFFFFF"
     }
   ]
 }
