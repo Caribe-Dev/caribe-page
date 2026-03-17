@@ -101,6 +101,12 @@
       "logo": "/images/communities/duke-barranquilla.png",
       "website": "https://jugbaq.org/",
       "background": "#FFFFFF"
+    },
+    {
+      "name": "QuillaBlocks",
+      "logo": "/images/communities/quillablocks-logo.png",
+      "website": "https://quillablocks.org",
+      "background": "#12132A"
     }
   ]
 }
