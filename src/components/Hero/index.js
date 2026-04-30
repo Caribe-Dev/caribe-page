@@ -1,17 +1,17 @@
-import { Layout } from '@/components/Layout';
+import { Layout } from "@/components/Layout";
 
-import { EventCard } from '../EventCard/EventCard';
-import SunImage from '../../../public/images/sun.svg';
-import CloudsImage from '../../../public/images/clouds.svg';
-import HighWaveImage from '../../../public/images/high-wave.svg';
-import SmallWaveImage from '../../../public/images/small-wave.svg';
-import LeftPalmsImage from '../../../public/images/left-palms.svg';
-import RightPalmsImage from '../../../public/images/right-palms.svg';
-import LeftMountainImage from '../../../public/images/left-mountain.svg';
-import RightMountainImage from '../../../public/images/right-mountain.svg';
+import { EventCard } from "../EventCard/EventCard";
+import SunImage from "../../../public/images/sun.svg";
+import CloudsImage from "../../../public/images/clouds.svg";
+import HighWaveImage from "../../../public/images/high-wave.svg";
+import SmallWaveImage from "../../../public/images/small-wave.svg";
+import LeftPalmsImage from "../../../public/images/left-palms.svg";
+import RightPalmsImage from "../../../public/images/right-palms.svg";
+import LeftMountainImage from "../../../public/images/left-mountain.svg";
+import RightMountainImage from "../../../public/images/right-mountain.svg";
 
 export function Hero({ events = [] }) {
-  const hasEvents = Boolean(events.length)
+  const hasEvents = Boolean(events.length);
 
   return (
     <section className="min-h-[75vh] md:min-h-screen bg-primary-hero relative">
@@ -46,22 +46,31 @@ export function Hero({ events = [] }) {
         <h2 className="flex justify-center text-xl md:text-[48px] gap-3 text-tertiary font-bold">
           <span>🇨🇴 Barranquilla, Colombia</span>
         </h2>
-        <h1 className="text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]">CaribeDev</h1>
-        <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl">Conectamos talentos que impulsan el futuro digital, somos una comunidad de comunidades del Caribe Colombiano para el mundo.</p>
-        {
-          hasEvents ? (
-            <div className="z-30 w-11/12 m-auto my-8 max-w-7xl md:w-full">
-              <h3 className="mt-8 mb-2 text-3xl font-extrabold text-center">Próximos eventos</h3>
-              <section className='flex flex-wrap justify-center w-full gap-2 capitalize'>
-                {events.map((event) => <EventCard key={event.id} event={event} />)}
-              </section>
-            </div>
-          ) : (
-            <div className="z-30 my-8">
-              <h3 className="mt-8 mb-2 text-3xl font-extrabold text-center">Sin eventos por ahora</h3>
-            </div>
-          )
-        }
+        <h1 className="text-tertiary text-center text-[40px] md:text-[100px] max-w-[800px] mt-5 md:mt-10 leading-[95%]">
+          CaribeDev
+        </h1>
+        <p className="mt-[20px] text-[25px] text-tertiary text-center max-w-xl">
+          Conectamos talentos que impulsan el futuro digital, somos una
+          comunidad de comunidades del Caribe Colombiano para el mundo.
+        </p>
+        {hasEvents ? (
+          <div className="z-30 w-11/12 m-auto my-8 max-w-7xl md:w-full">
+            <h3 className="mt-8 mb-2 text-3xl font-extrabold text-center">
+              Próximos eventos
+            </h3>
+            <section className="flex flex-wrap justify-center w-full gap-2">
+              {events.map((event) => (
+                <EventCard key={event.id} event={event} />
+              ))}
+            </section>
+          </div>
+        ) : (
+          <div className="z-30 my-8">
+            <h3 className="mt-8 mb-2 text-3xl font-extrabold text-center">
+              Sin eventos por ahora
+            </h3>
+          </div>
+        )}
       </Layout>
     </section>
   );

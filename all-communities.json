@@ -37,12 +37,6 @@
       "background": "#FFFFFF"
     },
     {
-      "name": "Red team Barranquilla",
-      "logo": "/images/communities/red-team-baq-logo.jpg",
-      "website": "https://www.instagram.com/redteambq",
-      "background": "#000000"
-    },
-    {
       "name": "Linux BQ",
       "logo": "/images/communities/Logo_LinuxBQ_2025.png",
       "website": "https://www.instagram.com/linuxbq",
@@ -74,9 +68,9 @@
     },
     {
       "name": "Meet & GameDev",
-      "logo": "/images/communities/game-logo.png",
+      "logo": "/images/communities/gamedev-logo.png",
       "website": "https://www.meetup.com/es-ES/meet-gamedev/",
-      "background": "#172136"
+      "background": "#FFFFFF"
     },
     {
       "name": "Notion Barranquilla",
@@ -98,8 +92,8 @@
     },
     {
       "name": "BarranquiJava - JUGBAQ",
-      "logo": "/images/communities/duke-barranquilla.png",
-      "website": "https://jugbaq.org/",
+      "logo": "/images/communities/duke-barranquillav2.png",
+      "website": "https://www.barranquillajug.org",
       "background": "#FFFFFF"
     },
     {
