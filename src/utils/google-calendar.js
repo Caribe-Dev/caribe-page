@@ -1,18 +1,18 @@
-const google = require("@googleapis/calendar");
+const google = require('@googleapis/calendar');
 
 const SIXTY_DAYS = 60;
 
 const EXCLUSE_EVENTS = {
-  FIXED: "[fixed]",
-  DRAFT: "[draft]",
-  TENTATIVE: "[tentative]",
+  FIXED: '[fixed]',
+  DRAFT: '[draft]',
+  TENTATIVE: '[tentative]',
 };
 
 const prefixFixedLenght = EXCLUSE_EVENTS.FIXED.length;
 
 export async function getEventsFromCalendar() {
   const calendar = google.calendar({
-    version: "v3",
+    version: 'v3',
     auth: process.env.GOOGLE_KEY,
   });
 
@@ -25,14 +25,14 @@ export async function getEventsFromCalendar() {
     calendarId: process.env.GOOGLE_CALENDAR_ID,
     timeMin: timeMin.toISOString(),
     timeMax: timeMax.toISOString(),
-    orderBy: "startTime",
+    orderBy: 'startTime',
     singleEvents: true,
   });
 
   const fixedEvents = await calendar.events.list({
     calendarId: process.env.GOOGLE_CALENDAR_ID,
     timeMin: timeMin.toISOString(),
-    orderBy: "startTime",
+    orderBy: 'startTime',
     maxResults: 10,
     q: EXCLUSE_EVENTS.FIXED,
     singleEvents: true,
@@ -45,7 +45,7 @@ export async function getEventsFromCalendar() {
   });
 
   const confirmedEvents = events.filter((item) => {
-    const title = item.summary;
+    const title = item.summary.toLowerCase();
 
     if (
       title.includes(EXCLUSE_EVENTS.DRAFT) ||
@@ -61,7 +61,7 @@ export async function getEventsFromCalendar() {
     let summary = item.summary.trim();
 
     if (summary.includes(EXCLUSE_EVENTS.FIXED)) {
-      summary = summary.replace(EXCLUSE_EVENTS.FIXED, "").trim();
+      summary = summary.replace(EXCLUSE_EVENTS.FIXED, '').trim();
       summary = item.summary.substring(summary.length - prefixFixedLenght);
     }
 
@@ -69,7 +69,7 @@ export async function getEventsFromCalendar() {
       id: item.id,
       created: item.created,
       title: summary,
-      description: item.description || "",
+      description: item.description || '',
       location: item?.location || null,
       startAt: item.start || item.start,
       endAt: item.end,
