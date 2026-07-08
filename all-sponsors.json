@@ -5,6 +5,12 @@
       "logo": "/images/sponsors/logo-alegra-dark.png",
       "website": "https://www.alegra.com/colombia/",
       "background": "#FFFFFF"
+    },
+    {
+      "name": "Interledger",
+      "logo": "/images/sponsors/interledger-logo.svg",
+      "website": "https://interledger.org/",
+      "background": "#FFFFFF"
     }
   ]
 }
