@@ -95,6 +95,18 @@
       "logo": "/images/communities/quillablocks-logo.png",
       "website": "https://quillablocks.org",
       "background": "#12132A"
+    },
+    {
+      "name": "Macondo Hackclub",
+      "logo": "/images/communities/macondo-logo.jpeg",
+      "website": "https://macondo.hackclub.com",
+      "background": "#f0f0f0"
+    },
+    {
+      "name": "Riza",
+      "logo": "/images/communities/riza-logo.jpeg",
+      "website": "https://www.instagram.com/riza_team23?igsh=MWIxZ2V4ODh5bnZicA==",
+      "background": "#01111e"
     }
   ]
 }
