@@ -24,15 +24,18 @@ export function Menu({ className, isOpen, setOpen }) {
     )}>
       <ul className={classNames('flex gap-5', className)} onClick={onClick}>
         <li className='font-bold text-center md:font-medium text-tertiary' >
-          <Link href='#communities' data-scroll="true">Comunidades</Link>
+          <Link href='/#communities'>Comunidades</Link>
         </li>
         {/*<li className='font-bold text-center md:font-medium text-tertiary' onClick={onClick}>
         <a href='/#sponsors' scroll={false}>Sponsors</a></li>*/}
         <li className='font-bold text-center md:font-medium text-tertiary'>
-          <Link href='#founders' data-scroll="true">Organizadores</Link>
+          <Link href='/#founders'>Organizadores</Link>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary'>
-          <Link href='#about-us' data-scroll="true">Nosotros</Link>
+          <Link href='/#about-us'>Nosotros</Link>
+        </li>
+        <li className='font-bold text-center md:font-medium text-tertiary'>
+          <Link href='/blog'>Blog</Link>
         </li>
         <li className='font-bold text-center md:font-medium text-tertiary'>
           <Link href="/hacktoberfest/2024/index.html">HacktoberFest</Link>

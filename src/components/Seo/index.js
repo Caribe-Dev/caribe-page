@@ -2,15 +2,26 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 export function Seo (props) {
-  const { title, description, image } = props
+  const {
+    title,
+    description,
+    image,
+    canonical,
+    type = 'website',
+    publishedTime,
+    modifiedTime,
+    author,
+    tags = [],
+    jsonLd,
+  } = props
   const { asPath } = useRouter()
   const site = process.env.NEXT_PUBLIC_DOMAIN
+  const canonicalUrl = canonical ? `${site}${canonical}` : site
 
   let parsedDescription = ''
 
   if (description) {
-    const trimmedString = description.substring(0, 157)
-    parsedDescription = `${trimmedString}...`
+    parsedDescription = description.length > 157 ? `${description.substring(0, 157)}...` : description
   }
 
   return (
@@ -22,12 +33,12 @@ export function Seo (props) {
       <meta name='theme-color' content='#005D68' />
       <meta property='og:site_name' content='Caribe Dev' />
       <meta property='og:locale' content='es' />
-      <meta property='og:type' content='website' />
+      <meta property='og:type' content={type} />
       <meta property='og:url' content={`${site}${asPath}`} />
       {
         site && (
           <>
-            <link rel='canonical' href={site} />
+            <link rel='canonical' href={canonicalUrl} />
           </>
         )
       }
@@ -63,6 +74,22 @@ export function Seo (props) {
           </>
         )
       }
+
+      {type === 'article' && (
+        <>
+          {publishedTime && <meta property='article:published_time' content={publishedTime} />}
+          {modifiedTime && <meta property='article:modified_time' content={modifiedTime} />}
+          {author && <meta property='article:author' content={author} />}
+          {tags.map((tag) => <meta key={tag} property='article:tag' content={tag} />)}
+        </>
+      )}
+      {jsonLd && (
+        <script
+          type='application/ld+json'
+          // JSON-LD built from our own frontmatter; escape "<" so content can't close the script tag
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+        />
+      )}
 
       <meta name="twitter:site" content="@caribedev" />
       <meta name="twitter:creator" content="@caribedev" />

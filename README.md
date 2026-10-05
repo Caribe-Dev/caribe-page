@@ -36,6 +36,10 @@
 
     Open [http://localhost:3000](http://localhost:3000) with your browser to see the website.
 
+## Blog
+
+Blog posts are MDX files in [`src/content/blog/`](./src/content/blog). To publish a new post, follow the guide in [docs/BLOG.md](./docs/BLOG.md).
+
 ## License
 
 This project is licensed under the [MIT](./LICENSE) license.

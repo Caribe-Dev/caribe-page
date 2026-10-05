@@ -1,0 +1,51 @@
+---
+title: "Primeros pasos con Next.js"
+description: "[Demo] Tutorial de ejemplo con código, listas, enlaces, citas e imágenes para validar los estilos del blog."
+date: "2026-09-28"
+author: "Luis Porras"
+category: "Tutoriales"
+draft: true
+tags:
+  - javascript
+  - nextjs
+  - tutorial
+---
+
+> Artículo de demostración para validar el formato del contenido técnico.
+
+[Next.js](https://nextjs.org) es un framework de React para construir aplicaciones web. En este tutorial creamos un proyecto desde cero.
+
+## Crear el proyecto
+
+Ejecuta el siguiente comando en tu terminal:
+
+```bash
+yarn create next-app mi-proyecto
+cd mi-proyecto
+yarn dev
+```
+
+### Tu primera página
+
+Crea el archivo `src/pages/hola.js`:
+
+```jsx
+export default function Hola() {
+  return <h1>¡Hola desde el Caribe!</h1>
+}
+```
+
+## Lo que aprendimos
+
+1. Crear un proyecto con `create-next-app`.
+2. Levantar el servidor de desarrollo.
+3. Crear una página nueva.
+
+| Comando     | Descripción                 |
+| ----------- | --------------------------- |
+| `yarn dev`  | Servidor de desarrollo      |
+| `yarn build`| Build de producción         |
+
+![Comunidad CaribeDev reunida en un evento](/images/nosotros.jpeg)
+
+Revisa también la [página principal](/) para conocer nuestras comunidades.
